@@ -15,9 +15,7 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate  {
     var pointted = CGPoint()
     var line = UIBezierPath()
     var lineLayer = CAShapeLayer()
-    var animation = CABasicAnimation(keyPath: "strokeEnd")
     var views = UIView()
-    var skview = SKView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,31 +44,31 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate  {
     }
     func labelSet(label:UIView)->UIView{
         label.alpha = 1
-        setShapeLayer()
+        Animation().setShapeLayer(views:self)
         return label
     }
-    func setShapeLayer(){
-        _ =  shapeLayer(shape: lineLayer)
-        _ =  animationDraw(animation: animation)
-        self.view.layer.addSublayer(shapeLayer(shape: lineLayer))
-        shapeLayer(shape: lineLayer).add(animation, forKey: nil)
-    }
-    func shapeLayer(shape:CAShapeLayer)->CAShapeLayer{
-        shape.lineWidth = 8
-        shape.strokeColor = UIColor.black.cgColor
-        shape.fillRule = kCAFillRuleEvenOdd
-        shape.path = line.cgPath
-        self.view.layer.addSublayer(shape)
-        return shape
-    }
-    func animationDraw(animation:CABasicAnimation)->CABasicAnimation{
-        animation.duration = 1.0
-        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
-        animation.fromValue = 0.0
-        animation.toValue = 1.0
-        animation.fillMode = kCAFillModeForwards
-        animation.isRemovedOnCompletion = true
-        return animation
-    }
+//    func setShapeLayer(){
+//        _ =  shapeLayer(shape: lineLayer)
+//        _ =  animationDraw(animation: animation)
+//        self.view.layer.addSublayer(shapeLayer(shape: lineLayer))
+//        shapeLayer(shape: lineLayer).add(animation, forKey: nil)
+//    }
+//    func shapeLayer(shape:CAShapeLayer)->CAShapeLayer{
+//        shape.lineWidth = 8
+//        shape.strokeColor = UIColor.black.cgColor
+//        shape.fillRule = kCAFillRuleEvenOdd
+//        shape.path = line.cgPath
+//        self.view.layer.addSublayer(shape)
+//        return shape
+//    }
+//    func animationDraw(animation:CABasicAnimation)->CABasicAnimation{
+//        animation.duration = 1.0
+//        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
+//        animation.fromValue = 0.0
+//        animation.toValue = 1.0
+//        animation.fillMode = kCAFillModeForwards
+//        animation.isRemovedOnCompletion = true
+//        return animation
+//    }
 }
 
