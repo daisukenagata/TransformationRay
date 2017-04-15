@@ -10,7 +10,7 @@ import UIKit
 import SpriteKit
 
 class ViewController: UIViewController,UIGestureRecognizerDelegate  {
-    static var vv = UIViewController()
+
     var tapGesture = UITapGestureRecognizer()
     var pointted = CGPoint()
     var line = UIBezierPath()
@@ -22,7 +22,6 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate  {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // シングルタップ
         tapGesture = UITapGestureRecognizer(target: self, action: #selector(singleTap))
         tapGesture.delegate = self
         self.view.addGestureRecognizer(tapGesture)
@@ -33,7 +32,6 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate  {
         // Dispose of any resources that can be recreated.
     }
     
-    // singleTap
     func singleTap() {
 
         for i in 0..<tapGesture.numberOfTouches {
