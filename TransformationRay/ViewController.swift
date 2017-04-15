@@ -14,7 +14,6 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate  {
     var tapGesture = UITapGestureRecognizer()
     var pointted = CGPoint()
     var line = UIBezierPath()
-    var lineLayer = CAShapeLayer()
     var views = UIView()
 
     override func viewDidLoad() {
@@ -24,14 +23,8 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate  {
         tapGesture.delegate = self
         self.view.addGestureRecognizer(tapGesture)
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+   
     func singleTap() {
-
         for i in 0..<tapGesture.numberOfTouches {
             pointted = tapGesture.location(ofTouch: i, in: self.view)
             if pointted.y != 0.0 {
@@ -47,28 +40,5 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate  {
         Animation().setShapeLayer(views:self)
         return label
     }
-//    func setShapeLayer(){
-//        _ =  shapeLayer(shape: lineLayer)
-//        _ =  animationDraw(animation: animation)
-//        self.view.layer.addSublayer(shapeLayer(shape: lineLayer))
-//        shapeLayer(shape: lineLayer).add(animation, forKey: nil)
-//    }
-//    func shapeLayer(shape:CAShapeLayer)->CAShapeLayer{
-//        shape.lineWidth = 8
-//        shape.strokeColor = UIColor.black.cgColor
-//        shape.fillRule = kCAFillRuleEvenOdd
-//        shape.path = line.cgPath
-//        self.view.layer.addSublayer(shape)
-//        return shape
-//    }
-//    func animationDraw(animation:CABasicAnimation)->CABasicAnimation{
-//        animation.duration = 1.0
-//        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
-//        animation.fromValue = 0.0
-//        animation.toValue = 1.0
-//        animation.fillMode = kCAFillModeForwards
-//        animation.isRemovedOnCompletion = true
-//        return animation
-//    }
 }
 

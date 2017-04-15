@@ -19,6 +19,7 @@ class Animation:UIView {
         views.view.layer.addSublayer(shapeLayer(shape: lineLayer, views: views))
         shapeLayer(shape: lineLayer,views: views).add(animation, forKey: nil)
     }
+    
     func shapeLayer(shape:CAShapeLayer,views:ViewController)->CAShapeLayer{
         shape.lineWidth = 8
         shape.strokeColor = UIColor.black.cgColor
@@ -27,6 +28,7 @@ class Animation:UIView {
         views.view.layer.addSublayer(shape)
         return shape
     }
+    
     func animationDraw(animation:CABasicAnimation)->CABasicAnimation{
         animation.duration = 1.0
         animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
