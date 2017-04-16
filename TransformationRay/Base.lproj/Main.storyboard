@@ -31,10 +31,15 @@
                                     <action selector="actionButton:" destination="BYZ-38-t0r" id="PGw-eu-ZYO"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem title="         " id="WVg-wa-6sg"/>
                             <barButtonItem title="clear" id="tWP-28-Ag9">
                                 <connections>
                                     <action selector="removeSegue:" destination="BYZ-38-t0r" id="azQ-Xe-9Eg"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="         " id="WVg-wa-6sg"/>
+                            <barButtonItem title="cirle" id="cBF-8c-aJ8">
+                                <connections>
+                                    <action selector="cirle:" destination="BYZ-38-t0r" id="X2A-iz-xiE"/>
                                 </connections>
                             </barButtonItem>
                         </leftBarButtonItems>
@@ -44,7 +49,6 @@
                                     <action selector="slender:" destination="BYZ-38-t0r" id="1Da-r1-rsm"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem title="         " id="YBW-Rr-Hbo"/>
                             <barButtonItem title="boldly" id="opK-m5-LmE">
                                 <connections>
                                     <action selector="boldly:" destination="BYZ-38-t0r" id="Bkr-rm-DSD"/>

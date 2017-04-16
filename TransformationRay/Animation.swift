@@ -14,16 +14,20 @@ class Animation:UIView {
     var animation = CABasicAnimation(keyPath: "strokeEnd")
     
     
-    func setShapeLayer(views:ViewController){
-        _ =  shapeLayer(shape: lineLayer, views: views)
+    func setShapeLayer(views:ViewController,bool:Bool){
+        _ =  shapeLayer(shape: lineLayer, views: views,bool:bool)
         _ =  animationDraw(animation: animation)
-        views.view.layer.addSublayer(shapeLayer(shape: lineLayer, views: views))
-        shapeLayer(shape: lineLayer,views: views).add(animation, forKey: nil)
+        views.view.layer.addSublayer(shapeLayer(shape: lineLayer, views: views,bool:bool))
+        shapeLayer(shape: lineLayer,views: views,bool:bool).add(animation, forKey: nil)
     }
     
-    func shapeLayer(shape:CAShapeLayer,views:ViewController)->CAShapeLayer{
+    func shapeLayer(shape:CAShapeLayer,views:ViewController,bool:Bool)->CAShapeLayer{
         shape.lineWidth = views.lineWidth
+        if bool == false {
         shape.strokeColor = UIColor.black.cgColor
+        }else if bool == true{
+        shape.strokeColor = UIColor.white.cgColor
+        }
         shape.fillRule = kCAFillRuleEvenOdd
         shape.path = views.line.cgPath
         views.view.layer.addSublayer(shape)

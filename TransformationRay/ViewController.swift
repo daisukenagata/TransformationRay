@@ -19,15 +19,16 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate  {
     var views = UIView()
     var lineWidth : CGFloat = 1
     var count : [CGPoint] = []
+    var bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
- 
+        
         
         tapGesture = UITapGestureRecognizer(target: self, action: #selector(singleTap))
         tapGesture.delegate = self
         self.view.addGestureRecognizer(tapGesture)
-                
+        
         swipeLongGesture = UILongPressGestureRecognizer(target: self, action:#selector(handleSwipeLong))
         self.view.addGestureRecognizer(swipeLongGesture)
         
@@ -36,12 +37,11 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate  {
         
         swipePanGesture = UIPanGestureRecognizer(target: self, action:#selector(panLabel))
         self.view.addGestureRecognizer(swipePanGesture)
-
+        
     }
     
-  
+    
     func singleTap(){
- 
         for i in 0..<tapGesture.numberOfTouches {
             pointted = tapGesture.location(ofTouch: i, in: self.view)
             
@@ -56,7 +56,7 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate  {
     
     func labelSet(label:UIView)->UIView{
         label.alpha = 1
-        Animation().setShapeLayer(views:self)
+        Animation().setShapeLayer(views:self,bool:bool)
         return label
     }
     
@@ -66,8 +66,8 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate  {
     }
     
     func zoomAction(sender: UIPinchGestureRecognizer) {
-
-    view.transform = CGAffineTransform(scaleX: sender.scale, y: sender.scale)
+        
+        view.transform = CGAffineTransform(scaleX: sender.scale, y: sender.scale)
         
     }
     
@@ -88,16 +88,27 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate  {
         }
     }
     
+    @IBAction func cirle(_ sender: UIBarButtonItem) {
+        self.line = UIBezierPath(roundedRect: line.bounds, cornerRadius: line.bounds.width / 2)
+        if bool == false{
+            bool = true
+        }else if bool == true{
+            bool = false
+        }
+        self.view.addSubview(labelSet(label: views))
+    }
+    
     @IBAction func removeSegue(_ sender: UIBarButtonItem) {
         self.loadView()
         self.viewDidLoad()
     }
-
+    
     @IBAction func boldly(_ sender: UIBarButtonItem) {
         lineWidth += 1
-
+        
     }
     @IBAction func slender(_ sender: UIBarButtonItem) {
         lineWidth -= 1
     }
+    
 }
