@@ -12,16 +12,30 @@ import SpriteKit
 class ViewController: UIViewController,UIGestureRecognizerDelegate  {
 
     var tapGesture = UITapGestureRecognizer()
+    var swipeUpGesture = UISwipeGestureRecognizer()
+    var swipeDownGesture = UISwipeGestureRecognizer()
     var pointted = CGPoint()
     var line = UIBezierPath()
     var views = UIView()
-
+    var lineWidth : CGFloat = 1
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tapGesture = UITapGestureRecognizer(target: self, action: #selector(singleTap))
         tapGesture.delegate = self
         self.view.addGestureRecognizer(tapGesture)
+        
+        swipeUpGesture = UISwipeGestureRecognizer(target: self, action:#selector(handleSwipeUp))
+        swipeUpGesture.numberOfTouchesRequired = 1
+        swipeUpGesture.direction = UISwipeGestureRecognizerDirection.up
+        self.view.addGestureRecognizer(swipeUpGesture)
+        
+        swipeDownGesture = UISwipeGestureRecognizer(target: self, action:#selector(handleSwipeDown))
+        swipeDownGesture.numberOfTouchesRequired = 1
+        swipeDownGesture.direction = UISwipeGestureRecognizerDirection.down
+        self.view.addGestureRecognizer(swipeDownGesture)
+
     }
    
     func singleTap() {
@@ -39,6 +53,14 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate  {
         label.alpha = 1
         Animation().setShapeLayer(views:self)
         return label
+    }
+
+    func handleSwipeUp(sender: UITapGestureRecognizer){
+        lineWidth += 1
+    }
+    
+    func handleSwipeDown(sender: UITapGestureRecognizer){
+        lineWidth -= 1
     }
 }
 

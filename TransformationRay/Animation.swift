@@ -13,6 +13,7 @@ class Animation:UIView {
     var lineLayer = CAShapeLayer()
     var animation = CABasicAnimation(keyPath: "strokeEnd")
     
+    
     func setShapeLayer(views:ViewController){
         _ =  shapeLayer(shape: lineLayer, views: views)
         _ =  animationDraw(animation: animation)
@@ -21,7 +22,7 @@ class Animation:UIView {
     }
     
     func shapeLayer(shape:CAShapeLayer,views:ViewController)->CAShapeLayer{
-        shape.lineWidth = 8
+        shape.lineWidth = views.lineWidth
         shape.strokeColor = UIColor.black.cgColor
         shape.fillRule = kCAFillRuleEvenOdd
         shape.path = views.line.cgPath
