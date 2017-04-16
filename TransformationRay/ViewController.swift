@@ -15,15 +15,16 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate  {
     var swipeUpGesture = UISwipeGestureRecognizer()
     var swipeDownGesture = UISwipeGestureRecognizer()
     var swipeLongGesture = UILongPressGestureRecognizer()
+    var swipePinchGesture = UIPinchGestureRecognizer()
     var pointted = CGPoint()
     var line = UIBezierPath()
     var views = UIView()
     var lineWidth : CGFloat = 1
     var count : [CGPoint] = []
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+ 
         
         tapGesture = UITapGestureRecognizer(target: self, action: #selector(singleTap))
         tapGesture.delegate = self
@@ -41,12 +42,18 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate  {
         
         swipeLongGesture = UILongPressGestureRecognizer(target: self, action:#selector(handleSwipeLong))
         self.view.addGestureRecognizer(swipeLongGesture)
+        
+        swipePinchGesture = UIPinchGestureRecognizer(target: self, action:#selector(zoomAction))
+        self.view.addGestureRecognizer(swipePinchGesture)
+
     }
     
-    func singleTap()->CGPoint  {
+  
+    func singleTap()  {
         
         for i in 0..<tapGesture.numberOfTouches {
             pointted = tapGesture.location(ofTouch: i, in: self.view)
+            
             if pointted.y != 0.0 {
                 self.line.addLine(to:CGPoint(x: pointted.x , y: pointted.y))
             }
@@ -54,9 +61,7 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate  {
             count.append(pointted)
             
             self.view.addSubview(labelSet(label: views))
-            return CGPoint(x: pointted.x , y: pointted.y)
         }
-        return CGPoint(x: pointted.x , y: pointted.y)
     }
     
     func labelSet(label:UIView)->UIView{
@@ -89,6 +94,10 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate  {
     @IBAction func removeSegue(_ sender: UIButton) {
         self.loadView()
         self.viewDidLoad()
+    }
+    
+    func zoomAction(sender: UIPinchGestureRecognizer) {
+        view.transform = CGAffineTransform(scaleX: sender.scale, y: sender.scale)
     }
 }
 
