@@ -11,8 +11,6 @@ import UIKit
 class ViewController: UIViewController,UIGestureRecognizerDelegate  {
     
     var tapGesture = UITapGestureRecognizer()
-    var swipeUpGesture = UISwipeGestureRecognizer()
-    var swipeDownGesture = UISwipeGestureRecognizer()
     var swipeLongGesture = UILongPressGestureRecognizer()
     var swipePinchGesture = UIPinchGestureRecognizer()
     var swipePanGesture = UIPanGestureRecognizer()
@@ -30,17 +28,7 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate  {
         tapGesture = UITapGestureRecognizer(target: self, action: #selector(singleTap))
         tapGesture.delegate = self
         self.view.addGestureRecognizer(tapGesture)
-        
-        swipeUpGesture = UISwipeGestureRecognizer(target: self, action:#selector(handleSwipeUp))
-        swipeUpGesture.numberOfTouchesRequired = 1
-        swipeUpGesture.direction = UISwipeGestureRecognizerDirection.up
-        self.view.addGestureRecognizer(swipeUpGesture)
-        
-        swipeDownGesture = UISwipeGestureRecognizer(target: self, action:#selector(handleSwipeDown))
-        swipeDownGesture.numberOfTouchesRequired = 1
-        swipeDownGesture.direction = UISwipeGestureRecognizerDirection.down
-        self.view.addGestureRecognizer(swipeDownGesture)
-        
+                
         swipeLongGesture = UILongPressGestureRecognizer(target: self, action:#selector(handleSwipeLong))
         self.view.addGestureRecognizer(swipeLongGesture)
         
@@ -74,30 +62,9 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate  {
         return label
     }
     
-    func handleSwipeUp(sender: UITapGestureRecognizer){
-        lineWidth += 1
-    }
-    
-    func handleSwipeDown(sender: UITapGestureRecognizer){
-        lineWidth -= 1
-    }
-    
     func handleSwipeLong(sender: UILongPressGestureRecognizer){
         line.removeAllPoints()
         view.setNeedsLayout()
-    }
-    
-    @IBAction func actionButton(_ sender: UIButton) {
-        if count.count > 2{
-            self.line.move(to: CGPoint(x: count[count.endIndex-2].x , y:  count[count.endIndex-2].y))
-            self.line.addLine(to:CGPoint(x: count[count.endIndex-1].x , y:count[count.endIndex-1].y))
-            self.view.addSubview(labelSet(label: views))
-        }
-    }
-    
-    @IBAction func removeSegue(_ sender: UIButton) {
-        self.loadView()
-        self.viewDidLoad()
     }
     
     func zoomAction(sender: UIPinchGestureRecognizer) {
@@ -113,5 +80,26 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate  {
         sender.view!.center.y += move.y
         sender.setTranslation(CGPoint.zero, in:view)
         
+    }
+    
+    @IBAction func actionButton(_ sender: UIBarButtonItem) {
+        if count.count > 2{
+            self.line.move(to: CGPoint(x: count[count.endIndex-2].x , y:  count[count.endIndex-2].y))
+            self.line.addLine(to:CGPoint(x: count[count.endIndex-1].x , y:count[count.endIndex-1].y))
+            self.view.addSubview(labelSet(label: views))
+        }
+    }
+    
+    @IBAction func removeSegue(_ sender: UIBarButtonItem) {
+        self.loadView()
+        self.viewDidLoad()
+    }
+
+    @IBAction func boldly(_ sender: UIBarButtonItem) {
+        lineWidth += 1
+
+    }
+    @IBAction func slender(_ sender: UIBarButtonItem) {
+        lineWidth -= 1
     }
 }
