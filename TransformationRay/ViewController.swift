@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SpriteKit
 
 class ViewController: UIViewController,UIGestureRecognizerDelegate  {
     
@@ -16,7 +15,9 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate  {
     var swipeDownGesture = UISwipeGestureRecognizer()
     var swipeLongGesture = UILongPressGestureRecognizer()
     var swipePinchGesture = UIPinchGestureRecognizer()
+    var swipePanGesture = UIPanGestureRecognizer()
     var pointted = CGPoint()
+    var pointted2 = CGPoint()
     var line = UIBezierPath()
     var views = UIView()
     var lineWidth : CGFloat = 1
@@ -45,21 +46,24 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate  {
         
         swipePinchGesture = UIPinchGestureRecognizer(target: self, action:#selector(zoomAction))
         self.view.addGestureRecognizer(swipePinchGesture)
+        
+        swipePanGesture = UIPanGestureRecognizer(target: self, action:#selector(panLabel))
+        self.view.addGestureRecognizer(swipePanGesture)
 
     }
     
   
-    func singleTap()  {
-        
+    func singleTap(){
+ 
         for i in 0..<tapGesture.numberOfTouches {
             pointted = tapGesture.location(ofTouch: i, in: self.view)
             
             if pointted.y != 0.0 {
                 self.line.addLine(to:CGPoint(x: pointted.x , y: pointted.y))
+                pointted2 = pointted
             }
             self.line.move(to: CGPoint(x: pointted.x , y: pointted.y))
             count.append(pointted)
-            
             self.view.addSubview(labelSet(label: views))
         }
     }
@@ -97,7 +101,17 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate  {
     }
     
     func zoomAction(sender: UIPinchGestureRecognizer) {
-        view.transform = CGAffineTransform(scaleX: sender.scale, y: sender.scale)
+
+    view.transform = CGAffineTransform(scaleX: sender.scale, y: sender.scale)
+        
+    }
+    
+    func panLabel(sender: UIPanGestureRecognizer) {
+        let move:CGPoint = sender.translation(in: view)
+        
+        sender.view!.center.x += move.x
+        sender.view!.center.y += move.y
+        sender.setTranslation(CGPoint.zero, in:view)
+        
     }
 }
-
