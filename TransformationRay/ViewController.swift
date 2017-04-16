@@ -15,7 +15,6 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate  {
     var swipePinchGesture = UIPinchGestureRecognizer()
     var swipePanGesture = UIPanGestureRecognizer()
     var pointted = CGPoint()
-    var pointted2 = CGPoint()
     var line = UIBezierPath()
     var views = UIView()
     var lineWidth : CGFloat = 1
@@ -48,7 +47,6 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate  {
             
             if pointted.y != 0.0 {
                 self.line.addLine(to:CGPoint(x: pointted.x , y: pointted.y))
-                pointted2 = pointted
             }
             self.line.move(to: CGPoint(x: pointted.x , y: pointted.y))
             count.append(pointted)
