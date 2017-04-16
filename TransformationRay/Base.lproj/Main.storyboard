@@ -24,9 +24,18 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mLf-TW-yzt">
                                 <rect key="frame" x="0.0" y="28" width="83" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Paint"/>
                                 <connections>
                                     <action selector="actionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pcs-cC-vQU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vah-Ne-Ytb">
+                                <rect key="frame" x="70" y="28" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="clear"/>
+                                <connections>
+                                    <action selector="actionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gj9-gA-tbt"/>
+                                    <action selector="removeSegue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WOP-is-FcM"/>
                                 </connections>
                             </button>
                         </subviews>

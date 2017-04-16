@@ -10,7 +10,7 @@ import UIKit
 import SpriteKit
 
 class ViewController: UIViewController,UIGestureRecognizerDelegate  {
-
+    
     var tapGesture = UITapGestureRecognizer()
     var swipeUpGesture = UISwipeGestureRecognizer()
     var swipeDownGesture = UISwipeGestureRecognizer()
@@ -19,11 +19,11 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate  {
     var line = UIBezierPath()
     var views = UIView()
     var lineWidth : CGFloat = 1
-    var bool = false
+    var count : [CGPoint] = []
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.white
         
         tapGesture = UITapGestureRecognizer(target: self, action: #selector(singleTap))
         tapGesture.delegate = self
@@ -42,17 +42,21 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate  {
         swipeLongGesture = UILongPressGestureRecognizer(target: self, action:#selector(handleSwipeLong))
         self.view.addGestureRecognizer(swipeLongGesture)
     }
-   
-    func singleTap()  {
-
+    
+    func singleTap()->CGPoint  {
+        
         for i in 0..<tapGesture.numberOfTouches {
             pointted = tapGesture.location(ofTouch: i, in: self.view)
             if pointted.y != 0.0 {
                 self.line.addLine(to:CGPoint(x: pointted.x , y: pointted.y))
             }
             self.line.move(to: CGPoint(x: pointted.x , y: pointted.y))
+            count.append(pointted)
+            
             self.view.addSubview(labelSet(label: views))
-            }
+            return CGPoint(x: pointted.x , y: pointted.y)
+        }
+        return CGPoint(x: pointted.x , y: pointted.y)
     }
     
     func labelSet(label:UIView)->UIView{
@@ -60,7 +64,7 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate  {
         Animation().setShapeLayer(views:self)
         return label
     }
-
+    
     func handleSwipeUp(sender: UITapGestureRecognizer){
         lineWidth += 1
     }
@@ -75,6 +79,14 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate  {
     }
     
     @IBAction func actionButton(_ sender: UIButton) {
+        if count.count > 2{
+            self.line.move(to: CGPoint(x: count[count.endIndex-2].x , y:  count[count.endIndex-2].y))
+            self.line.addLine(to:CGPoint(x: count[count.endIndex-1].x , y:count[count.endIndex-1].y))
+            self.view.addSubview(labelSet(label: views))
+        }
+    }
+    
+    @IBAction func removeSegue(_ sender: UIButton) {
         self.loadView()
         self.viewDidLoad()
     }
