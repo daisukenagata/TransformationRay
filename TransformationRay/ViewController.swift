@@ -114,7 +114,11 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate  {
         
         let vw = SetView().vw
         let image = ConversionImage().toImage(view: view)
+        vw.frame =  SetView().rectSet()
         vw.image = image
+        vw.layer.borderColor = UIColor.yellow.cgColor
+        vw.layer.borderWidth = 2
         view.addSubview(vw)
+        
     }
 }
