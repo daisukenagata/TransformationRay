@@ -24,7 +24,6 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate  {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         tapGesture = UITapGestureRecognizer(target: self, action: #selector(singleTap))
         tapGesture.delegate = self
         self.view.addGestureRecognizer(tapGesture)
@@ -39,7 +38,6 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate  {
         self.view.addGestureRecognizer(swipePanGesture)
         
     }
-    
     
     func singleTap(){
         for i in 0..<tapGesture.numberOfTouches {
@@ -107,8 +105,16 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate  {
         lineWidth += 1
         
     }
+    
     @IBAction func slender(_ sender: UIBarButtonItem) {
         lineWidth -= 1
     }
     
+    @IBAction func transformImage(_ sender: UIBarButtonItem) {
+        
+        let vw = SetView().vw
+        let image = ConversionImage().toImage(view: view)
+        vw.image = image
+        view.addSubview(vw)
+    }
 }

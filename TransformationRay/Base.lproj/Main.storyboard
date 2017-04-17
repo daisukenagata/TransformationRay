@@ -36,10 +36,14 @@
                                     <action selector="removeSegue:" destination="BYZ-38-t0r" id="azQ-Xe-9Eg"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem title="         " id="WVg-wa-6sg"/>
-                            <barButtonItem title="cirle" id="cBF-8c-aJ8">
+                            <barButtonItem title="circle" id="cBF-8c-aJ8">
                                 <connections>
                                     <action selector="cirle:" destination="BYZ-38-t0r" id="X2A-iz-xiE"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Image" id="WVg-wa-6sg">
+                                <connections>
+                                    <action selector="transformImage:" destination="BYZ-38-t0r" id="4PI-5I-enD"/>
                                 </connections>
                             </barButtonItem>
                         </leftBarButtonItems>
