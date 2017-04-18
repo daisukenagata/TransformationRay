@@ -15,20 +15,12 @@ struct TouchField {
                        animations: { () -> Void in
                         vw.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
         })
-        { (Bool) -> Void in
-        }
+        { (Bool) -> Void in }
     }
     
     static func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?,vw:UIImageView,pointted:CGPoint) {
         
-        
-
-        
         vw.center = pointted
-        
-        
-               
-
         
     }
     
