@@ -21,6 +21,8 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate  {
     var lineWidth : CGFloat = 1
     var count : [CGPoint] = []
     var bool = false
+    var aTouch = Set<UITouch>()
+    var event = UIEvent()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +52,11 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate  {
             self.line.move(to: CGPoint(x: pointted.x , y: pointted.y))
             count.append(pointted)
             self.view.addSubview(labelSet(label: views))
+            
+            if bool == true {
+                TouchField.touchesBegan(aTouch, with: event, vw: vw)
+                TouchField.touchesMoved(aTouch, with: event, vw: vw,pointted:pointted)
+            }
         }
     }
     
@@ -60,6 +67,7 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate  {
     }
     
     func handleSwipeLong(sender: UILongPressGestureRecognizer){
+        bool = true
         line.removeAllPoints()
         view.setNeedsLayout()
     }
@@ -90,15 +98,11 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate  {
     
     @IBAction func cirle(_ sender: UIBarButtonItem) {
         self.line = UIBezierPath(roundedRect: line.bounds, cornerRadius: line.bounds.width / 2)
-        if bool == false{
-            bool = true
-        }else if bool == true{
-            bool = false
-        }
         self.view.addSubview(labelSet(label: views))
     }
     
     @IBAction func removeSegue(_ sender: UIBarButtonItem) {
+        bool = false
         self.loadView()
         self.viewDidLoad()
     }
@@ -120,37 +124,6 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate  {
         vw.layer.borderColor = UIColor.yellow.cgColor
         vw.layer.borderWidth = 2
         view.addSubview(vw)
-        
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        UIView.animate(withDuration: 0.06,
-            animations: { () -> Void in
-                self.vw.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
-        })
-        { (Bool) -> Void in
-        }
-    }
-    
-    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
-
-        let aTouch: UITouch = touches.first!
-        let location = aTouch.location(in: self.vw)
-        
-
-        let prevLocation = aTouch.previousLocation(in: self.vw)
-        var myFrame: CGRect = self.vw.frame
-        
-
-        let deltaX: CGFloat = location.x - prevLocation.x
-        let deltaY: CGFloat = location.y - prevLocation.y
-        
-        myFrame.origin.x += deltaX
-        myFrame.origin.y += deltaY
-        
-        self.vw.frame = myFrame
-        
     }
 }
 
