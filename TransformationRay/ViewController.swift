@@ -17,6 +17,7 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate  {
     var pointted = CGPoint()
     var line = UIBezierPath()
     var views = UIView()
+    var vw = SetView().vw
     var lineWidth : CGFloat = 1
     var count : [CGPoint] = []
     var bool = false
@@ -70,12 +71,13 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate  {
     }
     
     func panLabel(sender: UIPanGestureRecognizer) {
-        let move:CGPoint = sender.translation(in: view)
-        
-        sender.view!.center.x += move.x
-        sender.view!.center.y += move.y
-        sender.setTranslation(CGPoint.zero, in:view)
-        
+        if bool == true{
+            let move:CGPoint = sender.translation(in: view)
+            
+            sender.view!.center.x += move.x
+            sender.view!.center.y += move.y
+            sender.setTranslation(CGPoint.zero, in:view)
+        }
     }
     
     @IBAction func actionButton(_ sender: UIBarButtonItem) {
@@ -112,7 +114,6 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate  {
     
     @IBAction func transformImage(_ sender: UIBarButtonItem) {
         
-        let vw = SetView().vw
         let image = ConversionImage().toImage(view: view)
         vw.frame =  SetView().rectSet()
         vw.image = image
@@ -121,4 +122,35 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate  {
         view.addSubview(vw)
         
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        UIView.animate(withDuration: 0.06,
+            animations: { () -> Void in
+                self.vw.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+        })
+        { (Bool) -> Void in
+        }
+    }
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+
+        let aTouch: UITouch = touches.first!
+        let location = aTouch.location(in: self.vw)
+        
+
+        let prevLocation = aTouch.previousLocation(in: self.vw)
+        var myFrame: CGRect = self.vw.frame
+        
+
+        let deltaX: CGFloat = location.x - prevLocation.x
+        let deltaY: CGFloat = location.y - prevLocation.y
+        
+        myFrame.origin.x += deltaX
+        myFrame.origin.y += deltaY
+        
+        self.vw.frame = myFrame
+        
+    }
 }
+
