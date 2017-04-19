@@ -12,6 +12,7 @@
 #### Thinness adjustment Button
 #### Change the drawing position with a long tap.
 #### Pinch to magnify
+#### It gradually disappears with an eraser Button.
 
 
 #### Paintは塗り絵機能
@@ -22,3 +23,4 @@
 #### 細さ太さの調整Button
 #### ロングタップで描画位置を変更します。
 #### ピンチで拡大機能
+#### 消しゴムButtonで徐々に消えます。
