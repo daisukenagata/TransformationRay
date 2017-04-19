@@ -8,11 +8,11 @@
 
 import UIKit
 
-class Animation:UIView {
-
+class Animation{
+    
     var lineLayer = CAShapeLayer()
     var animation = CABasicAnimation(keyPath: "strokeEnd")
-
+    
     
     func setShapeLayer(viewC:UIViewController,bool:Bool){
         
@@ -27,17 +27,34 @@ class Animation:UIView {
     func shapeLayer(shape:CAShapeLayer,viewC:UIViewController,bool:Bool)->CAShapeLayer{
         
         let vc = viewC as! ViewController
-        shape.lineWidth = vc.lineWidth
-        if bool == false {
-        shape.strokeColor = UIColor.black.cgColor
-        shape.fillRule = kCAFillRuleEvenOdd
-        shape.path = vc.line.cgPath
-        vc.view.layer.addSublayer(shape)
+        if GestureField.bool == false {
+            
+            shape.lineWidth = vc.lineWidth
+            shape.strokeColor = UIColor.black.cgColor
+            shape.fillRule = kCAFillRuleEvenOdd
+            shape.path = vc.line.cgPath
+            vc.view.layer.addSublayer(shape)
+            
         }
+        
         return shape
         
     }
     
+    func shapeLayer2(shape:CAShapeLayer,viewC:UIViewController,bool:Bool)->CAShapeLayer{
+        
+        let vc = viewC as! ViewController
+        
+        shape.lineWidth = vc.lineWidth
+        shape.strokeColor = UIColor.white.cgColor
+        shape.fillRule = kCAFillRuleEvenOdd
+        shape.path = vc.line.cgPath
+        vc.view.layer.addSublayer(shape)
+        
+        return shape
+        
+    }
+
     func animationDraw(animation:CABasicAnimation)->CABasicAnimation{
         
         animation.duration = 1.0

@@ -19,7 +19,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -34,6 +34,11 @@
                             <barButtonItem title="clear" id="tWP-28-Ag9">
                                 <connections>
                                     <action selector="removeSegue:" destination="BYZ-38-t0r" id="azQ-Xe-9Eg"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="eraser" id="OsO-QU-jcD" userLabel="move">
+                                <connections>
+                                    <action selector="eraserButton:" destination="BYZ-38-t0r" id="3va-Hd-3dk"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem title="circle" id="cBF-8c-aJ8">
@@ -63,6 +68,8 @@
                             </barButtonItem>
                         </leftBarButtonItems>
                     </navigationItem>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="667" height="375"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

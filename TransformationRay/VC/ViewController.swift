@@ -69,9 +69,15 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate  {
     func longTappled(sender: UILongPressGestureRecognizer) {
         
         line.removeAllPoints()
-        view.setNeedsLayout()
         
     }
+    
+    @IBAction func eraserButton(_ sender: UIBarButtonItem) {
+        
+        Animation().shapeLayer2(shape: Animation().lineLayer,viewC: self,bool:GestureField.bool).add(Animation().animation, forKey: nil)
+        
+    }
+    
     
     @IBAction func actionBool(_ sender: UIBarButtonItem){
         
