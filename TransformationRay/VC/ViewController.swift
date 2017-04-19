@@ -13,6 +13,7 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate  {
     var tapGesture = UITapGestureRecognizer()
     var swipePinchGesture = UIPinchGestureRecognizer()
     var swipePanGesture = UIPanGestureRecognizer()
+    var tapLong = UILongPressGestureRecognizer()
     var pointted = CGPoint()
     var line = UIBezierPath()
     var views = UIView()
@@ -34,6 +35,9 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate  {
         
         swipePanGesture = UIPanGestureRecognizer(target: self, action:#selector(panLabel(sender:)))
         self.view.addGestureRecognizer(swipePanGesture)
+        
+        tapLong = UILongPressGestureRecognizer(target: self, action:#selector(longTappled(sender:)))
+        self.view.addGestureRecognizer(tapLong)
         
     }
     
@@ -59,6 +63,13 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate  {
     func panLabel(sender: UIPanGestureRecognizer) {
         
         GestureField.panLabel(sender: sender, view: self.view)
+        
+    }
+    
+    func longTappled(sender: UILongPressGestureRecognizer) {
+        
+        line.removeAllPoints()
+        view.setNeedsLayout()
         
     }
     
