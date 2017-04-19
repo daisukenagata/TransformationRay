@@ -75,7 +75,15 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate  {
     
     @IBAction func actionBool(_ sender: UIBarButtonItem){
         
+        if GestureField.bool == false {
+            
         GestureField.bool = true
+            
+        } else if GestureField.bool == true {
+            
+        GestureField.bool = false
+            
+        }
         
     }
 
@@ -99,10 +107,7 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate  {
     @IBAction func removeSegue(_ sender: UIBarButtonItem) {
         
         GestureField.bool = false
-        self.loadView()
-        self.viewDidLoad()
-        line.removeAllPoints()
-        view.setNeedsLayout()
+        LineField.lineField(line: line, viewC: self)
 
     }
     
@@ -120,12 +125,8 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate  {
     
     @IBAction func transformImage(_ sender: UIBarButtonItem) {
         
-        let image = ConversionImage().toImage(view: view)
-        vw.frame =  SetView().rectSet()
-        vw.image = image
-        vw.layer.borderColor = UIColor.yellow.cgColor
-        vw.layer.borderWidth = 2
-        view.addSubview(vw)
+        ConversionImage().toImage(viewC: self,uiImage:vw)
+        
     }
 }
 
