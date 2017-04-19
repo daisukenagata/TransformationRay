@@ -12,29 +12,34 @@ class Animation:UIView {
 
     var lineLayer = CAShapeLayer()
     var animation = CABasicAnimation(keyPath: "strokeEnd")
+
     
-    
-    func setShapeLayer(views:ViewController,bool:Bool){
-        _ =  shapeLayer(shape: lineLayer, views: views,bool:bool)
+    func setShapeLayer(viewC:UIViewController,bool:Bool){
+        
+        let vc = viewC as! ViewController
+        _ =  shapeLayer(shape: lineLayer, viewC: viewC,bool:bool)
         _ =  animationDraw(animation: animation)
-        views.view.layer.addSublayer(shapeLayer(shape: lineLayer, views: views,bool:bool))
-        shapeLayer(shape: lineLayer,views: views,bool:bool).add(animation, forKey: nil)
+        vc.view.layer.addSublayer(shapeLayer(shape: lineLayer, viewC: viewC,bool:bool))
+        shapeLayer(shape: lineLayer,viewC: viewC,bool:bool).add(animation, forKey: nil)
+        
     }
     
-    func shapeLayer(shape:CAShapeLayer,views:ViewController,bool:Bool)->CAShapeLayer{
-        shape.lineWidth = views.lineWidth
+    func shapeLayer(shape:CAShapeLayer,viewC:UIViewController,bool:Bool)->CAShapeLayer{
+        
+        let vc = viewC as! ViewController
+        shape.lineWidth = vc.lineWidth
         if bool == false {
         shape.strokeColor = UIColor.black.cgColor
-        }else if bool == true{
-        shape.strokeColor = UIColor.white.cgColor
-        }
         shape.fillRule = kCAFillRuleEvenOdd
-        shape.path = views.line.cgPath
-        views.view.layer.addSublayer(shape)
+        shape.path = vc.line.cgPath
+        vc.view.layer.addSublayer(shape)
+        }
         return shape
+        
     }
     
     func animationDraw(animation:CABasicAnimation)->CABasicAnimation{
+        
         animation.duration = 1.0
         animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
         animation.fromValue = 0.0
@@ -42,6 +47,7 @@ class Animation:UIView {
         animation.fillMode = kCAFillModeForwards
         animation.isRemovedOnCompletion = true
         return animation
+        
     }
 
 }

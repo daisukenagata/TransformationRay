@@ -46,8 +46,11 @@
                                     <action selector="transformImage:" destination="BYZ-38-t0r" id="4PI-5I-enD"/>
                                 </connections>
                             </barButtonItem>
-                        </leftBarButtonItems>
-                        <rightBarButtonItems>
+                            <barButtonItem title="move" id="6VZ-DW-PAF" userLabel="move">
+                                <connections>
+                                    <action selector="actionBool:" destination="BYZ-38-t0r" id="yDP-7R-ZZb"/>
+                                </connections>
+                            </barButtonItem>
                             <barButtonItem title="slender" id="tQo-aJ-tKd" userLabel="slender">
                                 <connections>
                                     <action selector="slender:" destination="BYZ-38-t0r" id="1Da-r1-rsm"/>
@@ -58,7 +61,7 @@
                                     <action selector="boldly:" destination="BYZ-38-t0r" id="Bkr-rm-DSD"/>
                                 </connections>
                             </barButtonItem>
-                        </rightBarButtonItems>
+                        </leftBarButtonItems>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

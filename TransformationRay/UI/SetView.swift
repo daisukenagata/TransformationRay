@@ -20,6 +20,7 @@ class SetView: UIView {
     }
     
     func rectSet()-> CGRect{
+        
     return CGRect(x:0,y:0,width:UIScreen.main.bounds.width/2,height:UIScreen.main.bounds.height)
     }
 }

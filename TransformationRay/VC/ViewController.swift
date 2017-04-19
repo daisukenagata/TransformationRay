@@ -11,7 +11,6 @@ import UIKit
 class ViewController: UIViewController,UIGestureRecognizerDelegate  {
     
     var tapGesture = UITapGestureRecognizer()
-    var swipeLongGesture = UILongPressGestureRecognizer()
     var swipePinchGesture = UIPinchGestureRecognizer()
     var swipePanGesture = UIPanGestureRecognizer()
     var pointted = CGPoint()
@@ -20,7 +19,6 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate  {
     var vw = SetView().vw
     var lineWidth : CGFloat = 1
     var count : [CGPoint] = []
-    var bool = false
     var aTouch = Set<UITouch>()
     var event = UIEvent()
     
@@ -31,89 +29,82 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate  {
         tapGesture.delegate = self
         self.view.addGestureRecognizer(tapGesture)
         
-        swipeLongGesture = UILongPressGestureRecognizer(target: self, action:#selector(handleSwipeLong))
-        self.view.addGestureRecognizer(swipeLongGesture)
-        
-        swipePinchGesture = UIPinchGestureRecognizer(target: self, action:#selector(zoomAction))
+        swipePinchGesture = UIPinchGestureRecognizer(target: self, action:#selector(zoomAction(sender:)))
         self.view.addGestureRecognizer(swipePinchGesture)
         
-        swipePanGesture = UIPanGestureRecognizer(target: self, action:#selector(panLabel))
+        swipePanGesture = UIPanGestureRecognizer(target: self, action:#selector(panLabel(sender:)))
         self.view.addGestureRecognizer(swipePanGesture)
         
     }
     
     func singleTap(){
-        for i in 0..<tapGesture.numberOfTouches {
-            pointted = tapGesture.location(ofTouch: i, in: self.view)
-            
-            if pointted.y != 0.0 {
-                self.line.addLine(to:CGPoint(x: pointted.x , y: pointted.y))
-            }
-            self.line.move(to: CGPoint(x: pointted.x , y: pointted.y))
-            count.append(pointted)
-            self.view.addSubview(labelSet(label: views))
-            
-            if bool == true {
-                TouchField.touchesBegan(aTouch, with: event, vw: vw)
-                TouchField.touchesMoved(aTouch, with: event, vw: vw,pointted:pointted)
-            }
-        }
+        
+        GestureField.singleTap(viewC: self)
+        
     }
     
-    func labelSet(label:UIView)->UIView{
-        label.alpha = 1
-        Animation().setShapeLayer(views:self,bool:bool)
-        return label
-    }
-    
-    func handleSwipeLong(sender: UILongPressGestureRecognizer){
-        bool = true
-        line.removeAllPoints()
-        view.setNeedsLayout()
+    func labelSet(view:UIView)->UIView{
+        
+        GestureField.labelSet(viewC: self)
+        
+        return view
     }
     
     func zoomAction(sender: UIPinchGestureRecognizer) {
         
-        view.transform = CGAffineTransform(scaleX: sender.scale, y: sender.scale)
+        GestureField.zoomAction(sender: sender, view: self.view)
         
     }
     
     func panLabel(sender: UIPanGestureRecognizer) {
-        if bool == true{
-            let move:CGPoint = sender.translation(in: view)
-            
-            sender.view!.center.x += move.x
-            sender.view!.center.y += move.y
-            sender.setTranslation(CGPoint.zero, in:view)
-        }
+        
+        GestureField.panLabel(sender: sender, view: self.view)
+        
     }
     
+    @IBAction func actionBool(_ sender: UIBarButtonItem){
+        
+        GestureField.bool = true
+        
+    }
+
     @IBAction func actionButton(_ sender: UIBarButtonItem) {
+        
         if count.count > 2{
             self.line.move(to: CGPoint(x: count[count.endIndex-2].x , y:  count[count.endIndex-2].y))
             self.line.addLine(to:CGPoint(x: count[count.endIndex-1].x , y:count[count.endIndex-1].y))
-            self.view.addSubview(labelSet(label: views))
+            self.view.addSubview(labelSet(view: views))
         }
+        
     }
     
     @IBAction func cirle(_ sender: UIBarButtonItem) {
+        
         self.line = UIBezierPath(roundedRect: line.bounds, cornerRadius: line.bounds.width / 2)
-        self.view.addSubview(labelSet(label: views))
+        self.view.addSubview(labelSet(view: views))
+        
     }
     
     @IBAction func removeSegue(_ sender: UIBarButtonItem) {
-        bool = false
+        
+        GestureField.bool = false
         self.loadView()
         self.viewDidLoad()
+        line.removeAllPoints()
+        view.setNeedsLayout()
+
     }
     
     @IBAction func boldly(_ sender: UIBarButtonItem) {
+        
         lineWidth += 1
         
     }
     
     @IBAction func slender(_ sender: UIBarButtonItem) {
+        
         lineWidth -= 1
+        
     }
     
     @IBAction func transformImage(_ sender: UIBarButtonItem) {

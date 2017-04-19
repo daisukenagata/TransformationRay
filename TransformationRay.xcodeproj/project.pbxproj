@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BB0021961EA260700066B821 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB0021951EA260700066B821 /* Animation.swift */; };
-		BB5110D91EA434CA0025AB84 /* ConversionImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5110D81EA434CA0025AB84 /* ConversionImage.swift */; };
-		BB5110DB1EA437200025AB84 /* SetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5110DA1EA437200025AB84 /* SetView.swift */; };
+		BB279D371EA7B61D0095555A /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB279D341EA7B61D0095555A /* Animation.swift */; };
+		BB279D381EA7B61D0095555A /* GestureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB279D351EA7B61D0095555A /* GestureField.swift */; };
+		BB279D391EA7B61D0095555A /* TouchField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB279D361EA7B61D0095555A /* TouchField.swift */; };
+		BB279D3D1EA7B6270095555A /* ConversionImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB279D3B1EA7B6270095555A /* ConversionImage.swift */; };
+		BB279D3E1EA7B6270095555A /* SetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB279D3C1EA7B6270095555A /* SetView.swift */; };
+		BB279D411EA7B62C0095555A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB279D401EA7B62C0095555A /* ViewController.swift */; };
 		BB5FF01C1EA1A92B001FF0F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5FF01B1EA1A92B001FF0F4 /* AppDelegate.swift */; };
-		BB5FF01E1EA1A92B001FF0F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5FF01D1EA1A92B001FF0F4 /* ViewController.swift */; };
 		BB5FF0211EA1A92B001FF0F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB5FF01F1EA1A92B001FF0F4 /* Main.storyboard */; };
 		BB5FF0231EA1A92B001FF0F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB5FF0221EA1A92B001FF0F4 /* Assets.xcassets */; };
 		BB5FF0261EA1A92B001FF0F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB5FF0241EA1A92B001FF0F4 /* LaunchScreen.storyboard */; };
@@ -37,12 +39,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BB0021951EA260700066B821 /* Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
-		BB5110D81EA434CA0025AB84 /* ConversionImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversionImage.swift; sourceTree = "<group>"; };
-		BB5110DA1EA437200025AB84 /* SetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetView.swift; sourceTree = "<group>"; };
+		BB279D341EA7B61D0095555A /* Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
+		BB279D351EA7B61D0095555A /* GestureField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureField.swift; sourceTree = "<group>"; };
+		BB279D361EA7B61D0095555A /* TouchField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchField.swift; sourceTree = "<group>"; };
+		BB279D3B1EA7B6270095555A /* ConversionImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversionImage.swift; sourceTree = "<group>"; };
+		BB279D3C1EA7B6270095555A /* SetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetView.swift; sourceTree = "<group>"; };
+		BB279D401EA7B62C0095555A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BB5FF0181EA1A92B001FF0F4 /* TransformationRay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransformationRay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB5FF01B1EA1A92B001FF0F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BB5FF01D1EA1A92B001FF0F4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BB5FF0201EA1A92B001FF0F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BB5FF0221EA1A92B001FF0F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB5FF0251EA1A92B001FF0F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -80,6 +84,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BB279D331EA7B61D0095555A /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				BB279D341EA7B61D0095555A /* Animation.swift */,
+				BB279D351EA7B61D0095555A /* GestureField.swift */,
+				BB279D361EA7B61D0095555A /* TouchField.swift */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
+		BB279D3A1EA7B6270095555A /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				BB279D3B1EA7B6270095555A /* ConversionImage.swift */,
+				BB279D3C1EA7B6270095555A /* SetView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		BB279D3F1EA7B62C0095555A /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				BB279D401EA7B62C0095555A /* ViewController.swift */,
+			);
+			name = VC;
+			path = TransformationRay/VC;
+			sourceTree = SOURCE_ROOT;
+		};
 		BB5FF00F1EA1A92B001FF0F4 = {
 			isa = PBXGroup;
 			children = (
@@ -104,14 +136,13 @@
 			isa = PBXGroup;
 			children = (
 				BB5FF01B1EA1A92B001FF0F4 /* AppDelegate.swift */,
-				BB5FF01D1EA1A92B001FF0F4 /* ViewController.swift */,
-				BB0021951EA260700066B821 /* Animation.swift */,
-				BB5110D81EA434CA0025AB84 /* ConversionImage.swift */,
-				BB5110DA1EA437200025AB84 /* SetView.swift */,
 				BB5FF01F1EA1A92B001FF0F4 /* Main.storyboard */,
 				BB5FF0221EA1A92B001FF0F4 /* Assets.xcassets */,
 				BB5FF0241EA1A92B001FF0F4 /* LaunchScreen.storyboard */,
 				BB5FF0271EA1A92B001FF0F4 /* Info.plist */,
+				BB279D331EA7B61D0095555A /* Animation */,
+				BB279D3A1EA7B6270095555A /* UI */,
+				BB279D3F1EA7B62C0095555A /* VC */,
 			);
 			path = TransformationRay;
 			sourceTree = "<group>";
@@ -271,11 +302,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB5FF01E1EA1A92B001FF0F4 /* ViewController.swift in Sources */,
-				BB5110D91EA434CA0025AB84 /* ConversionImage.swift in Sources */,
-				BB0021961EA260700066B821 /* Animation.swift in Sources */,
-				BB5110DB1EA437200025AB84 /* SetView.swift in Sources */,
+				BB279D371EA7B61D0095555A /* Animation.swift in Sources */,
+				BB279D3E1EA7B6270095555A /* SetView.swift in Sources */,
 				BB5FF01C1EA1A92B001FF0F4 /* AppDelegate.swift in Sources */,
+				BB279D3D1EA7B6270095555A /* ConversionImage.swift in Sources */,
+				BB279D411EA7B62C0095555A /* ViewController.swift in Sources */,
+				BB279D391EA7B61D0095555A /* TouchField.swift in Sources */,
+				BB279D381EA7B61D0095555A /* GestureField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
