@@ -12,12 +12,11 @@ class ConversionImage {
     
     func toImage(viewC:UIViewController,uiImage:UIImageView) {
         
-        let vc = viewC as! ViewController
         
-        UIGraphicsBeginImageContextWithOptions(vc.view.frame.size, false, 0.0)
+        UIGraphicsBeginImageContextWithOptions(viewC.view.frame.size, false, 0.0)
         let context = UIGraphicsGetCurrentContext()
         context?.translateBy(x: 0.0, y: 0.0)
-        vc.view.layer.render(in: context!)
+        viewC.view.layer.render(in: context!)
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
@@ -25,7 +24,7 @@ class ConversionImage {
         uiImage.image = image
         uiImage.layer.borderColor = UIColor.yellow.cgColor
         uiImage.layer.borderWidth = 2
-        vc.view.addSubview(uiImage)
+        viewC.view.addSubview(uiImage)
 
     }
 }

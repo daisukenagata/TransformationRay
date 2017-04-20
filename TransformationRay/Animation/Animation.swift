@@ -16,24 +16,22 @@ class Animation{
     
     func setShapeLayer(viewC:UIViewController,bool:Bool){
         
-        let vc = viewC as! ViewController
         _ =  shapeLayer(shape: lineLayer, viewC: viewC,bool:bool)
         _ =  animationDraw(animation: animation)
-        vc.view.layer.addSublayer(shapeLayer(shape: lineLayer, viewC: viewC,bool:bool))
+        viewC.view.layer.addSublayer(shapeLayer(shape: lineLayer, viewC: viewC,bool:bool))
         shapeLayer(shape: lineLayer,viewC: viewC,bool:bool).add(animation, forKey: nil)
         
     }
     
     func shapeLayer(shape:CAShapeLayer,viewC:UIViewController,bool:Bool)->CAShapeLayer{
         
-        let vc = viewC as! ViewController
         if GestureField.bool == false {
             
             shape.lineWidth = CommonStructure.lineWidth
             shape.strokeColor = UIColor.black.cgColor
             shape.fillRule = kCAFillRuleEvenOdd
             shape.path = CommonStructure.line.cgPath
-            vc.view.layer.addSublayer(shape)
+            viewC.view.layer.addSublayer(shape)
             
         }
         
@@ -43,13 +41,11 @@ class Animation{
     
     func shapeLayer2(shape:CAShapeLayer,viewC:UIViewController,bool:Bool)->CAShapeLayer{
         
-        let vc = viewC as! ViewController
-        
         shape.lineWidth = CommonStructure.lineWidth
         shape.strokeColor = UIColor.white.cgColor
         shape.fillRule = kCAFillRuleEvenOdd
         shape.path = CommonStructure.line.cgPath
-        vc.view.layer.addSublayer(shape)
+        viewC.view.layer.addSublayer(shape)
         
         return shape
         

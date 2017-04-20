@@ -15,7 +15,6 @@ struct GestureField {
     
     static func singleTap(viewC:UIViewController){
         
-        let vc = viewC as! ViewController
         
         for i in 0..<CommonStructure.tapGesture.numberOfTouches {
             
@@ -27,7 +26,7 @@ struct GestureField {
             
             CommonStructure.line.move(to: CGPoint(x:CommonStructure.pointted.x , y:CommonStructure.pointted.y))
             CommonStructure.count.append(CommonStructure.pointted)
-            GestureField.labelSet(viewC: vc)
+            GestureField.labelSet(viewC: viewC)
             
             if  GestureField.bool == true {
                 TouchField.touchesMoved(CommonStructure.aTouch, with:CommonStructure.event, vw:CommonStructure.vw,pointted:CommonStructure.pointted)
@@ -37,9 +36,8 @@ struct GestureField {
     
     static func labelSet(viewC:UIViewController){
         
-        let vc = viewC as! ViewController
-        vc.view.alpha = 1
-        Animation().setShapeLayer(viewC:vc,bool:GestureField.bool)
+        viewC.view.alpha = 1
+        Animation().setShapeLayer(viewC:viewC,bool:GestureField.bool)
         
     }
     

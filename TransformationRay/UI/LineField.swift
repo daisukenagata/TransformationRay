@@ -12,12 +12,10 @@ struct LineField {
     
     static func lineField(line:UIBezierPath,viewC:UIViewController){
         
-        let vc = viewC as! ViewController
-        
-        vc.loadView()
-        vc.viewDidLoad()
+        viewC.loadView()
+        viewC.viewDidLoad()
         line.removeAllPoints()
-        vc.view.setNeedsLayout()
+        viewC.view.setNeedsLayout()
         
     }
 }
