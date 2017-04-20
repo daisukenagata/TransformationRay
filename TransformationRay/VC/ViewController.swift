@@ -10,34 +10,22 @@ import UIKit
 
 class ViewController: UIViewController,UIGestureRecognizerDelegate  {
     
-    var tapGesture = UITapGestureRecognizer()
-    var swipePinchGesture = UIPinchGestureRecognizer()
-    var swipePanGesture = UIPanGestureRecognizer()
-    var tapLong = UILongPressGestureRecognizer()
-    var pointted = CGPoint()
-    var line = UIBezierPath()
-    var views = UIView()
-    var vw = SetView().vw
-    var lineWidth : CGFloat = 1
-    var count : [CGPoint] = []
-    var aTouch = Set<UITouch>()
-    var event = UIEvent()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tapGesture = UITapGestureRecognizer(target: self, action: #selector(singleTap))
-        tapGesture.delegate = self
-        self.view.addGestureRecognizer(tapGesture)
+       CommonStructure.tapGesture = UITapGestureRecognizer(target: self, action: #selector(singleTap))
+         CommonStructure.tapGesture.delegate = self
+        self.view.addGestureRecognizer( CommonStructure.tapGesture)
         
-        swipePinchGesture = UIPinchGestureRecognizer(target: self, action:#selector(zoomAction(sender:)))
-        self.view.addGestureRecognizer(swipePinchGesture)
+         CommonStructure.swipePinchGesture = UIPinchGestureRecognizer(target: self, action:#selector(zoomAction(sender:)))
+        self.view.addGestureRecognizer( CommonStructure.swipePinchGesture)
         
-        swipePanGesture = UIPanGestureRecognizer(target: self, action:#selector(panLabel(sender:)))
-        self.view.addGestureRecognizer(swipePanGesture)
+         CommonStructure.swipePanGesture = UIPanGestureRecognizer(target: self, action:#selector(panLabel(sender:)))
+        self.view.addGestureRecognizer( CommonStructure.swipePanGesture)
         
-        tapLong = UILongPressGestureRecognizer(target: self, action:#selector(longTappled(sender:)))
-        self.view.addGestureRecognizer(tapLong)
+         CommonStructure.tapLong = UILongPressGestureRecognizer(target: self, action:#selector(longTappled(sender:)))
+        self.view.addGestureRecognizer( CommonStructure.tapLong)
         
     }
     
@@ -68,7 +56,7 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate  {
     
     func longTappled(sender: UILongPressGestureRecognizer) {
         
-        line.removeAllPoints()
+         CommonStructure.line.removeAllPoints()
         
     }
     
@@ -95,43 +83,43 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate  {
 
     @IBAction func actionButton(_ sender: UIBarButtonItem) {
         
-        if count.count > 2{
-            self.line.move(to: CGPoint(x: count[count.endIndex-2].x , y:  count[count.endIndex-2].y))
-            self.line.addLine(to:CGPoint(x: count[count.endIndex-1].x , y:count[count.endIndex-1].y))
-            self.view.addSubview(labelSet(view: views))
+        if  CommonStructure.count.count > 2{
+             CommonStructure.line.move(to: CGPoint(x:  CommonStructure.count[ CommonStructure.count.endIndex-2].x,y:CommonStructure.count[ CommonStructure.count.endIndex-2].y))
+             CommonStructure.line.addLine(to:CGPoint(x:  CommonStructure.count[CommonStructure.count.endIndex-1].x , y: CommonStructure.count[ CommonStructure.count.endIndex-1].y))
+             self.view.addSubview(labelSet(view:  CommonStructure.views))
         }
         
     }
     
     @IBAction func cirle(_ sender: UIBarButtonItem) {
         
-        self.line = UIBezierPath(roundedRect: line.bounds, cornerRadius: line.bounds.width / 2)
-        self.view.addSubview(labelSet(view: views))
+         CommonStructure.line = UIBezierPath(roundedRect:CommonStructure.line.bounds, cornerRadius:CommonStructure.line.bounds.width / 2)
+        self.view.addSubview(labelSet(view: CommonStructure.views))
         
     }
     
     @IBAction func removeSegue(_ sender: UIBarButtonItem) {
         
         GestureField.bool = false
-        LineField.lineField(line: line, viewC: self)
+        LineField.lineField(line:CommonStructure.line, viewC: self)
 
     }
     
     @IBAction func boldly(_ sender: UIBarButtonItem) {
         
-        lineWidth += 1
+         CommonStructure.lineWidth += 1
         
     }
     
     @IBAction func slender(_ sender: UIBarButtonItem) {
         
-        lineWidth -= 1
+         CommonStructure.lineWidth -= 1
         
     }
     
     @IBAction func transformImage(_ sender: UIBarButtonItem) {
         
-        ConversionImage().toImage(viewC: self,uiImage:vw)
+        ConversionImage().toImage(viewC: self,uiImage:CommonStructure.vw)
         
     }
 }

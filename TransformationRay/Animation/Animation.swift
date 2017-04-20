@@ -29,10 +29,10 @@ class Animation{
         let vc = viewC as! ViewController
         if GestureField.bool == false {
             
-            shape.lineWidth = vc.lineWidth
+            shape.lineWidth = CommonStructure.lineWidth
             shape.strokeColor = UIColor.black.cgColor
             shape.fillRule = kCAFillRuleEvenOdd
-            shape.path = vc.line.cgPath
+            shape.path = CommonStructure.line.cgPath
             vc.view.layer.addSublayer(shape)
             
         }
@@ -45,10 +45,10 @@ class Animation{
         
         let vc = viewC as! ViewController
         
-        shape.lineWidth = vc.lineWidth
+        shape.lineWidth = CommonStructure.lineWidth
         shape.strokeColor = UIColor.white.cgColor
         shape.fillRule = kCAFillRuleEvenOdd
-        shape.path = vc.line.cgPath
+        shape.path = CommonStructure.line.cgPath
         vc.view.layer.addSublayer(shape)
         
         return shape

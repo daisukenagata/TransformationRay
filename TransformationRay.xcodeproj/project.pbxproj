@@ -14,6 +14,7 @@
 		BB279D3E1EA7B6270095555A /* SetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB279D3C1EA7B6270095555A /* SetView.swift */; };
 		BB279D411EA7B62C0095555A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB279D401EA7B62C0095555A /* ViewController.swift */; };
 		BB279D431EA7EA180095555A /* LineField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB279D421EA7EA180095555A /* LineField.swift */; };
+		BB279D451EA8EED40095555A /* CommonStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB279D441EA8EED40095555A /* CommonStructure.swift */; };
 		BB5FF01C1EA1A92B001FF0F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5FF01B1EA1A92B001FF0F4 /* AppDelegate.swift */; };
 		BB5FF0211EA1A92B001FF0F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB5FF01F1EA1A92B001FF0F4 /* Main.storyboard */; };
 		BB5FF0231EA1A92B001FF0F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB5FF0221EA1A92B001FF0F4 /* Assets.xcassets */; };
@@ -47,6 +48,7 @@
 		BB279D3C1EA7B6270095555A /* SetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetView.swift; sourceTree = "<group>"; };
 		BB279D401EA7B62C0095555A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BB279D421EA7EA180095555A /* LineField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineField.swift; sourceTree = "<group>"; };
+		BB279D441EA8EED40095555A /* CommonStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonStructure.swift; sourceTree = "<group>"; };
 		BB5FF0181EA1A92B001FF0F4 /* TransformationRay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransformationRay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB5FF01B1EA1A92B001FF0F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB5FF0201EA1A92B001FF0F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				BB279D3B1EA7B6270095555A /* ConversionImage.swift */,
+				BB279D441EA8EED40095555A /* CommonStructure.swift */,
 				BB279D3C1EA7B6270095555A /* SetView.swift */,
 				BB279D421EA7EA180095555A /* LineField.swift */,
 			);
@@ -306,6 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB279D371EA7B61D0095555A /* Animation.swift in Sources */,
+				BB279D451EA8EED40095555A /* CommonStructure.swift in Sources */,
 				BB279D3E1EA7B6270095555A /* SetView.swift in Sources */,
 				BB5FF01C1EA1A92B001FF0F4 /* AppDelegate.swift in Sources */,
 				BB279D3D1EA7B6270095555A /* ConversionImage.swift in Sources */,

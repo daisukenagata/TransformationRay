@@ -17,20 +17,20 @@ struct GestureField {
         
         let vc = viewC as! ViewController
         
-        for i in 0..<vc.tapGesture.numberOfTouches {
+        for i in 0..<CommonStructure.tapGesture.numberOfTouches {
             
-            vc.pointted = vc.tapGesture.location(ofTouch: i, in:viewC.view)
+            CommonStructure.pointted = CommonStructure.tapGesture.location(ofTouch: i, in:viewC.view)
             
-            if vc.pointted.y != 0.0 {
-                vc.line.addLine(to:CGPoint(x: vc.pointted.x , y: vc.pointted.y))
+            if CommonStructure.pointted.y != 0.0 {
+                CommonStructure.line.addLine(to:CGPoint(x:CommonStructure.pointted.x , y:CommonStructure.pointted.y))
             }
             
-            vc.line.move(to: CGPoint(x: vc.pointted.x , y: vc.pointted.y))
-            vc.count.append(vc.pointted)
+            CommonStructure.line.move(to: CGPoint(x:CommonStructure.pointted.x , y:CommonStructure.pointted.y))
+            CommonStructure.count.append(CommonStructure.pointted)
             GestureField.labelSet(viewC: vc)
             
             if  GestureField.bool == true {
-                TouchField.touchesMoved(vc.aTouch, with: vc.event, vw: vc.vw,pointted:vc.pointted)
+                TouchField.touchesMoved(CommonStructure.aTouch, with:CommonStructure.event, vw:CommonStructure.vw,pointted:CommonStructure.pointted)
             }
         }
     }
