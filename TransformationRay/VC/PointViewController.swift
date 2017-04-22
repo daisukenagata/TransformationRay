@@ -87,28 +87,34 @@ class PointViewController: UIViewController,UIGestureRecognizerDelegate {
             }
         }
     }
+    
+    @IBAction func Alert(_ sender: UIBarButtonItem) {
+        
+     
+       print(AlertView().Alert(view: self),"11111")
+    }
+    
      
     func singleTap1(){
         GestureField.singleTap2(view:sample1,index:sample1.tag)
        
-        anglePoint.title = GestureField.angle(a: CommonStructure.Point(x: 0, y: 0), b: CommonStructure.Point(x: Double(CommonStructure.pointted.x), y: Double(CommonStructure.pointted.y))).description
+        anglePoint.title = GestureField.angle(a: CommonStructure.Point(x: 0, y: 0), b: CommonStructure.Point(x: (CommonStructure.pointted.x), y: (CommonStructure.pointted.y))).description
     }
     func singleTap2(){
         GestureField.singleTap2(view:sample1,index:sample2.tag)
         
-        anglePoint.title = GestureField.angle(a: CommonStructure.Point(x: 0, y: 0), b: CommonStructure.Point(x: Double(CommonStructure.pointted.x), y: Double(CommonStructure.pointted.y))).description
-
+        anglePoint.title = GestureField.angle(a: CommonStructure.Point(x: 0, y: 0), b: CommonStructure.Point(x: (CommonStructure.pointted.x), y: (CommonStructure.pointted.y))).description
     }
     func singleTap3(){
         GestureField.singleTap2(view:sample1,index:sample3.tag)
         
-        anglePoint.title = GestureField.angle(a: CommonStructure.Point(x: 0, y: 0), b: CommonStructure.Point(x: Double(CommonStructure.pointted.x), y: Double(CommonStructure.pointted.y))).description
-
+        anglePoint.title = GestureField.angle(a: CommonStructure.Point(x: 0, y: 0), b: CommonStructure.Point(x: (CommonStructure.pointted.x), y: (CommonStructure.pointted.y))).description
     }
     func singleTap4(){
         GestureField.singleTap2(view:sample1,index:sample4.tag)
         
-        anglePoint.title = GestureField.angle(a: CommonStructure.Point(x: 0, y: 0), b: CommonStructure.Point(x: Double(CommonStructure.pointted.x), y: Double(CommonStructure.pointted.y))).description
+        anglePoint.title = GestureField.angle(a: CommonStructure.Point(x: 0, y: 0), b: CommonStructure.Point(x: (CommonStructure.pointted.x), y: (CommonStructure.pointted.y))).description
+
     }
     
 }

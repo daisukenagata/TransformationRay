@@ -30,8 +30,8 @@ struct CommonStructure {
     
     struct Point {
         
-        var x:Double = 0
-        var y:Double = 0
+        var x:CGFloat = 0
+        var y:CGFloat = 0
     }
     
     struct Pointted {
@@ -39,6 +39,7 @@ struct CommonStructure {
         var x = CommonStructure.pointted.x
         var y = CommonStructure.pointted.y
     }
+
 
 }
 

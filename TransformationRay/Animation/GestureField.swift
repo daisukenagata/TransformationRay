@@ -45,16 +45,15 @@ struct GestureField {
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                 
-                CommonStructure.angle = CGFloat(GestureField.angle(a: CommonStructure.Point(x: 0, y: 0), b: CommonStructure.Point(x: Double(CommonStructure.pointted.x), y: Double(CommonStructure.pointted.y)))) / 57.295779513115938
-            
-                
-                if angleLength(p1: CommonStructure.Pointted(x:0,y:0), CommonStructure.Pointted(x:CommonStructure.pointted.x,y:CommonStructure.pointted.y)) > 0 {
+                CommonStructure.angle = CGFloat(GestureField.angle(a: CommonStructure.Point(x: 0, y: 0), b: CommonStructure.Point(x: CommonStructure.pointted.x, y: CommonStructure.pointted.y))) / 57.165779513115938
+         
+                if angleLength(p1: CommonStructure.Point(x:0,y:0), CommonStructure.Pointted(x:CommonStructure.pointted.x,y:CommonStructure.pointted.y)) > 0 {
                     
-                    CommonStructure.line2 = UIBezierPath(arcCenter: CGPoint(x:0, y:0), radius: angleLength(p1: CommonStructure.Pointted(x:0,y:0), CommonStructure.Pointted(x:CommonStructure.pointted.x,y:CommonStructure.pointted.y)) , startAngle: 0, endAngle:CommonStructure.angle, clockwise: true)
+                    CommonStructure.line2 = UIBezierPath(arcCenter: CGPoint(x:0, y:0), radius: angleLength(p1: CommonStructure.Point(x:0,y:0), CommonStructure.Pointted(x:CommonStructure.pointted.x,y:CommonStructure.pointted.y)) , startAngle: 0, endAngle:CommonStructure.angle, clockwise: true)
                     
                 }else{
                     
-                    CommonStructure.line2 = UIBezierPath(arcCenter: CGPoint(x:0, y:0), radius: -angleLength(p1: CommonStructure.Pointted(x:0,y:0), CommonStructure.Pointted(x:CommonStructure.pointted.x,y:CommonStructure.pointted.y)), startAngle: 0, endAngle:CommonStructure.angle, clockwise: true)
+                    CommonStructure.line2 = UIBezierPath(arcCenter: CGPoint(x:0, y:0), radius: -angleLength(p1: CommonStructure.Point(x:0,y:0), CommonStructure.Pointted(x:CommonStructure.pointted.x,y:CommonStructure.pointted.y)), startAngle: 0, endAngle:CommonStructure.angle, clockwise: true)
                     
                 }
                 
@@ -93,12 +92,12 @@ struct GestureField {
     static func angle(a:CommonStructure.Point, b:CommonStructure.Point) -> Double {
         var r = atan2(b.y - a.y, b.x - a.x)
         if r < 0 {
-            r = r + 2 * Double.pi
+            r = r + CGFloat(2 * Double.pi)
         }
-        return floor(r * 360 / (2 * Double.pi))
+        return floor(Double(r * 360 / CGFloat(2 * Double.pi)))
     }
     
-    static  func angleLength( p1: CommonStructure.Pointted, _ p2: CommonStructure.Pointted) -> CGFloat {
+    static  func angleLength( p1: CommonStructure.Point, _ p2: CommonStructure.Pointted) -> CGFloat {
         
         return sqrt(pow(p1.x - p2.x, 2) + pow(p1.y - p2.y, 2))
 

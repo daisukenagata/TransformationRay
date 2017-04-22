@@ -131,7 +131,14 @@
                     </view>
                     <navigationItem key="navigationItem" id="b4n-dc-Pcl">
                         <nil key="title"/>
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="pJv-Gd-wFn"/>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Angle Point" id="pJv-Gd-wFn"/>
+                            <barButtonItem title="Alert" id="3Fu-nO-16p" userLabel="Allert">
+                                <connections>
+                                    <action selector="Alert:" destination="QP3-8t-RMs" id="MlC-Zn-vuG"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="667" height="375"/>
