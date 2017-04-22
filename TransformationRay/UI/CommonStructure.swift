@@ -40,7 +40,6 @@ struct CommonStructure {
         var y = CommonStructure.pointted.y
     }
 
-
 }
 
 class TapGesture{

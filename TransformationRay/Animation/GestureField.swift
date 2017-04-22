@@ -47,11 +47,12 @@ struct GestureField {
                 
                 if angleLength(p1: CommonStructure.Pointted(x:CommonStructure.pointted.x,y:0), CommonStructure.Pointted(x:0,y:CommonStructure.pointted.y)) > 0 {
                     
-                    CommonStructure.line2 = UIBezierPath(arcCenter: CGPoint(x:0, y:0), radius: angleLength(p1: CommonStructure.Pointted(x:CommonStructure.pointted.x,y:0), CommonStructure.Pointted(x:0,y:CommonStructure.pointted.y)) , startAngle: 0, endAngle:CommonStructure.angle, clockwise: true)
+                    CommonStructure.line2 = UIBezierPath(arcCenter: CGPoint(x:0, y:0), radius: angleLength(p1: CommonStructure.Pointted(x:0,y:0), CommonStructure.Pointted(x:CommonStructure.pointted.x,y:CommonStructure.pointted.y)) , startAngle: 0, endAngle:CommonStructure.angle, clockwise: true)
+                    
                     
                 }else{
                     
-                    CommonStructure.line2 = UIBezierPath(arcCenter: CGPoint(x:0, y:0), radius: -angleLength(p1: CommonStructure.Pointted(x:CommonStructure.pointted.x,y:0), CommonStructure.Pointted(x:0,y:CommonStructure.pointted.y)), startAngle: 0, endAngle:CommonStructure.angle, clockwise: true)
+                    CommonStructure.line2 = UIBezierPath(arcCenter: CGPoint(x:0, y:0), radius: -angleLength(p1: CommonStructure.Pointted(x:0,y:0), CommonStructure.Pointted(x:CommonStructure.pointted.x,y:CommonStructure.pointted.y)), startAngle: 0, endAngle:CommonStructure.angle, clockwise: true)
                     
                 }
                 
@@ -99,11 +100,8 @@ struct GestureField {
     
     static  func angleLength( p1: CommonStructure.Pointted, _ p2: CommonStructure.Pointted) -> CGFloat {
         
-        let xDistance = (p1.y - p2.y)
-        let yDistance = (p1.x - p2.x)
-        let distance : CGFloat  = CGFloat(sqrtf(Float(xDistance*xDistance + yDistance*yDistance)))
-        
-        return distance
+        return sqrt(pow(p1.x - p2.x, 2) + pow(p1.y - p2.y, 2))
+
     }
     
     static func labelSet(viewC:UIView){
