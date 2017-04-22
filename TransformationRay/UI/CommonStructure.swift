@@ -26,7 +26,7 @@ struct CommonStructure {
     static var aTouch = Set<UITouch>()
     static var event = UIEvent()
     static var vw = SetView().vw
-    
+    static var angle = CGFloat()
     struct Point {
         
         var x:Double = 0

@@ -38,19 +38,22 @@ struct GestureField {
     
     static func singleTap2(view:UIView,index:Int){
         
-        let angle = CGFloat(GestureField.angle(a: CommonStructure.Point(x: 0, y: 0), b: CommonStructure.Point(x: Double(CommonStructure.pointted.x), y: Double(CommonStructure.pointted.y)))) / 57.295779513115938
-
+        
+        
         for i in 0..<TapGesture.tapGesture[index].numberOfTouches {
             
-            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            CommonStructure.angle = CGFloat(GestureField.angle(a: CommonStructure.Point(x: 0, y: 0), b: CommonStructure.Point(x: Double(CommonStructure.pointted.x), y: Double(CommonStructure.pointted.y)))) / 57.295779513115938
+            CommonStructure.line2 = UIBezierPath(arcCenter: CGPoint(x:0, y:0), radius: 50, startAngle: 0, endAngle:CommonStructure.angle, clockwise: true)
+            GestureField.labelSet3(viewC: view)
+                
+            }
+
             CommonStructure.pointted = TapGesture.tapGesture[index].location(ofTouch: i, in:view)
             CommonStructure.line.move(to:CGPoint(x:0 , y:0))
             CommonStructure.line.addLine(to: CGPoint(x:CommonStructure.pointted.x , y:CommonStructure.pointted.y))
             
 
-            CommonStructure.line2 = UIBezierPath(arcCenter: CGPoint(x:0, y:0), radius: 50, startAngle: 0, endAngle:angle, clockwise: true)
-            
-            
             CommonStructure.line2.move(to:CGPoint(x:0 , y:0))
             CommonStructure.line2.addLine(to:CGPoint(x:0 , y:view.bounds.height))
             CommonStructure.line2.addLine(to:CGPoint(x:0 , y:-view.bounds.height))
@@ -59,7 +62,7 @@ struct GestureField {
             CommonStructure.line2.move(to:CGPoint(x:0 , y:0))
             CommonStructure.line2.addLine(to:CGPoint(x:view.bounds.width , y:0))
             CommonStructure.line2.addLine(to:CGPoint(x:-view.bounds.width , y:0))
-            CommonStructure.count.append(CommonStructure.pointted)
+       
             
     
             GestureField.labelSet(viewC: view)
@@ -70,7 +73,6 @@ struct GestureField {
                 TouchField.touchesMoved(CommonStructure.aTouch, with:CommonStructure.event, vw:CommonStructure.vw,pointted:CommonStructure.pointted)
             }
         }
-
     }
 
         

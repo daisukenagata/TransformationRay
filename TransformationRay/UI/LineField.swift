@@ -16,6 +16,5 @@ struct LineField {
         viewC.viewDidLoad()
         line.removeAllPoints()
         viewC.view.setNeedsLayout()
-        
     }
 }
