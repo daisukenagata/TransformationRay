@@ -49,7 +49,7 @@ struct GestureField {
             GestureField.labelSet3(viewC: view)
                 
             CommonStructure.angle = 0.0
-                
+            CommonStructure.line2.removeAllPoints()
             }
 
             CommonStructure.pointted = TapGesture.tapGesture[index].location(ofTouch: i, in:view)
