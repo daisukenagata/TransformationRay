@@ -20,6 +20,7 @@ class Animation{
         _ =  animationDraw(animation: animation)
         viewC.layer.addSublayer(shapeLayer(shape: lineLayer, viewC: viewC,bool:bool))
         shapeLayer(shape: lineLayer,viewC: viewC,bool:bool).add(animation, forKey: nil)
+        
     }
     
     func setShapeLayer3(viewC:UIView,bool:Bool){
@@ -80,6 +81,7 @@ class Animation{
         animation.toValue = 1.0
         animation.fillMode = kCAFillModeForwards
         animation.isRemovedOnCompletion = true
+        
         return animation
         
     }

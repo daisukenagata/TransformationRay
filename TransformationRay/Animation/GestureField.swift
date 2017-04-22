@@ -29,8 +29,11 @@ struct GestureField {
             CommonStructure.count.append(CommonStructure.pointted)
             GestureField.labelSet(viewC: viewC)
             
+            
             if  GestureField.bool == true {
+                
                 TouchField.touchesMoved(CommonStructure.aTouch, with:CommonStructure.event, vw:CommonStructure.vw,pointted:CommonStructure.pointted)
+                
             }
         }
     }
@@ -45,10 +48,9 @@ struct GestureField {
                 CommonStructure.angle = CGFloat(GestureField.angle(a: CommonStructure.Point(x: 0, y: 0), b: CommonStructure.Point(x: Double(CommonStructure.pointted.x), y: Double(CommonStructure.pointted.y)))) / 57.295779513115938
             
                 
-                if angleLength(p1: CommonStructure.Pointted(x:CommonStructure.pointted.x,y:0), CommonStructure.Pointted(x:0,y:CommonStructure.pointted.y)) > 0 {
+                if angleLength(p1: CommonStructure.Pointted(x:0,y:0), CommonStructure.Pointted(x:CommonStructure.pointted.x,y:CommonStructure.pointted.y)) > 0 {
                     
                     CommonStructure.line2 = UIBezierPath(arcCenter: CGPoint(x:0, y:0), radius: angleLength(p1: CommonStructure.Pointted(x:0,y:0), CommonStructure.Pointted(x:CommonStructure.pointted.x,y:CommonStructure.pointted.y)) , startAngle: 0, endAngle:CommonStructure.angle, clockwise: true)
-                    
                     
                 }else{
                     
@@ -78,7 +80,6 @@ struct GestureField {
             CommonStructure.line2.addLine(to:CGPoint(x:-view.bounds.width , y:0))
             
             
-            
             GestureField.labelSet(viewC: view)
             GestureField.labelSet3(viewC: view)
             
@@ -88,7 +89,6 @@ struct GestureField {
             }
         }
     }
-    
     
     static func angle(a:CommonStructure.Point, b:CommonStructure.Point) -> Double {
         var r = atan2(b.y - a.y, b.x - a.x)
@@ -111,7 +111,6 @@ struct GestureField {
         
     }
     
-    
     static func labelSet3(viewC:UIView){
         
         viewC.alpha = 1
@@ -119,15 +118,14 @@ struct GestureField {
         
     }
     
-    
     static func zoomAction(sender: UIPinchGestureRecognizer,view:UIView) {
         
         view.transform = CGAffineTransform(scaleX: sender.scale, y: sender.scale)
         
     }
     
-    
     static func panLabel(sender: UIPanGestureRecognizer,view:UIView) {
+        
         if GestureField.bool == true{
             let move:CGPoint = sender.translation(in: view)
             

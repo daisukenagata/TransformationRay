@@ -12,7 +12,6 @@ class SetView: UIView {
     
     var vw = UIImageView()
     
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.addSubview(vw)
