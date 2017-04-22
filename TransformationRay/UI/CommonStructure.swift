@@ -27,11 +27,19 @@ struct CommonStructure {
     static var event = UIEvent()
     static var vw = SetView().vw
     static var angle = CGFloat()
+    
     struct Point {
         
         var x:Double = 0
         var y:Double = 0
     }
+    
+    struct Pointted {
+        
+        var x = CommonStructure.pointted.x
+        var y = CommonStructure.pointted.y
+    }
+
 
 }
 
