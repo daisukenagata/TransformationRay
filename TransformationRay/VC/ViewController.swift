@@ -31,13 +31,13 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate  {
     
     func singleTap(){
         
-        GestureField.singleTap(viewC: self)
+        GestureField.singleTap(viewC: self.view)
         
     }
     
     func labelSet(view:UIView)->UIView{
         
-        GestureField.labelSet(viewC: self)
+        GestureField.labelSet(viewC: self.view)
         
         return view
     }
@@ -106,7 +106,7 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate  {
     
     @IBAction func eraserButton(_ sender: UIBarButtonItem) {
         
-        Animation().shapeLayer2(shape: Animation().lineLayer,viewC: self,bool:GestureField.bool).add(Animation().animation, forKey: nil)
+        Animation().shapeLayer2(shape: Animation().lineLayer,viewC: self.view,bool:GestureField.bool).add(Animation().animation, forKey: nil)
         
     }
     

@@ -19,6 +19,7 @@ struct CommonStructure {
     static var tapLong = UILongPressGestureRecognizer()
     static var pointted = CGPoint()
     static var line = UIBezierPath()
+    static var line2 = UIBezierPath()
     static var views = UIView()
     static var lineWidth : CGFloat = 1
     static var count : [CGPoint] = []
@@ -26,4 +27,15 @@ struct CommonStructure {
     static var event = UIEvent()
     static var vw = SetView().vw
     
+}
+
+class TapGesture{
+    
+    static var tapGesture1 = UITapGestureRecognizer()
+    static var tapGesture2 = UITapGestureRecognizer()
+    static var tapGesture3 = UITapGestureRecognizer()
+    static var tapGesture4 = UITapGestureRecognizer()
+    
+    static var tapGesture : [UITapGestureRecognizer] = [TapGesture.tapGesture1,TapGesture.tapGesture2,TapGesture.tapGesture3,TapGesture.tapGesture4]
+
 }

@@ -14,16 +14,17 @@ class Animation{
     var animation = CABasicAnimation(keyPath: "strokeEnd")
     
     
-    func setShapeLayer(viewC:UIViewController,bool:Bool){
+    func setShapeLayer(viewC:UIView,bool:Bool){
         
         _ =  shapeLayer(shape: lineLayer, viewC: viewC,bool:bool)
         _ =  animationDraw(animation: animation)
-        viewC.view.layer.addSublayer(shapeLayer(shape: lineLayer, viewC: viewC,bool:bool))
+        //lineLayer.fillColor = UIColor.clear.cgColor
+        viewC.layer.addSublayer(shapeLayer(shape: lineLayer, viewC: viewC,bool:bool))
         shapeLayer(shape: lineLayer,viewC: viewC,bool:bool).add(animation, forKey: nil)
         
     }
     
-    func shapeLayer(shape:CAShapeLayer,viewC:UIViewController,bool:Bool)->CAShapeLayer{
+    func shapeLayer(shape:CAShapeLayer,viewC:UIView,bool:Bool)->CAShapeLayer{
         
         if GestureField.bool == false {
             
@@ -31,7 +32,7 @@ class Animation{
             shape.strokeColor = UIColor.black.cgColor
             shape.fillRule = kCAFillRuleEvenOdd
             shape.path = CommonStructure.line.cgPath
-            viewC.view.layer.addSublayer(shape)
+            viewC.layer.addSublayer(shape)
             
         }
         
@@ -39,13 +40,13 @@ class Animation{
         
     }
     
-    func shapeLayer2(shape:CAShapeLayer,viewC:UIViewController,bool:Bool)->CAShapeLayer{
+    func shapeLayer2(shape:CAShapeLayer,viewC:UIView,bool:Bool)->CAShapeLayer{
         
         shape.lineWidth = CommonStructure.lineWidth
         shape.strokeColor = UIColor.white.cgColor
         shape.fillRule = kCAFillRuleEvenOdd
         shape.path = CommonStructure.line.cgPath
-        viewC.view.layer.addSublayer(shape)
+        viewC.layer.addSublayer(shape)
         
         return shape
         

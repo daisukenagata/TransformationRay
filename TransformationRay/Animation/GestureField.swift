@@ -13,7 +13,7 @@ struct GestureField {
     static var bool = false
     
     
-    static func singleTap2(viewC:UIView){
+    static func singleTap(viewC:UIView){
         
         
         for i in 0..<CommonStructure.tapGesture.numberOfTouches {
@@ -24,74 +24,41 @@ struct GestureField {
                 CommonStructure.line.addLine(to:CGPoint(x:CommonStructure.pointted.x , y:CommonStructure.pointted.y))
             }
             
-            print(CommonStructure.pointted.x,CommonStructure.pointted.y)
-            
             
             CommonStructure.line.move(to: CGPoint(x:CommonStructure.pointted.x , y:CommonStructure.pointted.y))
             CommonStructure.count.append(CommonStructure.pointted)
-          
+            GestureField.labelSet(viewC: viewC)
             
             if  GestureField.bool == true {
                 TouchField.touchesMoved(CommonStructure.aTouch, with:CommonStructure.event, vw:CommonStructure.vw,pointted:CommonStructure.pointted)
             }
         }
-        for i in 0..<CommonStructure.tapGesture2.numberOfTouches {
+    }
+    
+    static func singleTap2(view:UIView,index:Int){
+        
+        
+        for i in 0..<TapGesture.tapGesture[index].numberOfTouches {
             
-            CommonStructure.pointted = CommonStructure.tapGesture2.location(ofTouch: i, in:viewC)
+            CommonStructure.pointted = TapGesture.tapGesture[index].location(ofTouch: i, in:view)
             
-            if CommonStructure.pointted.y != 0.0 {
-                CommonStructure.line.addLine(to:CGPoint(x:CommonStructure.pointted.x , y:CommonStructure.pointted.y))
-            }
+            CommonStructure.line.move(to:CGPoint(x:0 , y:0))
+            CommonStructure.line2.move(to:CGPoint(x:0 , y:0))
+
+            CommonStructure.line2.addLine(to:CGPoint(x:0 , y:view.bounds.height))
+            CommonStructure.line2.addLine(to:CGPoint(x:view.bounds.width , y:0))
             
-            print(CommonStructure.pointted.x,CommonStructure.pointted.y)
             
-            
-            CommonStructure.line.move(to: CGPoint(x:CommonStructure.pointted.x , y:CommonStructure.pointted.y))
+            CommonStructure.line.addLine(to: CGPoint(x:CommonStructure.pointted.x , y:CommonStructure.pointted.y))
             CommonStructure.count.append(CommonStructure.pointted)
-            
+    
+            GestureField.labelSet(viewC: view)
             
             if  GestureField.bool == true {
                 TouchField.touchesMoved(CommonStructure.aTouch, with:CommonStructure.event, vw:CommonStructure.vw,pointted:CommonStructure.pointted)
             }
         }
-        for i in 0..<CommonStructure.tapGesture3.numberOfTouches {
-            
-            CommonStructure.pointted = CommonStructure.tapGesture3.location(ofTouch: i, in:viewC)
-            
-            if CommonStructure.pointted.y != 0.0 {
-                CommonStructure.line.addLine(to:CGPoint(x:CommonStructure.pointted.x , y:CommonStructure.pointted.y))
-            }
-            
-            print(CommonStructure.pointted.x,CommonStructure.pointted.y)
-            
-            
-            CommonStructure.line.move(to: CGPoint(x:CommonStructure.pointted.x , y:CommonStructure.pointted.y))
-            CommonStructure.count.append(CommonStructure.pointted)
-            
-            
-            if  GestureField.bool == true {
-                TouchField.touchesMoved(CommonStructure.aTouch, with:CommonStructure.event, vw:CommonStructure.vw,pointted:CommonStructure.pointted)
-            }
-        }
-        for i in 0..<CommonStructure.tapGesture4.numberOfTouches {
-            
-            CommonStructure.pointted = CommonStructure.tapGesture4.location(ofTouch: i, in:viewC)
-            
-            if CommonStructure.pointted.y != 0.0 {
-                CommonStructure.line.addLine(to:CGPoint(x:CommonStructure.pointted.x , y:CommonStructure.pointted.y))
-            }
-            
-            print(CommonStructure.pointted.x,CommonStructure.pointted.y)
-            
-            
-            CommonStructure.line.move(to: CGPoint(x:CommonStructure.pointted.x , y:CommonStructure.pointted.y))
-            CommonStructure.count.append(CommonStructure.pointted)
-            
-            
-            if  GestureField.bool == true {
-                TouchField.touchesMoved(CommonStructure.aTouch, with:CommonStructure.event, vw:CommonStructure.vw,pointted:CommonStructure.pointted)
-            }
-        }
+        
         struct Point {
             var x:Double = 0
             var y:Double = 0
@@ -107,35 +74,13 @@ struct GestureField {
         
         
         print(angle(a: Point(x: 0, y: 0), b: Point(x: Double(CommonStructure.pointted.x), y: Double(CommonStructure.pointted.y))),"角度")
-       
-    }
-
-    static func singleTap(viewC:UIViewController){
         
-        
-        for i in 0..<CommonStructure.tapGesture.numberOfTouches {
-            
-            CommonStructure.pointted = CommonStructure.tapGesture.location(ofTouch: i, in:viewC.view)
-            
-            if CommonStructure.pointted.y != 0.0 {
-                CommonStructure.line.addLine(to:CGPoint(x:CommonStructure.pointted.x , y:CommonStructure.pointted.y))
-            }
-            
-            print(CommonStructure.pointted.x,CommonStructure.pointted.y)
-            
-            CommonStructure.line.move(to: CGPoint(x:CommonStructure.pointted.x , y:CommonStructure.pointted.y))
-            CommonStructure.count.append(CommonStructure.pointted)
-            GestureField.labelSet(viewC: viewC)
-            
-            if  GestureField.bool == true {
-                TouchField.touchesMoved(CommonStructure.aTouch, with:CommonStructure.event, vw:CommonStructure.vw,pointted:CommonStructure.pointted)
-            }
-        }
     }
     
-    static func labelSet(viewC:UIViewController){
+    
+    static func labelSet(viewC:UIView){
         
-        viewC.view.alpha = 1
+        viewC.alpha = 1
         Animation().setShapeLayer(viewC:viewC,bool:GestureField.bool)
         
     }
