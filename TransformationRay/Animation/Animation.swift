@@ -72,7 +72,6 @@ class Animation{
         
     }
 
-
     func animationDraw(animation:CABasicAnimation)->CABasicAnimation{
         
         animation.duration = 1.0

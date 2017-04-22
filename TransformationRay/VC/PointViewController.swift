@@ -88,6 +88,7 @@ class PointViewController: UIViewController,UIGestureRecognizerDelegate {
         }
     }
     
+    
     func singleTap1(){
         GestureField.singleTap2(view:sample1,index:sample1.tag)
        
