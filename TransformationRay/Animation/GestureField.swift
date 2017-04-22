@@ -43,8 +43,8 @@ struct GestureField {
  
         for i in 0..<TapGesture.tapGesture[index].numberOfTouches {
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                
+            CommonStructure.pointted = TapGesture.tapGesture[index].location(ofTouch: i, in:view)
+          
                 CommonStructure.angle = CGFloat(GestureField.angle(a: CommonStructure.Point(x: 0, y: 0), b: CommonStructure.Point(x: CommonStructure.pointted.x, y: CommonStructure.pointted.y))) / 57.165779513115938
          
                 if angleLength(p1: CommonStructure.Point(x:0,y:0), CommonStructure.Pointted(x:CommonStructure.pointted.x,y:CommonStructure.pointted.y)) > 0 {
@@ -62,9 +62,8 @@ struct GestureField {
                 CommonStructure.angle = 0.0
                 CommonStructure.line2.removeAllPoints()
                 
-            }
             
-            CommonStructure.pointted = TapGesture.tapGesture[index].location(ofTouch: i, in:view)
+            
             CommonStructure.line.move(to:CGPoint(x:0 , y:0))
             CommonStructure.line.addLine(to: CGPoint(x:CommonStructure.pointted.x , y:CommonStructure.pointted.y))
             

@@ -20,6 +20,7 @@ class PointViewController: UIViewController,UIGestureRecognizerDelegate {
     var transMiller2 = CGAffineTransform()
     var transMiller3 = CGAffineTransform()
     var transMiller4 = CGAffineTransform()
+    var alert = AlertView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,8 +91,8 @@ class PointViewController: UIViewController,UIGestureRecognizerDelegate {
     
     @IBAction func Alert(_ sender: UIBarButtonItem) {
         
-     
-       print(AlertView().Alert(view: self),"11111")
+       print( alert.delegate?.Alert(view: self))
+        
     }
     
      

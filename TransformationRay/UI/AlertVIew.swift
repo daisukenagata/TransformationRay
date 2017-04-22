@@ -8,17 +8,36 @@
 
 import UIKit
 
-class AlertView:UIView{
+protocol AlertViewDelegatae:class {
+    func Alert(view:UIViewController)
+}
+
+class AlertView:UIView,AlertViewDelegatae{
+   
+    var delegate:AlertViewDelegatae?
+  
     
-    
-    func Alert(view:UIViewController)->String{
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         
+        self.delegate = self
+        
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
+    func Alert(view:UIViewController){
+
         let alertController = UIAlertController(title: "", message: "Angle input", preferredStyle: .alert)
         alertController.addTextField(configurationHandler: nil)
         let otherAction = UIAlertAction(title: "OK", style: .default) {
             action in
             alertController.addTextField { ( textFields : UITextField) -> Void in
                 guard alertController.textFields?[0].text == "" else {
+                    GestureField.singleTap2(view: self, index: view.view.tag)
                    return 
                 }
             }
@@ -27,6 +46,6 @@ class AlertView:UIView{
         alertController.addAction(otherAction)
         view.present(alertController, animated: true, completion: nil)
         
-        return (alertController.textFields?[0].text)!
     }
+    
 }
