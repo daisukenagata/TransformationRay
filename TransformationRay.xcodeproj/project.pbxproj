@@ -21,6 +21,7 @@
 		BB5FF0261EA1A92B001FF0F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB5FF0241EA1A92B001FF0F4 /* LaunchScreen.storyboard */; };
 		BB5FF0311EA1A92B001FF0F4 /* TransformationRayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5FF0301EA1A92B001FF0F4 /* TransformationRayTests.swift */; };
 		BB5FF03C1EA1A92B001FF0F4 /* TransformationRayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5FF03B1EA1A92B001FF0F4 /* TransformationRayUITests.swift */; };
+		BBE318841EA960B10085E56A /* PointViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE318831EA960B10085E56A /* PointViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		BB5FF0371EA1A92B001FF0F4 /* TransformationRayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransformationRayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB5FF03B1EA1A92B001FF0F4 /* TransformationRayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformationRayUITests.swift; sourceTree = "<group>"; };
 		BB5FF03D1EA1A92B001FF0F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBE318831EA960B10085E56A /* PointViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				BB279D401EA7B62C0095555A /* ViewController.swift */,
+				BBE318831EA960B10085E56A /* PointViewController.swift */,
 			);
 			name = VC;
 			path = TransformationRay/VC;
@@ -313,6 +316,7 @@
 				BB279D3E1EA7B6270095555A /* SetView.swift in Sources */,
 				BB5FF01C1EA1A92B001FF0F4 /* AppDelegate.swift in Sources */,
 				BB279D3D1EA7B6270095555A /* ConversionImage.swift in Sources */,
+				BBE318841EA960B10085E56A /* PointViewController.swift in Sources */,
 				BB279D411EA7B62C0095555A /* ViewController.swift in Sources */,
 				BB279D391EA7B61D0095555A /* TouchField.swift in Sources */,
 				BB279D431EA7EA180095555A /* LineField.swift in Sources */,

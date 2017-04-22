@@ -11,6 +11,9 @@ import UIKit
 struct CommonStructure {
     
     static var tapGesture = UITapGestureRecognizer()
+    static var tapGesture2 = UITapGestureRecognizer()
+    static var tapGesture3 = UITapGestureRecognizer()
+    static var tapGesture4 = UITapGestureRecognizer()
     static var swipePinchGesture = UIPinchGestureRecognizer()
     static var swipePanGesture = UIPanGestureRecognizer()
     static var tapLong = UILongPressGestureRecognizer()

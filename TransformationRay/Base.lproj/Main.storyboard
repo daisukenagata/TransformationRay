@@ -67,6 +67,11 @@
                                 </connections>
                             </barButtonItem>
                         </leftBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" title="Segue" id="rkt-bK-1hD">
+                            <connections>
+                                <segue destination="QP3-8t-RMs" kind="show" id="sCd-8o-mEz"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="667" height="375"/>
@@ -92,6 +97,57 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O9e-Wy-ltK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1076" y="137.18140929535232"/>
+        </scene>
+        <!--Point View Controller-->
+        <scene sceneID="Caw-fq-kjX">
+            <objects>
+                <viewController id="QP3-8t-RMs" customClass="PointViewController" customModule="TransformationRay" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hGY-lF-53P"/>
+                        <viewControllerLayoutGuide type="bottom" id="z9R-hF-ZIF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IWd-CX-tAf">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f2A-Bx-ZCP">
+                                <rect key="frame" x="334" y="220" width="334" height="155"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.4395869419242262" blue="0.21858106002597222" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="81F-1J-zNO">
+                                <rect key="frame" x="0.0" y="64" width="334" height="155"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.33249525628880561" green="1" blue="0.39802760523073633" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F5s-gf-r12">
+                                <rect key="frame" x="334" y="64" width="334" height="155"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.1852038897563415" blue="0.76307302594428505" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="02f-GP-lIY">
+                                <rect key="frame" x="0.0" y="220" width="334" height="155"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.39719339085004268" green="0.35227440971450685" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="b4n-dc-Pcl">
+                        <nil key="title"/>
+                    </navigationItem>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="667" height="375"/>
+                    <connections>
+                        <outlet property="sample1" destination="81F-1J-zNO" id="TZe-Ra-uJ0"/>
+                        <outlet property="sample2" destination="F5s-gf-r12" id="Yah-Yb-M7a"/>
+                        <outlet property="sample3" destination="02f-GP-lIY" id="Qfi-Y5-CiJ"/>
+                        <outlet property="sample4" destination="f2A-Bx-ZCP" id="bN8-ml-V0l"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rue-rf-E6q" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3421.5999999999999" y="136.28185907046478"/>
         </scene>
     </scenes>
 </document>
