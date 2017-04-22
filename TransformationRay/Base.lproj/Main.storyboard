@@ -131,10 +131,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="b4n-dc-Pcl">
                         <nil key="title"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="pJv-Gd-wFn"/>
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="667" height="375"/>
                     <connections>
+                        <outlet property="anglePoint" destination="pJv-Gd-wFn" id="YTr-o0-AXP"/>
                         <outlet property="sample1" destination="81F-1J-zNO" id="TZe-Ra-uJ0"/>
                         <outlet property="sample2" destination="F5s-gf-r12" id="Yah-Yb-M7a"/>
                         <outlet property="sample3" destination="02f-GP-lIY" id="Qfi-Y5-CiJ"/>

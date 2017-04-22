@@ -27,6 +27,12 @@ struct CommonStructure {
     static var event = UIEvent()
     static var vw = SetView().vw
     
+    struct Point {
+        
+        var x:Double = 0
+        var y:Double = 0
+    }
+
 }
 
 class TapGesture{

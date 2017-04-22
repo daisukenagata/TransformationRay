@@ -14,6 +14,7 @@ class PointViewController: UIViewController,UIGestureRecognizerDelegate {
     @IBOutlet weak var sample2: UIView!
     @IBOutlet weak var sample3: UIView!
     @IBOutlet weak var sample4: UIView!
+    @IBOutlet weak var anglePoint: UIBarButtonItem!
     
     var transMiller = CGAffineTransform()
     var transMiller2 = CGAffineTransform()
@@ -85,20 +86,29 @@ class PointViewController: UIViewController,UIGestureRecognizerDelegate {
                 
             }
         }
-        
     }
     
     func singleTap1(){
         GestureField.singleTap2(view:sample1,index:sample1.tag)
+       
+        anglePoint.title = GestureField.angle(a: CommonStructure.Point(x: 0, y: 0), b: CommonStructure.Point(x: Double(CommonStructure.pointted.x), y: Double(CommonStructure.pointted.y))).description
     }
     func singleTap2(){
         GestureField.singleTap2(view:sample1,index:sample2.tag)
+        
+        anglePoint.title = GestureField.angle(a: CommonStructure.Point(x: 0, y: 0), b: CommonStructure.Point(x: Double(CommonStructure.pointted.x), y: Double(CommonStructure.pointted.y))).description
+
     }
     func singleTap3(){
         GestureField.singleTap2(view:sample1,index:sample3.tag)
+        
+        anglePoint.title = GestureField.angle(a: CommonStructure.Point(x: 0, y: 0), b: CommonStructure.Point(x: Double(CommonStructure.pointted.x), y: Double(CommonStructure.pointted.y))).description
+
     }
     func singleTap4(){
         GestureField.singleTap2(view:sample1,index:sample4.tag)
+        
+        anglePoint.title = GestureField.angle(a: CommonStructure.Point(x: 0, y: 0), b: CommonStructure.Point(x: Double(CommonStructure.pointted.x), y: Double(CommonStructure.pointted.y))).description
     }
     
 }

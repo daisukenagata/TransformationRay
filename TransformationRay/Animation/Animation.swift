@@ -18,12 +18,20 @@ class Animation{
         
         _ =  shapeLayer(shape: lineLayer, viewC: viewC,bool:bool)
         _ =  animationDraw(animation: animation)
-        //lineLayer.fillColor = UIColor.clear.cgColor
         viewC.layer.addSublayer(shapeLayer(shape: lineLayer, viewC: viewC,bool:bool))
         shapeLayer(shape: lineLayer,viewC: viewC,bool:bool).add(animation, forKey: nil)
-        
     }
     
+    func setShapeLayer3(viewC:UIView,bool:Bool){
+        
+        _ =  shapeLayer3(shape: lineLayer, viewC: viewC,bool:bool)
+        _ =  animationDraw(animation: animation)
+        lineLayer.fillColor = UIColor.clear.cgColor
+        viewC.layer.addSublayer(shapeLayer3(shape: lineLayer, viewC: viewC,bool:bool))
+        shapeLayer3(shape: lineLayer,viewC: viewC,bool:bool).add(animation, forKey: nil)
+        
+    }
+
     func shapeLayer(shape:CAShapeLayer,viewC:UIView,bool:Bool)->CAShapeLayer{
         
         if GestureField.bool == false {
@@ -51,6 +59,19 @@ class Animation{
         return shape
         
     }
+    
+    func shapeLayer3(shape:CAShapeLayer,viewC:UIView,bool:Bool)->CAShapeLayer{
+        
+        shape.lineWidth = CommonStructure.lineWidth
+        shape.strokeColor = UIColor.black.cgColor
+        shape.fillRule = kCAFillRuleNonZero
+        shape.path = CommonStructure.line2.cgPath
+        viewC.layer.addSublayer(shape)
+        
+        return shape
+        
+    }
+
 
     func animationDraw(animation:CABasicAnimation)->CABasicAnimation{
         
