@@ -10,6 +10,8 @@ import UIKit
 
 struct Mathematics {
     
+    static let angelMathematics = CGFloat(Double.pi/180.0)
+    
     //MARK:Angle
     
     static func angle(a:CommonStructure.Point, b:CommonStructure.Point) -> Double {

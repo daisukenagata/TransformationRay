@@ -46,7 +46,7 @@ struct GestureField {
             
             CommonStructure.pointted = TapGesture.tapGesture[index].location(ofTouch: i, in:view)
             
-            CommonStructure.angle = CGFloat(Mathematics.angle(a: CommonStructure.Point(x: 0, y: 0), b: CommonStructure.Point(x: CommonStructure.pointted.x, y: CommonStructure.pointted.y))) / 57.165779513115938
+            CommonStructure.angle = CGFloat(Mathematics.angle(a: CommonStructure.Point(x: 0, y: 0), b: CommonStructure.Point(x: CommonStructure.pointted.x, y: CommonStructure.pointted.y))) * Mathematics.angelMathematics
             
             if Mathematics.angleLength(p1: CommonStructure.Point(x:0,y:0), CommonStructure.Pointted(x:CommonStructure.pointted.x,y:CommonStructure.pointted.y)) > 0 {
                 
@@ -86,10 +86,9 @@ struct GestureField {
     }
     
     static func singleTap3(view:UIView,cg:CGFloat){
-                
-        let angle = (cg / 57.365779513115938)
         
-        CommonStructure.line2 = UIBezierPath(arcCenter: CGPoint(x:view.bounds.width/2, y:view.bounds.height/2), radius: Mathematics.angleLength(p1: CommonStructure.Point(x:0,y:0), CommonStructure.Pointted(x:100,y:100)) , startAngle: 0, endAngle:angle, clockwise: true)
+        
+        CommonStructure.line2 = UIBezierPath(arcCenter: CGPoint(x:view.bounds.width/2, y:view.bounds.height/2), radius: Mathematics.angleLength(p1: CommonStructure.Point(x:0,y:0), CommonStructure.Pointted(x:100,y:100)) , startAngle: 0, endAngle:cg  * Mathematics.angelMathematics, clockwise: true)
         
         GestureField.labelSet3(viewC: view)
         
