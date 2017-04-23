@@ -1,9 +1,10 @@
 # TransformationRay_ios10.3
 
-![](https://github.com/daisukenagata/TransformationRay/blob/master/Circumference%20length.gif?raw=true)
-![](https://github.com/daisukenagata/TransformationRay/blob/master/angle.gif?raw=true)
-![](https://github.com/daisukenagata/TransformationRay/blob/master/Structure.gif?raw=true)
-![](https://github.com/daisukenagata/TransformationRay/blob/master/eraserButton.gif?raw=true)
+![](https://raw.githubusercontent.com/daisukenagata/TransformationRay/master/Gif/AngleInputEntry.gif)
+![](https://raw.githubusercontent.com/daisukenagata/TransformationRay/master/Gif/Circumference%20length.gif)
+![](https://raw.githubusercontent.com/daisukenagata/TransformationRay/master/Gif/angle.gif)
+![](https://raw.githubusercontent.com/daisukenagata/TransformationRay/master/Gif/eraserButton.gif)
+![](https://raw.githubusercontent.com/daisukenagata/TransformationRay/master/Gif/Structure.gif)
 
 
 #### Paint is a painting function
