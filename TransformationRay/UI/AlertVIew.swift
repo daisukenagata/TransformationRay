@@ -8,20 +8,12 @@
 
 import UIKit
 
-protocol AlertViewDelegatae:class {
-    
-    func Alert(view:UIViewController)->String
-}
 
-class AlertView:UIView,AlertViewDelegatae{
-    
-    var delegate:AlertViewDelegatae?
+class AlertView:UIView{
     
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
-        self.delegate = self
         
     }
     
