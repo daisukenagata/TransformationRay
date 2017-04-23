@@ -16,8 +16,6 @@ class PointViewController: UIViewController,UIGestureRecognizerDelegate {
     @IBOutlet weak var sample4: UIView!
     @IBOutlet weak var anglePoint: UIBarButtonItem!
     
-
-    var alert = AlertView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +45,6 @@ class PointViewController: UIViewController,UIGestureRecognizerDelegate {
         //MARK: sample4
         sample4.frame = CGRect(x:UIScreen.main.bounds.width/2,y:UIScreen.main.bounds.height/2+22,width:UIScreen.main.bounds.width/2,height:UIScreen.main.bounds.height/2-22)
         self.view.addSubview(sample4)
-        
         
         
         for i  in 0...TapGesture.tapGesture.count {
@@ -86,32 +83,26 @@ class PointViewController: UIViewController,UIGestureRecognizerDelegate {
         }
     }
     
-    @IBAction func Alert(_ sender: UIBarButtonItem) {
-        
-       print( alert.delegate?.Alert(view: self))
-        
-    }
-    
-     
+
     func singleTap1(){
         GestureField.singleTap2(view:sample1,index:sample1.tag)
        
-        anglePoint.title = GestureField.angle(a: CommonStructure.Point(x: 0, y: 0), b: CommonStructure.Point(x: (CommonStructure.pointted.x), y: (CommonStructure.pointted.y))).description
+        anglePoint.title = Mathematics.angle(a: CommonStructure.Point(x: 0, y: 0), b: CommonStructure.Point(x: (CommonStructure.pointted.x), y: (CommonStructure.pointted.y))).description
     }
     func singleTap2(){
         GestureField.singleTap2(view:sample1,index:sample2.tag)
         
-        anglePoint.title = GestureField.angle(a: CommonStructure.Point(x: 0, y: 0), b: CommonStructure.Point(x: (CommonStructure.pointted.x), y: (CommonStructure.pointted.y))).description
+        anglePoint.title = Mathematics.angle(a: CommonStructure.Point(x: 0, y: 0), b: CommonStructure.Point(x: (CommonStructure.pointted.x), y: (CommonStructure.pointted.y))).description
     }
     func singleTap3(){
         GestureField.singleTap2(view:sample1,index:sample3.tag)
         
-        anglePoint.title = GestureField.angle(a: CommonStructure.Point(x: 0, y: 0), b: CommonStructure.Point(x: (CommonStructure.pointted.x), y: (CommonStructure.pointted.y))).description
+        anglePoint.title = Mathematics.angle(a: CommonStructure.Point(x: 0, y: 0), b: CommonStructure.Point(x: (CommonStructure.pointted.x), y: (CommonStructure.pointted.y))).description
     }
     func singleTap4(){
         GestureField.singleTap2(view:sample1,index:sample4.tag)
         
-        anglePoint.title = GestureField.angle(a: CommonStructure.Point(x: 0, y: 0), b: CommonStructure.Point(x: (CommonStructure.pointted.x), y: (CommonStructure.pointted.y))).description
+        anglePoint.title = Mathematics.angle(a: CommonStructure.Point(x: 0, y: 0), b: CommonStructure.Point(x: (CommonStructure.pointted.x), y: (CommonStructure.pointted.y))).description
 
     }
     

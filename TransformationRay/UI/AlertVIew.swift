@@ -9,6 +9,7 @@
 import UIKit
 
 protocol AlertViewDelegatae:class {
+    
     func Alert(view:UIViewController)->String
 }
 
@@ -38,13 +39,15 @@ class AlertView:UIView,AlertViewDelegatae{
             alertController.addTextField { ( textFields : UITextField) -> Void in
                 guard alertController.textFields?[0].text == "" else {
                     
-                    let cg = Int((alertController.textFields?[0].text)!)
+                    CommonStructure.cg = Int((alertController.textFields?[0].text)!)!
+                    view.navigationItem.title = CommonStructure.cg.description
+                    GestureField.singleTap3(view: view.view, cg: CGFloat(CommonStructure.cg))
                     
-                    GestureField.singleTap3(view: view.view, cg: CGFloat(cg!))
                     return
                 }
             }
         }
+        
         alertController.textFields?[0].keyboardType = .numberPad
         alertController.addAction(otherAction)
         view.present(alertController, animated: true, completion: nil)

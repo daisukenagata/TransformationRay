@@ -132,12 +132,12 @@
                     <navigationItem key="navigationItem" id="b4n-dc-Pcl">
                         <nil key="title"/>
                         <rightBarButtonItems>
-                            <barButtonItem title="Angle Point" id="pJv-Gd-wFn"/>
-                            <barButtonItem title="Alert" id="3Fu-nO-16p" userLabel="Allert">
+                            <barButtonItem title="Segue" id="9Ai-kD-uf9">
                                 <connections>
-                                    <action selector="Alert:" destination="QP3-8t-RMs" id="MlC-Zn-vuG"/>
+                                    <segue destination="RRJ-uh-dlI" kind="show" id="hmF-rX-LmV"/>
                                 </connections>
                             </barButtonItem>
+                            <barButtonItem title="Angle Point" id="pJv-Gd-wFn"/>
                         </rightBarButtonItems>
                     </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -153,6 +153,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rue-rf-E6q" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3421.5999999999999" y="136.28185907046478"/>
+        </scene>
+        <!--Angle Input View Controller-->
+        <scene sceneID="X8s-pg-QRz">
+            <objects>
+                <viewController id="RRJ-uh-dlI" customClass="AngleInputViewController" customModule="TransformationRay" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2rC-XJ-Xsy"/>
+                        <viewControllerLayoutGuide type="bottom" id="kVc-kz-c3y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iFf-vU-rur">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view tag="3" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0hV-JR-nh3">
+                                <rect key="frame" x="334" y="220" width="334" height="155"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UbL-l9-eif">
+                                <rect key="frame" x="0.0" y="64" width="334" height="155"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5mA-jV-9Ww">
+                                <rect key="frame" x="334" y="64" width="334" height="155"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                            <view tag="2" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LNu-iC-D9t">
+                                <rect key="frame" x="0.0" y="220" width="334" height="155"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ify-az-AUD">
+                        <barButtonItem key="rightBarButtonItem" title="Angle input" id="jrO-9d-o0n" userLabel="Allert">
+                            <connections>
+                                <action selector="Angleinput:" destination="RRJ-uh-dlI" id="uDO-w8-Iit"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="667" height="375"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yqk-nI-3FP" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4708" y="136"/>
         </scene>
     </scenes>
 </document>

@@ -16,6 +16,8 @@
 		BB279D431EA7EA180095555A /* LineField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB279D421EA7EA180095555A /* LineField.swift */; };
 		BB279D451EA8EED40095555A /* CommonStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB279D441EA8EED40095555A /* CommonStructure.swift */; };
 		BB5045561EAB8B2A00161BFE /* AlertVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5045551EAB8B2A00161BFE /* AlertVIew.swift */; };
+		BB5045591EAC58A000161BFE /* Mathematics.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5045581EAC58A000161BFE /* Mathematics.swift */; };
+		BB50455B1EAC5BE500161BFE /* AngleInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB50455A1EAC5BE500161BFE /* AngleInputViewController.swift */; };
 		BB5FF01C1EA1A92B001FF0F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5FF01B1EA1A92B001FF0F4 /* AppDelegate.swift */; };
 		BB5FF0211EA1A92B001FF0F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB5FF01F1EA1A92B001FF0F4 /* Main.storyboard */; };
 		BB5FF0231EA1A92B001FF0F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB5FF0221EA1A92B001FF0F4 /* Assets.xcassets */; };
@@ -52,6 +54,8 @@
 		BB279D421EA7EA180095555A /* LineField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineField.swift; sourceTree = "<group>"; };
 		BB279D441EA8EED40095555A /* CommonStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonStructure.swift; sourceTree = "<group>"; };
 		BB5045551EAB8B2A00161BFE /* AlertVIew.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertVIew.swift; sourceTree = "<group>"; };
+		BB5045581EAC58A000161BFE /* Mathematics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mathematics.swift; sourceTree = "<group>"; };
+		BB50455A1EAC5BE500161BFE /* AngleInputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AngleInputViewController.swift; sourceTree = "<group>"; };
 		BB5FF0181EA1A92B001FF0F4 /* TransformationRay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransformationRay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB5FF01B1EA1A92B001FF0F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB5FF0201EA1A92B001FF0F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -119,10 +123,19 @@
 			children = (
 				BB279D401EA7B62C0095555A /* ViewController.swift */,
 				BBE318831EA960B10085E56A /* PointViewController.swift */,
+				BB50455A1EAC5BE500161BFE /* AngleInputViewController.swift */,
 			);
 			name = VC;
 			path = TransformationRay/VC;
 			sourceTree = SOURCE_ROOT;
+		};
+		BB5045571EAC587200161BFE /* Mathematics */ = {
+			isa = PBXGroup;
+			children = (
+				BB5045581EAC58A000161BFE /* Mathematics.swift */,
+			);
+			path = Mathematics;
+			sourceTree = "<group>";
 		};
 		BB5FF00F1EA1A92B001FF0F4 = {
 			isa = PBXGroup;
@@ -155,6 +168,7 @@
 				BB279D331EA7B61D0095555A /* Animation */,
 				BB279D3A1EA7B6270095555A /* UI */,
 				BB279D3F1EA7B62C0095555A /* VC */,
+				BB5045571EAC587200161BFE /* Mathematics */,
 			);
 			path = TransformationRay;
 			sourceTree = "<group>";
@@ -314,6 +328,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB5045591EAC58A000161BFE /* Mathematics.swift in Sources */,
 				BB5045561EAB8B2A00161BFE /* AlertVIew.swift in Sources */,
 				BB279D371EA7B61D0095555A /* Animation.swift in Sources */,
 				BB279D451EA8EED40095555A /* CommonStructure.swift in Sources */,
@@ -325,6 +340,7 @@
 				BB279D391EA7B61D0095555A /* TouchField.swift in Sources */,
 				BB279D431EA7EA180095555A /* LineField.swift in Sources */,
 				BB279D381EA7B61D0095555A /* GestureField.swift in Sources */,
+				BB50455B1EAC5BE500161BFE /* AngleInputViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

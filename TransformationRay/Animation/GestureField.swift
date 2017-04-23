@@ -41,19 +41,20 @@ struct GestureField {
     
     static func singleTap2(view:UIView,index:Int){
         
+        
         for i in 0..<TapGesture.tapGesture[index].numberOfTouches {
             
             CommonStructure.pointted = TapGesture.tapGesture[index].location(ofTouch: i, in:view)
             
-            CommonStructure.angle = CGFloat(GestureField.angle(a: CommonStructure.Point(x: 0, y: 0), b: CommonStructure.Point(x: CommonStructure.pointted.x, y: CommonStructure.pointted.y))) / 57.165779513115938
+            CommonStructure.angle = CGFloat(Mathematics.angle(a: CommonStructure.Point(x: 0, y: 0), b: CommonStructure.Point(x: CommonStructure.pointted.x, y: CommonStructure.pointted.y))) / 57.165779513115938
             
-            if angleLength(p1: CommonStructure.Point(x:0,y:0), CommonStructure.Pointted(x:CommonStructure.pointted.x,y:CommonStructure.pointted.y)) > 0 {
+            if Mathematics.angleLength(p1: CommonStructure.Point(x:0,y:0), CommonStructure.Pointted(x:CommonStructure.pointted.x,y:CommonStructure.pointted.y)) > 0 {
                 
-                CommonStructure.line2 = UIBezierPath(arcCenter: CGPoint(x:0, y:0), radius: angleLength(p1: CommonStructure.Point(x:0,y:0), CommonStructure.Pointted(x:CommonStructure.pointted.x,y:CommonStructure.pointted.y)) , startAngle: 0, endAngle:CommonStructure.angle, clockwise: true)
+                CommonStructure.line2 = UIBezierPath(arcCenter: CGPoint(x:0, y:0), radius: Mathematics.angleLength(p1: CommonStructure.Point(x:0,y:0), CommonStructure.Pointted(x:CommonStructure.pointted.x,y:CommonStructure.pointted.y)) , startAngle: 0, endAngle:CommonStructure.angle, clockwise: true)
                 
             }else{
-                
-                CommonStructure.line2 = UIBezierPath(arcCenter: CGPoint(x:0, y:0), radius: -angleLength(p1: CommonStructure.Point(x:0,y:0), CommonStructure.Pointted(x:CommonStructure.pointted.x,y:CommonStructure.pointted.y)), startAngle: 0, endAngle:CommonStructure.angle, clockwise: true)
+            
+                CommonStructure.line2 = UIBezierPath(arcCenter: CGPoint(x:0, y:0), radius: -Mathematics.angleLength(p1: CommonStructure.Point(x:0,y:0), CommonStructure.Pointted(x:CommonStructure.pointted.x,y:CommonStructure.pointted.y)), startAngle: 0, endAngle:CommonStructure.angle, clockwise: true)
                 
             }
             
@@ -85,17 +86,17 @@ struct GestureField {
     }
     
     static func singleTap3(view:UIView,cg:CGFloat){
+                
+        let angle = (cg / 57.365779513115938)
         
-        let anglePi =  180 * Double.pi / 180
-        CommonStructure.transMiller = CGAffineTransform(rotationAngle: CGFloat(anglePi))
-        view.transform = CommonStructure.transMiller
-        
-        let angle = (cg / 57.165779513115938)
-        
-        CommonStructure.line2 = UIBezierPath(arcCenter: CGPoint(x:view.bounds.width/2, y:view.bounds.height/2), radius: angleLength(p1: CommonStructure.Point(x:0,y:0), CommonStructure.Pointted(x:100,y:100)) , startAngle: 0, endAngle:angle, clockwise: true)
-        
+        CommonStructure.line2 = UIBezierPath(arcCenter: CGPoint(x:view.bounds.width/2, y:view.bounds.height/2), radius: Mathematics.angleLength(p1: CommonStructure.Point(x:0,y:0), CommonStructure.Pointted(x:100,y:100)) , startAngle: 0, endAngle:angle, clockwise: true)
         
         GestureField.labelSet3(viewC: view)
+        
+        
+        CommonStructure.line.move(to:CGPoint(x:view.bounds.width/2 , y:view.bounds.height/2))
+        CommonStructure.line.addLine(to: CGPoint(x:Mathematics.distance().0*100,y:Mathematics.distance().1*100))
+        
         
         CommonStructure.angle = 0.0
         CommonStructure.line2.removeAllPoints()
@@ -117,28 +118,13 @@ struct GestureField {
         CommonStructure.line2.addLine(to:CGPoint(x:view.bounds.width*100 , y:0))
        
         
-        
         GestureField.labelSet(viewC: view)
         GestureField.labelSet3(viewC: view)
         
         
     }
     
-    static func angle(a:CommonStructure.Point, b:CommonStructure.Point) -> Double {
-        
-        var r = atan2(b.y - a.y, b.x - a.x)
-        if r < 0 {
-            r = r + CGFloat(2 * Double.pi)
-        }
-        return floor(Double(r * 360 / CGFloat(2 * Double.pi)))
-    }
-    
-    static  func angleLength( p1: CommonStructure.Point, _ p2: CommonStructure.Pointted) -> CGFloat {
-        
-        return sqrt(pow(p1.x - p2.x, 2) + pow(p1.y - p2.y, 2))
-        
-    }
-    
+
     static func labelSet(viewC:UIView){
         
         viewC.alpha = 1
