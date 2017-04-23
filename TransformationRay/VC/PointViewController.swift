@@ -83,6 +83,12 @@ class PointViewController: UIViewController,UIGestureRecognizerDelegate {
         }
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(true)
+        
+        LineField.lineField(line:CommonStructure.line, viewC: self)
+        
+    }
 
     func singleTap1(){
         GestureField.singleTap2(view:sample1,index:sample1.tag)
