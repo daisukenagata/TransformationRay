@@ -7,6 +7,10 @@
 ![](https://raw.githubusercontent.com/daisukenagata/TransformationRay/master/Gif/Structure.gif)
 
 
+## Design photo
+
+<img src="https://github.com/daisukenagata/TransformationRay/blob/master/Design%20photo/TransformationRay.png?raw=true" width="800px" height="800px">
+
 #### Paint is a painting function
 #### Reset with clear button
 #### Draw a circle with a round Button.
