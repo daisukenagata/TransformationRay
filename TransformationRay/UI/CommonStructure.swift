@@ -25,7 +25,7 @@ struct CommonStructure {
     static var vw = SetView().vw
     static var angle = CGFloat()
     static var cg = Int()
-    static  var transMiller = CGAffineTransform()
+    static var transMiller = CGAffineTransform()
     
     struct Point {
         
