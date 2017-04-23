@@ -23,7 +23,7 @@ class AngleInputViewController: UIViewController {
     
     @IBAction func Angleinput(_ sender: UIBarButtonItem) {
         
-        self.navigationItem.title = alert.delegate?.Alert(view: self)
+        self.navigationItem.title = alert.Alert(view: self)
 
     }
     
