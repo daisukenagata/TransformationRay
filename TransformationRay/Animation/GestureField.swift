@@ -86,7 +86,7 @@ struct GestureField {
     }
     
     static func singleTap3(view:UIView,cg:CGFloat){
-        
+                
         
         CommonStructure.line2 = UIBezierPath(arcCenter: CGPoint(x:view.bounds.width/2, y:view.bounds.height/2), radius: Mathematics.angleLength(p1: CommonStructure.Point(x:0,y:0), CommonStructure.Pointted(x:100,y:100)) , startAngle: 0, endAngle:cg  * Mathematics.angelMathematics, clockwise: true)
         
