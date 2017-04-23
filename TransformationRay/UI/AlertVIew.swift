@@ -9,13 +9,13 @@
 import UIKit
 
 protocol AlertViewDelegatae:class {
-    func Alert(view:UIViewController)
+    func Alert(view:UIViewController)->String
 }
 
 class AlertView:UIView,AlertViewDelegatae{
-   
+    
     var delegate:AlertViewDelegatae?
-  
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -29,17 +29,19 @@ class AlertView:UIView,AlertViewDelegatae{
     }
     
     
-    func Alert(view:UIViewController){
-
+    func Alert(view:UIViewController)->String{
+        
         let alertController = UIAlertController(title: "", message: "Angle input", preferredStyle: .alert)
         alertController.addTextField(configurationHandler: nil)
         let otherAction = UIAlertAction(title: "OK", style: .default) {
             action in
             alertController.addTextField { ( textFields : UITextField) -> Void in
                 guard alertController.textFields?[0].text == "" else {
+                    
                     let cg = Int((alertController.textFields?[0].text)!)
+                    
                     GestureField.singleTap3(view: view.view, cg: CGFloat(cg!))
-                   return 
+                    return
                 }
             }
         }
@@ -47,6 +49,7 @@ class AlertView:UIView,AlertViewDelegatae{
         alertController.addAction(otherAction)
         view.present(alertController, animated: true, completion: nil)
         
+        return (alertController.textFields?[0].text)!
     }
     
 }

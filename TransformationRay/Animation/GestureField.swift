@@ -100,23 +100,27 @@ struct GestureField {
         CommonStructure.angle = 0.0
         CommonStructure.line2.removeAllPoints()
         
-        
-        CommonStructure.line.move(to:CGPoint(x:0 , y:0))
-        CommonStructure.line.addLine(to: CGPoint(x:0, y:0))
-        
-        
-        CommonStructure.line2.move(to:CGPoint(x:0 , y:0))
-        CommonStructure.line2.addLine(to:CGPoint(x:0 , y:view.bounds.height))
-        CommonStructure.line2.addLine(to:CGPoint(x:0 , y:-view.bounds.height))
+
+        CommonStructure.line2.move(to:CGPoint(x:view.bounds.width/2 , y:view.bounds.height/2))
+        CommonStructure.line2.addLine(to:CGPoint(x:0 , y:view.bounds.height/2))
         
         
-        CommonStructure.line2.move(to:CGPoint(x:0 , y:0))
-        CommonStructure.line2.addLine(to:CGPoint(x:view.bounds.width , y:0))
-        CommonStructure.line2.addLine(to:CGPoint(x:-view.bounds.width , y:0))
+        CommonStructure.line2.move(to:CGPoint(x:view.bounds.width/2 , y:view.bounds.height/2))
+        CommonStructure.line2.addLine(to:CGPoint(x:0 , y:view.bounds.height*100))
+        
+        
+        CommonStructure.line2.move(to:CGPoint(x:view.bounds.width/2 , y:view.bounds.height/2))
+        CommonStructure.line2.addLine(to:CGPoint(x:view.bounds.width/2 , y:0))
+       
+        
+        CommonStructure.line2.move(to:CGPoint(x:view.bounds.width/2 , y:view.bounds.height/2))
+        CommonStructure.line2.addLine(to:CGPoint(x:view.bounds.width*100 , y:0))
+       
         
         
         GestureField.labelSet(viewC: view)
         GestureField.labelSet3(viewC: view)
+        
         
     }
     
