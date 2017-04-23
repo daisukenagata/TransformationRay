@@ -27,6 +27,7 @@ struct CommonStructure {
     static var event = UIEvent()
     static var vw = SetView().vw
     static var angle = CGFloat()
+    static  var transMiller = CGAffineTransform()
     
     struct Point {
         
@@ -39,7 +40,6 @@ struct CommonStructure {
         var x = CommonStructure.pointted.x
         var y = CommonStructure.pointted.y
     }
-
 
 }
 

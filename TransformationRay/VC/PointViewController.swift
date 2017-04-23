@@ -16,10 +16,7 @@ class PointViewController: UIViewController,UIGestureRecognizerDelegate {
     @IBOutlet weak var sample4: UIView!
     @IBOutlet weak var anglePoint: UIBarButtonItem!
     
-    var transMiller = CGAffineTransform()
-    var transMiller2 = CGAffineTransform()
-    var transMiller3 = CGAffineTransform()
-    var transMiller4 = CGAffineTransform()
+
     var alert = AlertView()
     
     override func viewDidLoad() {
@@ -29,21 +26,21 @@ class PointViewController: UIViewController,UIGestureRecognizerDelegate {
         //MARK: sample1
         sample1.frame = CGRect(x:0,y:44,width:UIScreen.main.bounds.width/2,height:UIScreen.main.bounds.height/2-22)
         let angle =  180 * Double.pi / 180
-        transMiller = CGAffineTransform(rotationAngle: CGFloat(angle));
-        sample1.transform = transMiller
+        CommonStructure.transMiller = CGAffineTransform(rotationAngle: CGFloat(angle));
+        sample1.transform = CommonStructure.transMiller
         self.view.addSubview(sample1)
         
         //MARK: sample2
         let angle2 =  270 * Double.pi / 180
-        transMiller = CGAffineTransform(rotationAngle: CGFloat(angle2));
-        sample2.transform = transMiller
+        CommonStructure.transMiller = CGAffineTransform(rotationAngle: CGFloat(angle2));
+        sample2.transform = CommonStructure.transMiller
         sample2.frame = CGRect(x:UIScreen.main.bounds.width/2,y:44,width:UIScreen.main.bounds.width/2,height:UIScreen.main.bounds.height/2-22)
         self.view.addSubview(sample2)
         
         //MARK: sample3
         let angle3 =  90 * Double.pi / 180
-        transMiller = CGAffineTransform(rotationAngle: CGFloat(angle3));
-        sample3.transform = transMiller
+        CommonStructure.transMiller = CGAffineTransform(rotationAngle: CGFloat(angle3));
+        sample3.transform = CommonStructure.transMiller
         sample3.frame = CGRect(x:0,y:UIScreen.main.bounds.height/2+22,width:UIScreen.main.bounds.width/2,height:UIScreen.main.bounds.height/2-22)
         self.view.addSubview(sample3)
         

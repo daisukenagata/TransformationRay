@@ -37,7 +37,8 @@ class AlertView:UIView,AlertViewDelegatae{
             action in
             alertController.addTextField { ( textFields : UITextField) -> Void in
                 guard alertController.textFields?[0].text == "" else {
-                    GestureField.singleTap2(view: self, index: view.view.tag)
+                    let cg = Int((alertController.textFields?[0].text)!)
+                    GestureField.singleTap3(view: view.view, cg: CGFloat(cg!))
                    return 
                 }
             }
