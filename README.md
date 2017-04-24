@@ -1,7 +1,7 @@
 # TransformationRay_ios10.3
 
 ![](https://raw.githubusercontent.com/daisukenagata/TransformationRay/master/Gif/AngleInputEntry.gif)
-![](https://raw.githubusercontent.com/daisukenagata/TransformationRay/master/Gif/Circumference%20length.gif)
+![](https://github.com/daisukenagata/TransformationRay/blob/master/Gif/distance.gif?raw=true)
 ![](https://raw.githubusercontent.com/daisukenagata/TransformationRay/master/Gif/angle.gif)
 ![](https://raw.githubusercontent.com/daisukenagata/TransformationRay/master/Gif/eraserButton.gif)
 ![](https://raw.githubusercontent.com/daisukenagata/TransformationRay/master/Gif/Structure.gif)
