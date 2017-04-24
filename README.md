@@ -11,6 +11,7 @@
 
 <img src="https://github.com/daisukenagata/TransformationRay/blob/master/Design%20photo/TransformationRay.png?raw=true" width="800px" height="800px">
 
+#### If you do to the landing of the line and the ark to the beam and adjust the circumference ratio a little, it is matched.
 #### Paint is a painting function
 #### Reset with clear button
 #### Draw a circle with a round Button.
@@ -21,7 +22,7 @@
 #### Pinch to magnify
 #### It gradually disappears with an eraser Button.
 
-
+#### 線と孤の着地の誤差は角度にやって円周率を若干調整して分岐すれば合わせれます。
 #### Paintは塗り絵機能
 #### クリアボタンでリセット
 #### 丸Buttonで丸を描きます。
