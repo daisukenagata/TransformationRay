@@ -22,7 +22,7 @@
 #### Pinch to magnify
 #### It gradually disappears with an eraser Button.
 
-#### 線と孤の着地の誤差は角度にやって円周率を若干調整して分岐すれば合わせれます。
+#### 線と孤の着地の誤差は角度によって円周率を若干調整して分岐すれば合わせれます。
 #### Paintは塗り絵機能
 #### クリアボタンでリセット
 #### 丸Buttonで丸を描きます。
