@@ -94,7 +94,7 @@ struct GestureField {
         
         
         CommonStructure.line.move(to:CGPoint(x:view.bounds.width/2 , y:view.bounds.height/2))
-        CommonStructure.line.addLine(to: CGPoint(x:Mathematics.distance().0*100,y:Mathematics.distance().1*100))
+        CommonStructure.line.addLine(to: CGPoint(x:Mathematics.Coordinate().0*100,y:Mathematics.Coordinate().1*100))
         
         
         CommonStructure.angle = 0.0
