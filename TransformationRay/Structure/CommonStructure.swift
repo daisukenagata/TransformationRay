@@ -18,14 +18,20 @@ struct CommonStructure {
     static var line = UIBezierPath()
     static var line2 = UIBezierPath()
     static var views = UIView()
-    static var lineWidth : CGFloat = 1
-    static var count : [CGPoint] = []
-    static var aTouch = Set<UITouch>()
-    static var event = UIEvent()
     static var vw = SetView().vw
-    static var angle = CGFloat()
-    static var cg = Int()
     static var transMiller = CGAffineTransform()
+    static var count : [CGPoint] = []
+    static var cg = Int()
+    static var angle = CGFloat()
+    static var lineWidth : CGFloat = 1
+
+    struct Unit {
+        
+        var lineWidth : CGFloat = 1
+        var aTouch = Set<UITouch>()
+        var event = UIEvent()
+        
+    }
     
     struct Point {
         
@@ -38,7 +44,7 @@ struct CommonStructure {
         var x = CommonStructure.pointted.x
         var y = CommonStructure.pointted.y
     }
-
+    
 }
 
 class TapGesture{
@@ -49,5 +55,5 @@ class TapGesture{
     static var tapGesture4 = UITapGestureRecognizer()
     
     static var tapGesture : [UITapGestureRecognizer] = [TapGesture.tapGesture1,TapGesture.tapGesture2,TapGesture.tapGesture3,TapGesture.tapGesture4]
-
+    
 }

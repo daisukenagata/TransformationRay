@@ -31,7 +31,7 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate  {
     
     func singleTap(){
         
-        GestureField.singleTap(viewC: self.view)
+        GestureField.singleTap(vc: self)
         
     }
     

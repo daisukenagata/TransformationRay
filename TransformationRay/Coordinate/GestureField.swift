@@ -13,12 +13,12 @@ struct GestureField {
     static var bool = false
     
     
-    static func singleTap(viewC:UIView){
+    static func singleTap(vc:UIViewController){
         
         
         for i in 0..<CommonStructure.tapGesture.numberOfTouches {
             
-            CommonStructure.pointted = CommonStructure.tapGesture.location(ofTouch: i, in:viewC)
+            CommonStructure.pointted = CommonStructure.tapGesture.location(ofTouch: i, in:vc.view)
             
             if CommonStructure.pointted.y != 0.0 {
                 CommonStructure.line.addLine(to:CGPoint(x:CommonStructure.pointted.x , y:CommonStructure.pointted.y))
@@ -27,12 +27,13 @@ struct GestureField {
             
             CommonStructure.line.move(to: CGPoint(x:CommonStructure.pointted.x , y:CommonStructure.pointted.y))
             CommonStructure.count.append(CommonStructure.pointted)
-            GestureField.labelSet(viewC: viewC)
+            GestureField.labelSet(viewC: vc.view)
             
-            
+            vc.navigationItem.title = "Distance"+Mathematics.distance(a: CommonStructure.Point(x: 0, y: 0), b: CommonStructure.Point(x: CommonStructure.pointted.x, y: CommonStructure.pointted.y)).description
+
             if  GestureField.bool == true {
                 
-                TouchField.touchesMoved(CommonStructure.aTouch, with:CommonStructure.event, vw:CommonStructure.vw,pointted:CommonStructure.pointted)
+                TouchField.touchesMoved(CommonStructure.Unit().aTouch, with:CommonStructure.Unit().event, vw:CommonStructure.vw,pointted:CommonStructure.pointted)
                 
             }
         }

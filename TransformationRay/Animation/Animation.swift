@@ -37,7 +37,7 @@ class Animation{
         
         if GestureField.bool == false {
             
-            shape.lineWidth = CommonStructure.lineWidth
+            shape.lineWidth = CommonStructure.Unit().lineWidth
             shape.strokeColor = UIColor.black.cgColor
             shape.fillRule = kCAFillRuleEvenOdd
             shape.path = CommonStructure.line.cgPath
@@ -51,7 +51,7 @@ class Animation{
     
     func shapeLayer2(shape:CAShapeLayer,viewC:UIView,bool:Bool)->CAShapeLayer{
         
-        shape.lineWidth = CommonStructure.lineWidth
+        shape.lineWidth = CommonStructure.Unit().lineWidth
         shape.strokeColor = UIColor.white.cgColor
         shape.fillRule = kCAFillRuleEvenOdd
         shape.path = CommonStructure.line.cgPath
@@ -63,7 +63,7 @@ class Animation{
     
     func shapeLayer3(shape:CAShapeLayer,viewC:UIView,bool:Bool)->CAShapeLayer{
         
-        shape.lineWidth = CommonStructure.lineWidth
+        shape.lineWidth = CommonStructure.Unit().lineWidth
         shape.strokeColor = UIColor.black.cgColor
         shape.fillRule = kCAFillRuleNonZero
         shape.path = CommonStructure.line2.cgPath
