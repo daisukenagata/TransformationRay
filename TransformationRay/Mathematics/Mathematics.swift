@@ -31,7 +31,7 @@ struct Mathematics {
         
     }
     
-    //MARK:Distance
+    //MARK:Coordinate
     
     static func Coordinate()->(Double,Double){
         
@@ -39,6 +39,13 @@ struct Mathematics {
         
         return(cos(radian)*1000,sin(radian)*1000)
         
+    }
+    
+    //MARK:Distance
+    
+   static  func distance(a:CommonStructure.Point, b:CommonStructure.Point) -> Double {
+        return sqrt(Double(pow(b.x - a.x, 2) + pow(b.y - a.y, 2)))
+    
     }
 
 }

@@ -39,9 +39,9 @@ struct GestureField {
     }
     
     
-    static func singleTap2(view:UIView,index:Int){
+    static func singleTap2(view:UIView,vc:UIViewController,index:Int){
         
-        
+
         for i in 0..<TapGesture.tapGesture[index].numberOfTouches {
             
             CommonStructure.pointted = TapGesture.tapGesture[index].location(ofTouch: i, in:view)
@@ -80,9 +80,12 @@ struct GestureField {
             
             GestureField.labelSet(viewC: view)
             GestureField.labelSet3(viewC: view)
-            
-            
+
+                    
         }
+        
+        vc.navigationItem.title = "Distance"+Mathematics.distance(a: CommonStructure.Point(x: 0, y: 0), b: CommonStructure.Point(x: CommonStructure.pointted.x, y: CommonStructure.pointted.y)).description
+        
     }
     
     static func singleTap3(view:UIView,cg:CGFloat){
