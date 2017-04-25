@@ -24,6 +24,12 @@ struct CommonStructure {
     static var cg = Int()
     static var angle = CGFloat()
     static var lineWidth : CGFloat = 1
+    
+    struct DefalutsSave {
+        
+        var k = UserDefaults.standard
+        var s : Double?
+    }
 
     struct Unit {
         

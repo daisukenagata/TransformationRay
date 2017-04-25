@@ -17,5 +17,9 @@ struct LineField {
         line.removeAllPoints()
         viewC.view.setNeedsLayout()
         
+        GestureField.bool2 = false
+        CommonStructure.DefalutsSave().k.removeObject(forKey: "dx")
+        CommonStructure.DefalutsSave().k.removeObject(forKey: "dy")
+        
     }
 }
