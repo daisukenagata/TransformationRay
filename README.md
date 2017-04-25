@@ -3,7 +3,6 @@
 ![](https://github.com/daisukenagata/TransformationRay/blob/master/Gif/GetLength.gif?raw=true)
 ![](https://raw.githubusercontent.com/daisukenagata/TransformationRay/master/Gif/AngleInputEntry.gif)
 ![](https://github.com/daisukenagata/TransformationRay/blob/master/Gif/distance.gif?raw=true)
-![](https://raw.githubusercontent.com/daisukenagata/TransformationRay/master/Gif/angle.gif)
 ![](https://raw.githubusercontent.com/daisukenagata/TransformationRay/master/Gif/Structure.gif)
 
 
