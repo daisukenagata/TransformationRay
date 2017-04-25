@@ -15,6 +15,16 @@
 		BB5FF0261EA1A92B001FF0F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB5FF0241EA1A92B001FF0F4 /* LaunchScreen.storyboard */; };
 		BB5FF0311EA1A92B001FF0F4 /* TransformationRayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5FF0301EA1A92B001FF0F4 /* TransformationRayTests.swift */; };
 		BB5FF03C1EA1A92B001FF0F4 /* TransformationRayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5FF03B1EA1A92B001FF0F4 /* TransformationRayUITests.swift */; };
+		BB7B3A6A1EAFB20E00468ED8 /* AlertVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7B3A5F1EAFB20E00468ED8 /* AlertVIew.swift */; };
+		BB7B3A6B1EAFB20E00468ED8 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7B3A601EAFB20E00468ED8 /* Animation.swift */; };
+		BB7B3A6C1EAFB20E00468ED8 /* CommonStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7B3A611EAFB20E00468ED8 /* CommonStructure.swift */; };
+		BB7B3A6D1EAFB20E00468ED8 /* ConversionImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7B3A621EAFB20E00468ED8 /* ConversionImage.swift */; };
+		BB7B3A6E1EAFB20E00468ED8 /* GestureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7B3A631EAFB20E00468ED8 /* GestureField.swift */; };
+		BB7B3A6F1EAFB20E00468ED8 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB7B3A641EAFB20E00468ED8 /* Info.plist */; };
+		BB7B3A701EAFB20E00468ED8 /* LineField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7B3A651EAFB20E00468ED8 /* LineField.swift */; };
+		BB7B3A711EAFB20E00468ED8 /* Mathematics.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7B3A661EAFB20E00468ED8 /* Mathematics.swift */; };
+		BB7B3A721EAFB20E00468ED8 /* SetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7B3A671EAFB20E00468ED8 /* SetView.swift */; };
+		BB7B3A731EAFB20E00468ED8 /* TouchField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7B3A681EAFB20E00468ED8 /* TouchField.swift */; };
 		BBCDF96A1EAF9F540077E270 /* TransformationRayCartFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBCDF9611EAF9F540077E270 /* TransformationRayCartFile.framework */; };
 		BBCDF9711EAF9F540077E270 /* TransformationRayCartFileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCDF9701EAF9F540077E270 /* TransformationRayCartFileTests.swift */; };
 		BBCDF9731EAF9F540077E270 /* TransformationRayCartFile.h in Headers */ = {isa = PBXBuildFile; fileRef = BBCDF9631EAF9F540077E270 /* TransformationRayCartFile.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -90,6 +100,17 @@
 		BB5FF0371EA1A92B001FF0F4 /* TransformationRayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransformationRayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB5FF03B1EA1A92B001FF0F4 /* TransformationRayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformationRayUITests.swift; sourceTree = "<group>"; };
 		BB5FF03D1EA1A92B001FF0F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB7B3A5F1EAFB20E00468ED8 /* AlertVIew.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertVIew.swift; sourceTree = "<group>"; };
+		BB7B3A601EAFB20E00468ED8 /* Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
+		BB7B3A611EAFB20E00468ED8 /* CommonStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonStructure.swift; sourceTree = "<group>"; };
+		BB7B3A621EAFB20E00468ED8 /* ConversionImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversionImage.swift; sourceTree = "<group>"; };
+		BB7B3A631EAFB20E00468ED8 /* GestureField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureField.swift; sourceTree = "<group>"; };
+		BB7B3A641EAFB20E00468ED8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB7B3A651EAFB20E00468ED8 /* LineField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineField.swift; sourceTree = "<group>"; };
+		BB7B3A661EAFB20E00468ED8 /* Mathematics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mathematics.swift; sourceTree = "<group>"; };
+		BB7B3A671EAFB20E00468ED8 /* SetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetView.swift; sourceTree = "<group>"; };
+		BB7B3A681EAFB20E00468ED8 /* TouchField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchField.swift; sourceTree = "<group>"; };
+		BB7B3A691EAFB20E00468ED8 /* TransformationRayCartFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransformationRayCartFile.h; sourceTree = "<group>"; };
 		BBCDF9611EAF9F540077E270 /* TransformationRayCartFile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TransformationRayCartFile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBCDF9631EAF9F540077E270 /* TransformationRayCartFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransformationRayCartFile.h; sourceTree = "<group>"; };
 		BBCDF9641EAF9F540077E270 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -156,6 +177,7 @@
 			children = (
 				BB5FF01A1EA1A92B001FF0F4 /* TransformationRay */,
 				BB5FF02F1EA1A92B001FF0F4 /* TransformationRayTests */,
+				BB7B3A5E1EAFB20E00468ED8 /* TransformationRayCartFile */,
 				BB5FF03A1EA1A92B001FF0F4 /* TransformationRayUITests */,
 				BBCDF9621EAF9F540077E270 /* TransformationRayCartFile */,
 				BBCDF96F1EAF9F540077E270 /* TransformationRayCartFileTests */,
@@ -204,6 +226,24 @@
 				BB5FF03D1EA1A92B001FF0F4 /* Info.plist */,
 			);
 			path = TransformationRayUITests;
+			sourceTree = "<group>";
+		};
+		BB7B3A5E1EAFB20E00468ED8 /* TransformationRayCartFile */ = {
+			isa = PBXGroup;
+			children = (
+				BB7B3A5F1EAFB20E00468ED8 /* AlertVIew.swift */,
+				BB7B3A601EAFB20E00468ED8 /* Animation.swift */,
+				BB7B3A611EAFB20E00468ED8 /* CommonStructure.swift */,
+				BB7B3A621EAFB20E00468ED8 /* ConversionImage.swift */,
+				BB7B3A631EAFB20E00468ED8 /* GestureField.swift */,
+				BB7B3A641EAFB20E00468ED8 /* Info.plist */,
+				BB7B3A651EAFB20E00468ED8 /* LineField.swift */,
+				BB7B3A661EAFB20E00468ED8 /* Mathematics.swift */,
+				BB7B3A671EAFB20E00468ED8 /* SetView.swift */,
+				BB7B3A681EAFB20E00468ED8 /* TouchField.swift */,
+				BB7B3A691EAFB20E00468ED8 /* TransformationRayCartFile.h */,
+			);
+			path = TransformationRayCartFile;
 			sourceTree = "<group>";
 		};
 		BBCDF9621EAF9F540077E270 /* TransformationRayCartFile */ = {
@@ -397,6 +437,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB7B3A6F1EAFB20E00468ED8 /* Info.plist in Resources */,
 				BB5FF0261EA1A92B001FF0F4 /* LaunchScreen.storyboard in Resources */,
 				BB5FF0231EA1A92B001FF0F4 /* Assets.xcassets in Resources */,
 				BB5FF0211EA1A92B001FF0F4 /* Main.storyboard in Resources */,
@@ -438,10 +479,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB7B3A6C1EAFB20E00468ED8 /* CommonStructure.swift in Sources */,
+				BB7B3A6D1EAFB20E00468ED8 /* ConversionImage.swift in Sources */,
 				BB5FF01C1EA1A92B001FF0F4 /* AppDelegate.swift in Sources */,
 				BBE318841EA960B10085E56A /* PointViewController.swift in Sources */,
+				BB7B3A711EAFB20E00468ED8 /* Mathematics.swift in Sources */,
 				BB279D411EA7B62C0095555A /* ViewController.swift in Sources */,
+				BB7B3A6E1EAFB20E00468ED8 /* GestureField.swift in Sources */,
+				BB7B3A721EAFB20E00468ED8 /* SetView.swift in Sources */,
+				BB7B3A701EAFB20E00468ED8 /* LineField.swift in Sources */,
 				BB50455B1EAC5BE500161BFE /* AngleInputViewController.swift in Sources */,
+				BB7B3A731EAFB20E00468ED8 /* TouchField.swift in Sources */,
+				BB7B3A6B1EAFB20E00468ED8 /* Animation.swift in Sources */,
+				BB7B3A6A1EAFB20E00468ED8 /* AlertVIew.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -825,6 +875,7 @@
 				BBCDF97A1EAF9F540077E270 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BBCDF97C1EAF9F540077E270 /* Build configuration list for PBXNativeTarget "TransformationRayCartFileTests" */ = {
 			isa = XCConfigurationList;
@@ -833,6 +884,7 @@
 				BBCDF97E1EAF9F540077E270 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
