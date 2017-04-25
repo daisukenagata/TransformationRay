@@ -4,10 +4,20 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>TransformationCarthage copy.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>TransformationRay.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+		<key>TransformationRayCartFile.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -23,6 +33,16 @@
 			<true/>
 		</dict>
 		<key>BB5FF0361EA1A92B001FF0F4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BBCDF9601EAF9F540077E270</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BBCDF9681EAF9F540077E270</key>
 		<dict>
 			<key>primary</key>
 			<true/>
