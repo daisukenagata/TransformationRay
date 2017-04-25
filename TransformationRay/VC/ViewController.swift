@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import TransformationCarthage
 
 class ViewController: UIViewController,UIGestureRecognizerDelegate  {
     

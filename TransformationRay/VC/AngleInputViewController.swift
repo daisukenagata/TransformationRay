@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import TransformationCarthage
 
 class AngleInputViewController: UIViewController {
     

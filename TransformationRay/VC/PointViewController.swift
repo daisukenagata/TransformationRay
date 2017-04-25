@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import TransformationCarthage
 
 class PointViewController: UIViewController,UIGestureRecognizerDelegate {
     

@@ -48,6 +48,16 @@
                ReferencedContainer = "container:TransformationRay.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "BB99F0171EAF7DAA0033561D"
+               BuildableName = "TransformationCarthageTests.xctest"
+               BlueprintName = "TransformationCarthageTests"
+               ReferencedContainer = "container:TransformationRay.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
