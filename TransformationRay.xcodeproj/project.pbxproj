@@ -20,6 +20,27 @@
 		BBCDF9731EAF9F540077E270 /* TransformationRayCartFile.h in Headers */ = {isa = PBXBuildFile; fileRef = BBCDF9631EAF9F540077E270 /* TransformationRayCartFile.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BBCDF9761EAF9F540077E270 /* TransformationRayCartFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBCDF9611EAF9F540077E270 /* TransformationRayCartFile.framework */; };
 		BBCDF9771EAF9F540077E270 /* TransformationRayCartFile.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BBCDF9611EAF9F540077E270 /* TransformationRayCartFile.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BBCDF9AC1EAFA21D0077E270 /* AlertVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCDF9A11EAFA21D0077E270 /* AlertVIew.swift */; };
+		BBCDF9AD1EAFA21D0077E270 /* AlertVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCDF9A11EAFA21D0077E270 /* AlertVIew.swift */; };
+		BBCDF9AE1EAFA21D0077E270 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCDF9A21EAFA21D0077E270 /* Animation.swift */; };
+		BBCDF9AF1EAFA21D0077E270 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCDF9A21EAFA21D0077E270 /* Animation.swift */; };
+		BBCDF9B01EAFA21D0077E270 /* CommonStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCDF9A31EAFA21D0077E270 /* CommonStructure.swift */; };
+		BBCDF9B11EAFA21D0077E270 /* CommonStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCDF9A31EAFA21D0077E270 /* CommonStructure.swift */; };
+		BBCDF9B21EAFA21D0077E270 /* ConversionImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCDF9A41EAFA21D0077E270 /* ConversionImage.swift */; };
+		BBCDF9B31EAFA21D0077E270 /* ConversionImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCDF9A41EAFA21D0077E270 /* ConversionImage.swift */; };
+		BBCDF9B41EAFA21D0077E270 /* GestureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCDF9A51EAFA21D0077E270 /* GestureField.swift */; };
+		BBCDF9B51EAFA21D0077E270 /* GestureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCDF9A51EAFA21D0077E270 /* GestureField.swift */; };
+		BBCDF9B61EAFA21D0077E270 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BBCDF9A61EAFA21D0077E270 /* Info.plist */; };
+		BBCDF9B71EAFA21D0077E270 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BBCDF9A61EAFA21D0077E270 /* Info.plist */; };
+		BBCDF9B81EAFA21D0077E270 /* LineField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCDF9A71EAFA21D0077E270 /* LineField.swift */; };
+		BBCDF9B91EAFA21D0077E270 /* LineField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCDF9A71EAFA21D0077E270 /* LineField.swift */; };
+		BBCDF9BA1EAFA21D0077E270 /* Mathematics.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCDF9A81EAFA21D0077E270 /* Mathematics.swift */; };
+		BBCDF9BB1EAFA21D0077E270 /* Mathematics.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCDF9A81EAFA21D0077E270 /* Mathematics.swift */; };
+		BBCDF9BC1EAFA21D0077E270 /* SetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCDF9A91EAFA21D0077E270 /* SetView.swift */; };
+		BBCDF9BD1EAFA21D0077E270 /* SetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCDF9A91EAFA21D0077E270 /* SetView.swift */; };
+		BBCDF9BE1EAFA21D0077E270 /* TouchField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCDF9AA1EAFA21D0077E270 /* TouchField.swift */; };
+		BBCDF9BF1EAFA21D0077E270 /* TouchField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCDF9AA1EAFA21D0077E270 /* TouchField.swift */; };
+		BBCDF9C01EAFA21D0077E270 /* TransformationRayCartFile.h in Headers */ = {isa = PBXBuildFile; fileRef = BBCDF9AB1EAFA21D0077E270 /* TransformationRayCartFile.h */; };
 		BBE318841EA960B10085E56A /* PointViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE318831EA960B10085E56A /* PointViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -96,6 +117,17 @@
 		BBCDF9691EAF9F540077E270 /* TransformationRayCartFileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransformationRayCartFileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBCDF9701EAF9F540077E270 /* TransformationRayCartFileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformationRayCartFileTests.swift; sourceTree = "<group>"; };
 		BBCDF9721EAF9F540077E270 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBCDF9A11EAFA21D0077E270 /* AlertVIew.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertVIew.swift; sourceTree = "<group>"; };
+		BBCDF9A21EAFA21D0077E270 /* Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
+		BBCDF9A31EAFA21D0077E270 /* CommonStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonStructure.swift; sourceTree = "<group>"; };
+		BBCDF9A41EAFA21D0077E270 /* ConversionImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversionImage.swift; sourceTree = "<group>"; };
+		BBCDF9A51EAFA21D0077E270 /* GestureField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureField.swift; sourceTree = "<group>"; };
+		BBCDF9A61EAFA21D0077E270 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBCDF9A71EAFA21D0077E270 /* LineField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineField.swift; sourceTree = "<group>"; };
+		BBCDF9A81EAFA21D0077E270 /* Mathematics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mathematics.swift; sourceTree = "<group>"; };
+		BBCDF9A91EAFA21D0077E270 /* SetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetView.swift; sourceTree = "<group>"; };
+		BBCDF9AA1EAFA21D0077E270 /* TouchField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchField.swift; sourceTree = "<group>"; };
+		BBCDF9AB1EAFA21D0077E270 /* TransformationRayCartFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransformationRayCartFile.h; sourceTree = "<group>"; };
 		BBE318831EA960B10085E56A /* PointViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -155,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				BB5FF01A1EA1A92B001FF0F4 /* TransformationRay */,
+				BBCDF9A01EAFA21D0077E270 /* TransformationRayCartFile */,
 				BB5FF02F1EA1A92B001FF0F4 /* TransformationRayTests */,
 				BB5FF03A1EA1A92B001FF0F4 /* TransformationRayUITests */,
 				BBCDF9621EAF9F540077E270 /* TransformationRayCartFile */,
@@ -224,6 +257,24 @@
 			path = TransformationRayCartFileTests;
 			sourceTree = "<group>";
 		};
+		BBCDF9A01EAFA21D0077E270 /* TransformationRayCartFile */ = {
+			isa = PBXGroup;
+			children = (
+				BBCDF9A11EAFA21D0077E270 /* AlertVIew.swift */,
+				BBCDF9A21EAFA21D0077E270 /* Animation.swift */,
+				BBCDF9A31EAFA21D0077E270 /* CommonStructure.swift */,
+				BBCDF9A41EAFA21D0077E270 /* ConversionImage.swift */,
+				BBCDF9A51EAFA21D0077E270 /* GestureField.swift */,
+				BBCDF9A61EAFA21D0077E270 /* Info.plist */,
+				BBCDF9A71EAFA21D0077E270 /* LineField.swift */,
+				BBCDF9A81EAFA21D0077E270 /* Mathematics.swift */,
+				BBCDF9A91EAFA21D0077E270 /* SetView.swift */,
+				BBCDF9AA1EAFA21D0077E270 /* TouchField.swift */,
+				BBCDF9AB1EAFA21D0077E270 /* TransformationRayCartFile.h */,
+			);
+			path = TransformationRayCartFile;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -231,6 +282,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBCDF9C01EAFA21D0077E270 /* TransformationRayCartFile.h in Headers */,
 				BBCDF9731EAF9F540077E270 /* TransformationRayCartFile.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,6 +449,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBCDF9B61EAFA21D0077E270 /* Info.plist in Resources */,
 				BB5FF0261EA1A92B001FF0F4 /* LaunchScreen.storyboard in Resources */,
 				BB5FF0231EA1A92B001FF0F4 /* Assets.xcassets in Resources */,
 				BB5FF0211EA1A92B001FF0F4 /* Main.storyboard in Resources */,
@@ -421,6 +474,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBCDF9B71EAFA21D0077E270 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,10 +492,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBCDF9B01EAFA21D0077E270 /* CommonStructure.swift in Sources */,
+				BBCDF9B21EAFA21D0077E270 /* ConversionImage.swift in Sources */,
 				BB5FF01C1EA1A92B001FF0F4 /* AppDelegate.swift in Sources */,
 				BBE318841EA960B10085E56A /* PointViewController.swift in Sources */,
+				BBCDF9BA1EAFA21D0077E270 /* Mathematics.swift in Sources */,
 				BB279D411EA7B62C0095555A /* ViewController.swift in Sources */,
+				BBCDF9B41EAFA21D0077E270 /* GestureField.swift in Sources */,
+				BBCDF9BC1EAFA21D0077E270 /* SetView.swift in Sources */,
+				BBCDF9B81EAFA21D0077E270 /* LineField.swift in Sources */,
 				BB50455B1EAC5BE500161BFE /* AngleInputViewController.swift in Sources */,
+				BBCDF9BE1EAFA21D0077E270 /* TouchField.swift in Sources */,
+				BBCDF9AE1EAFA21D0077E270 /* Animation.swift in Sources */,
+				BBCDF9AC1EAFA21D0077E270 /* AlertVIew.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,6 +528,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBCDF9B11EAFA21D0077E270 /* CommonStructure.swift in Sources */,
+				BBCDF9B31EAFA21D0077E270 /* ConversionImage.swift in Sources */,
+				BBCDF9B91EAFA21D0077E270 /* LineField.swift in Sources */,
+				BBCDF9AF1EAFA21D0077E270 /* Animation.swift in Sources */,
+				BBCDF9B51EAFA21D0077E270 /* GestureField.swift in Sources */,
+				BBCDF9AD1EAFA21D0077E270 /* AlertVIew.swift in Sources */,
+				BBCDF9BB1EAFA21D0077E270 /* Mathematics.swift in Sources */,
+				BBCDF9BF1EAFA21D0077E270 /* TouchField.swift in Sources */,
+				BBCDF9BD1EAFA21D0077E270 /* SetView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -624,6 +696,7 @@
 		BB5FF0411EA1A92B001FF0F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = B3ZKJZUE9E;
 				INFOPLIST_FILE = TransformationRay/Info.plist;
@@ -638,6 +711,7 @@
 		BB5FF0421EA1A92B001FF0F4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = B3ZKJZUE9E;
 				INFOPLIST_FILE = TransformationRay/Info.plist;
@@ -825,6 +899,7 @@
 				BBCDF97A1EAF9F540077E270 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BBCDF97C1EAF9F540077E270 /* Build configuration list for PBXNativeTarget "TransformationRayCartFileTests" */ = {
 			isa = XCConfigurationList;
@@ -833,6 +908,7 @@
 				BBCDF97E1EAF9F540077E270 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
