@@ -29,6 +29,13 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate  {
         
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(true)
+        
+        LineField.lineField(line:CommonStructure.line, viewC: self)
+        
+    }
+    
     func singleTap(){
         
         GestureField.singleTap(vc: self)
