@@ -37,7 +37,7 @@ struct Mathematics {
         
         let radian : Double = Double(CommonStructure.cg) * Double.pi / 180
         
-        return(cos(radian)*1000,sin(radian)*1000)
+        return(sin(radian)*1000,cos(radian)*1000)
         
     }
     
