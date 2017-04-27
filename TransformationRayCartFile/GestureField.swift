@@ -41,12 +41,9 @@ struct GestureField {
             
             CommonStructure.pointted = TapGesture.tapGesture[index].location(ofTouch: i, in:view)
             
-            
             CommonStructure.line2 = Mathematics.mathematicsCirle()
-                
-        
-            GestureField.labelSet3(viewC: view)
             
+            GestureField.labelSet3(viewC: view)
             
             CommonStructure.line2.removeAllPoints()
             
@@ -73,7 +70,6 @@ struct GestureField {
     static func singleTap3(view:UIView,cg:CGFloat){
         
         CommonStructure.line2 = Mathematics.mathematicsCirle_100(view:view,cg:cg)
-        
         
         GestureField.labelSet3(viewC: view)
         
