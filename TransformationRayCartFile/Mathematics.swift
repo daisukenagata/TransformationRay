@@ -66,7 +66,7 @@ struct Mathematics {
     
     //MARK: Tap
     
-    static func tap(vc:UIViewController) {
+    static func mathematicsTap(vc:UIViewController) {
         
         if GestureField.bool2 == true {
             
@@ -124,5 +124,12 @@ struct Mathematics {
         return UIBezierPath(arcCenter: CGPoint(x:0, y:0), radius: -Mathematics.angleLength(p1: CommonStructure.Point(x:0,y:0), CommonStructure.Pointted(x:CommonStructure.pointted.x,y:CommonStructure.pointted.y)), startAngle: 0, endAngle:Mathematics.mathematicsAngle(), clockwise: true)
             
         }
+    }
+    
+    //MARK: MathematicsCirle_100
+    
+    static func mathematicsCirle_100(view:UIView,cg:CGFloat)->UIBezierPath{
+
+        return UIBezierPath(arcCenter: CGPoint(x:view.bounds.width/2, y:view.bounds.height/2), radius: Mathematics.angleLength(p1: CommonStructure.Point(x:0,y:0), CommonStructure.Pointted(x:100,y:100)) , startAngle: 0, endAngle:cg  * Mathematics.angelMathematics, clockwise: true)
     }
 }
