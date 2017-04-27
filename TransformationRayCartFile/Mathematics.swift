@@ -33,7 +33,7 @@ struct Mathematics {
     
     //MARK:Coordinate
     
-    static func Coordinate()->(Double,Double){
+    static func coordinate()->(Double,Double){
         
         let radian : Double = Double(CommonStructure.cg) * Double.pi / 180
         
