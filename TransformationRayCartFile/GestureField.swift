@@ -21,13 +21,16 @@ struct GestureField {
             CommonStructure.pointted = CommonStructure.tapGesture.location(ofTouch: i, in:vc.view)
             
             if CommonStructure.pointted.y != 0.0 {
+                
                 CommonStructure.line.addLine(to:CGPoint(x:CommonStructure.pointted.x , y:CommonStructure.pointted.y))
+                
             }
             
             
             CommonStructure.line.move(to: CGPoint(x:CommonStructure.pointted.x , y:CommonStructure.pointted.y))
             CommonStructure.count.append(CommonStructure.pointted)
             GestureField.labelSet(viewC: vc.view)
+            
             
             if GestureField.bool2 == true {
                 

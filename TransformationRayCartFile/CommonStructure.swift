@@ -43,12 +43,14 @@ struct CommonStructure {
         
         var x:CGFloat = 0
         var y:CGFloat = 0
+        
     }
     
     struct Pointted {
         
         var x = CommonStructure.pointted.x
         var y = CommonStructure.pointted.y
+        
     }
     
 }

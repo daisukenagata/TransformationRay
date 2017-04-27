@@ -22,8 +22,8 @@ class AlertView {
                 guard alertController.textFields?[0].text == "" else {
                     
                     CommonStructure.cg = Int((alertController.textFields?[0].text)!)!
-                    view.navigationItem.title = CommonStructure.cg.description
-                    GestureField.singleTap3(view: view.view, cg: CGFloat(CommonStructure.cg))
+                    view.navigationItem.title = alertController.textFields?[0].text?.description
+                    GestureField.singleTap3(view: view.view, cg: CGFloat(Double((alertController.textFields?[0].text!)!)!))
                     
                     return
                 }
