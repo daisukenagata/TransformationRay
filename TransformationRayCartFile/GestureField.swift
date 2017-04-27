@@ -31,15 +31,14 @@ struct GestureField {
             
             if GestureField.bool2 == true {
                 
-                
-                let n :CGPoint =  CGPoint(x:CommonStructure.pointted.x, y: CommonStructure.pointted.y)
+
                 let ddd = CommonStructure.DefalutsSave().k.object(forKey: "dx") as! CGFloat
                 let nnn = CommonStructure.DefalutsSave().k.object(forKey: "dy") as! CGFloat
                 
                 
                 GestureField.bool2 = false
                 
-                vc.navigationItem.title = "Distance"+Mathematics.distance(a: CommonStructure.Point(x: ddd , y: nnn), b: CommonStructure.Point(x: n.x, y: n.y)).description
+                vc.navigationItem.title = "Distance"+Mathematics.distance(a: CommonStructure.Point(x: ddd , y: nnn), b: CommonStructure.Point(x: CommonStructure.pointted.x, y: CommonStructure.pointted.y)).description
                 
             }
             
@@ -49,6 +48,7 @@ struct GestureField {
                 CommonStructure.DefalutsSave().k.set(CGPoint(x:CommonStructure.pointted.x, y: CommonStructure.pointted.y).x, forKey: "dx")
                 CommonStructure.DefalutsSave().k.set(CGPoint(x:CommonStructure.pointted.x, y: CommonStructure.pointted.y).y, forKey: "dy")
                 GestureField.bool2 = true
+                
             }
             
             
