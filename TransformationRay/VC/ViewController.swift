@@ -87,6 +87,7 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate  {
             CommonStructure.line.move(to: CGPoint(x:  CommonStructure.count[ CommonStructure.count.endIndex-2].x,y:CommonStructure.count[ CommonStructure.count.endIndex-2].y))
             CommonStructure.line.addLine(to:CGPoint(x:  CommonStructure.count[CommonStructure.count.endIndex-1].x , y: CommonStructure.count[ CommonStructure.count.endIndex-1].y))
             self.view.addSubview(labelSet(view:  CommonStructure.views))
+            
         }
         
     }

@@ -23,21 +23,18 @@ class PointViewController: UIViewController,UIGestureRecognizerDelegate {
         
         //MARK: sample1
         sample1.frame = CGRect(x:0,y:44,width:UIScreen.main.bounds.width/2,height:UIScreen.main.bounds.height/2-22)
-        let angle =  180 * Double.pi / 180
-        CommonStructure.transMiller = CGAffineTransform(rotationAngle: CGFloat(angle));
+        CommonStructure.transMiller = CGAffineTransform(rotationAngle: CGFloat(180 * Double.pi / 180));
         sample1.transform = CommonStructure.transMiller
         self.view.addSubview(sample1)
         
         //MARK: sample2
-        let angle2 =  270 * Double.pi / 180
-        CommonStructure.transMiller = CGAffineTransform(rotationAngle: CGFloat(angle2));
+        CommonStructure.transMiller = CGAffineTransform(rotationAngle: CGFloat(270 * Double.pi / 180));
         sample2.transform = CommonStructure.transMiller
         sample2.frame = CGRect(x:UIScreen.main.bounds.width/2,y:44,width:UIScreen.main.bounds.width/2,height:UIScreen.main.bounds.height/2-22)
         self.view.addSubview(sample2)
         
         //MARK: sample3
-        let angle3 =  90 * Double.pi / 180
-        CommonStructure.transMiller = CGAffineTransform(rotationAngle: CGFloat(angle3));
+        CommonStructure.transMiller = CGAffineTransform(rotationAngle: CGFloat(90 * Double.pi / 180));
         sample3.transform = CommonStructure.transMiller
         sample3.frame = CGRect(x:0,y:UIScreen.main.bounds.height/2+22,width:UIScreen.main.bounds.width/2,height:UIScreen.main.bounds.height/2-22)
         self.view.addSubview(sample3)

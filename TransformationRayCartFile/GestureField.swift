@@ -13,8 +13,8 @@ struct GestureField {
     static var bool = false
     static var bool2 = false
     
+    
     static func singleTap(vc:UIViewController){
-        
         
         for i in 0..<CommonStructure.tapGesture.numberOfTouches {
             
@@ -26,25 +26,20 @@ struct GestureField {
                 
             }
             
-            
             CommonStructure.line.move(to: CGPoint(x:CommonStructure.pointted.x , y:CommonStructure.pointted.y))
             CommonStructure.count.append(CommonStructure.pointted)
             GestureField.labelSet(viewC: vc.view)
             
-            
             if GestureField.bool2 == true {
                 
-
                 let ddd = CommonStructure.DefalutsSave().k.object(forKey: "dx") as! CGFloat
                 let nnn = CommonStructure.DefalutsSave().k.object(forKey: "dy") as! CGFloat
-                
                 
                 GestureField.bool2 = false
                 
                 vc.navigationItem.title = "Distance"+Mathematics.distance(a: CommonStructure.Point(x: ddd , y: nnn), b: CommonStructure.Point(x: CommonStructure.pointted.x, y: CommonStructure.pointted.y)).description
                 
             }
-            
             
             if GestureField.bool2 == false {
                 
@@ -54,7 +49,6 @@ struct GestureField {
                 
             }
             
-            
             if  GestureField.bool == true {
                 
                 TouchField.touchesMoved(CommonStructure.Unit().aTouch, with:CommonStructure.Unit().event, vw:CommonStructure.vw,pointted:CommonStructure.pointted)
@@ -63,9 +57,7 @@ struct GestureField {
         }
     }
     
-    
     static func singleTap2(view:UIView,vc:UIViewController,index:Int){
-        
         
         for i in 0..<TapGesture.tapGesture[index].numberOfTouches {
             
@@ -88,24 +80,19 @@ struct GestureField {
             CommonStructure.angle = 0.0
             CommonStructure.line2.removeAllPoints()
             
-            
             CommonStructure.line.move(to:CGPoint(x:0 , y:0))
             CommonStructure.line.addLine(to: CGPoint(x:CommonStructure.pointted.x , y:CommonStructure.pointted.y))
-            
             
             CommonStructure.line2.move(to:CGPoint(x:0 , y:0))
             CommonStructure.line2.addLine(to:CGPoint(x:0 , y:view.bounds.height))
             CommonStructure.line2.addLine(to:CGPoint(x:0 , y:-view.bounds.height))
             
-            
             CommonStructure.line2.move(to:CGPoint(x:0 , y:0))
             CommonStructure.line2.addLine(to:CGPoint(x:view.bounds.width , y:0))
             CommonStructure.line2.addLine(to:CGPoint(x:-view.bounds.width , y:0))
             
-            
             GestureField.labelSet(viewC: view)
             GestureField.labelSet3(viewC: view)
-            
             
         }
         
@@ -115,42 +102,32 @@ struct GestureField {
     
     static func singleTap3(view:UIView,cg:CGFloat){
         
-        
         CommonStructure.line2 = UIBezierPath(arcCenter: CGPoint(x:view.bounds.width/2, y:view.bounds.height/2), radius: Mathematics.angleLength(p1: CommonStructure.Point(x:0,y:0), CommonStructure.Pointted(x:100,y:100)) , startAngle: 0, endAngle:cg  * Mathematics.angelMathematics, clockwise: true)
         
         GestureField.labelSet3(viewC: view)
         
-        
         CommonStructure.line.move(to:CGPoint(x:view.bounds.width/2 , y:view.bounds.height/2))
         CommonStructure.line.addLine(to: CGPoint(x:Mathematics.coordinate().1*100,y:Mathematics.coordinate().0*100))
-        
         
         CommonStructure.angle = 0.0
         CommonStructure.line2.removeAllPoints()
         
-        
         CommonStructure.line2.move(to:CGPoint(x:view.bounds.width/2 , y:view.bounds.height/2))
         CommonStructure.line2.addLine(to:CGPoint(x:0 , y:view.bounds.height/2))
-        
         
         CommonStructure.line2.move(to:CGPoint(x:view.bounds.width/2 , y:view.bounds.height/2))
         CommonStructure.line2.addLine(to:CGPoint(x:0 , y:view.bounds.height*100))
         
-        
         CommonStructure.line2.move(to:CGPoint(x:view.bounds.width/2 , y:view.bounds.height/2))
         CommonStructure.line2.addLine(to:CGPoint(x:view.bounds.width/2 , y:0))
-        
         
         CommonStructure.line2.move(to:CGPoint(x:view.bounds.width/2 , y:view.bounds.height/2))
         CommonStructure.line2.addLine(to:CGPoint(x:view.bounds.width*100 , y:0))
         
-        
         GestureField.labelSet(viewC: view)
         GestureField.labelSet3(viewC: view)
         
-        
     }
-    
     
     static func labelSet(viewC:UIView){
         

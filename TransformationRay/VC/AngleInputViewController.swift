@@ -15,8 +15,7 @@ class AngleInputViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let anglePi =  180 * Double.pi / 180
-        CommonStructure.transMiller = CGAffineTransform(rotationAngle: CGFloat(anglePi))
+        CommonStructure.transMiller = CGAffineTransform(rotationAngle: CGFloat(180 * Double.pi / 180))
         view.transform = CommonStructure.transMiller
         
     }
