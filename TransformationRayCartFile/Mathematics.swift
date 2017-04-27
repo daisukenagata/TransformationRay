@@ -49,4 +49,18 @@ struct Mathematics {
         
     }
     
+    //MARK:AngleMathematics
+    
+    static func mathematics() -> String{
+        
+        return  Mathematics.angle(a: CommonStructure.Point(x: 0, y: 0), b: CommonStructure.Point(x: (CommonStructure.pointted.x), y: (CommonStructure.pointted.y))).description
+    }
+    
+    //MARK: Cirle 
+    
+    static func cirle()->UIBezierPath{
+        
+        return UIBezierPath(roundedRect:CommonStructure.line.bounds, cornerRadius:CommonStructure.line.bounds.width / 2)
+
+    }
 }

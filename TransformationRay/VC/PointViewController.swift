@@ -87,27 +87,34 @@ class PointViewController: UIViewController,UIGestureRecognizerDelegate {
         
     }
     
-
     func singleTap1(){
+        
         GestureField.singleTap2(view:sample1,vc:self,index:sample1.tag)
        
-        anglePoint.title = Mathematics.angle(a: CommonStructure.Point(x: 0, y: 0), b: CommonStructure.Point(x: (CommonStructure.pointted.x), y: (CommonStructure.pointted.y))).description
+        anglePoint.title = Mathematics.mathematics()
         
     }
+    
     func singleTap2(){
+        
         GestureField.singleTap2(view:sample1,vc:self,index:sample2.tag)
         
-        anglePoint.title = Mathematics.angle(a: CommonStructure.Point(x: 0, y: 0), b: CommonStructure.Point(x: (CommonStructure.pointted.x), y: (CommonStructure.pointted.y))).description
+        anglePoint.title = Mathematics.mathematics()
     }
+    
     func singleTap3(){
+        
         GestureField.singleTap2(view:sample1,vc:self,index:sample3.tag)
         
-        anglePoint.title = Mathematics.angle(a: CommonStructure.Point(x: 0, y: 0), b: CommonStructure.Point(x: (CommonStructure.pointted.x), y: (CommonStructure.pointted.y))).description
+        anglePoint.title = Mathematics.mathematics()
+        
     }
+    
     func singleTap4(){
+        
         GestureField.singleTap2(view:sample1,vc:self,index:sample4.tag)
         
-        anglePoint.title = Mathematics.angle(a: CommonStructure.Point(x: 0, y: 0), b: CommonStructure.Point(x: (CommonStructure.pointted.x), y: (CommonStructure.pointted.y))).description
+        anglePoint.title = Mathematics.mathematics()
 
     }
     

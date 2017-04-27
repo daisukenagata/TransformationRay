@@ -94,7 +94,7 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate  {
     
     @IBAction func cirle(_ sender: UIBarButtonItem) {
         
-        CommonStructure.line = UIBezierPath(roundedRect:CommonStructure.line.bounds, cornerRadius:CommonStructure.line.bounds.width / 2)
+        CommonStructure.line = Mathematics.cirle()
         self.view.addSubview(labelSet(view: CommonStructure.views))
         
     }
