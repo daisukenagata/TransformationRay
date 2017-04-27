@@ -56,12 +56,12 @@ struct Mathematics {
         return  Mathematics.angle(a: CommonStructure.Point(x: 0, y: 0), b: CommonStructure.Point(x: (CommonStructure.pointted.x), y: (CommonStructure.pointted.y))).description
     }
     
-    //MARK: Cirle 
+    //MARK: Cirle
     
     static func cirle()->UIBezierPath{
         
         return UIBezierPath(roundedRect:CommonStructure.line.bounds, cornerRadius:CommonStructure.line.bounds.width / 2)
-
+        
     }
     
     //MARK: Tap
@@ -69,29 +69,60 @@ struct Mathematics {
     static func tap(vc:UIViewController) {
         
         if GestureField.bool2 == true {
-        
-        let ddd = CommonStructure.DefalutsSave().k.object(forKey: "dx") as! CGFloat
-        let nnn = CommonStructure.DefalutsSave().k.object(forKey: "dy") as! CGFloat
-        
-        GestureField.bool2 = false
-        
-        vc.navigationItem.title = "Distance"+Mathematics.distance(a: CommonStructure.Point(x: ddd , y: nnn), b: CommonStructure.Point(x: CommonStructure.pointted.x, y: CommonStructure.pointted.y)).description
-        
+            
+            let ddd = CommonStructure.DefalutsSave().k.object(forKey: "dx") as! CGFloat
+            let nnn = CommonStructure.DefalutsSave().k.object(forKey: "dy") as! CGFloat
+            
+            GestureField.bool2 = false
+            
+            vc.navigationItem.title = "Distance"+Mathematics.distance(a: CommonStructure.Point(x: ddd , y: nnn), b: CommonStructure.Point(x: CommonStructure.pointted.x, y: CommonStructure.pointted.y)).description
+            
         }
         
         if GestureField.bool2 == false {
-        
-        CommonStructure.DefalutsSave().k.set(CGPoint(x:CommonStructure.pointted.x, y: CommonStructure.pointted.y).x, forKey: "dx")
-        CommonStructure.DefalutsSave().k.set(CGPoint(x:CommonStructure.pointted.x, y: CommonStructure.pointted.y).y, forKey: "dy")
-        GestureField.bool2 = true
-        
+            
+            CommonStructure.DefalutsSave().k.set(CGPoint(x:CommonStructure.pointted.x, y: CommonStructure.pointted.y).x, forKey: "dx")
+            CommonStructure.DefalutsSave().k.set(CGPoint(x:CommonStructure.pointted.x, y: CommonStructure.pointted.y).y, forKey: "dy")
+            GestureField.bool2 = true
+            
         }
         
         if  GestureField.bool == true {
-        
-        TouchField.touchesMoved(CommonStructure.Unit().aTouch, with:CommonStructure.Unit().event, vw:CommonStructure.vw,pointted:CommonStructure.pointted)
-        
+            
+            TouchField.touchesMoved(CommonStructure.Unit().aTouch, with:CommonStructure.Unit().event, vw:CommonStructure.vw,pointted:CommonStructure.pointted)
+            
         }
         
+    }
+    
+    //MARK: MathematicsAngle
+    
+    static func mathematicsAngle()->CGFloat{
+        
+        return CGFloat(Mathematics.angle(a: CommonStructure.Point(x: 0, y: 0), b: CommonStructure.Point(x: CommonStructure.pointted.x, y: CommonStructure.pointted.y))) * Mathematics.angelMathematics
+        
+    }
+    
+    //MARK: MathematicsAngle
+    
+    static func mathematicsLength()->String{
+        
+        return Mathematics.angleLength(p1: CommonStructure.Point(x:0,y:0), CommonStructure.Pointted(x:CommonStructure.pointted.x , y:CommonStructure.pointted.y)).description
+        
+    }
+    
+    //MARK: MathematicsCirle
+    
+    static func mathematicsCirle()->UIBezierPath{
+
+        if Mathematics.angleLength(p1: CommonStructure.Point(x:0,y:0), CommonStructure.Pointted(x:CommonStructure.pointted.x,y:CommonStructure.pointted.y)) > 0 {
+            
+         return UIBezierPath(arcCenter: CGPoint(x:0, y:0), radius: Mathematics.angleLength(p1: CommonStructure.Point(x:0,y:0), CommonStructure.Pointted(x:CommonStructure.pointted.x,y:CommonStructure.pointted.y)) , startAngle: 0, endAngle:Mathematics.mathematicsAngle(), clockwise: true)
+            
+        }else{
+            
+        return UIBezierPath(arcCenter: CGPoint(x:0, y:0), radius: -Mathematics.angleLength(p1: CommonStructure.Point(x:0,y:0), CommonStructure.Pointted(x:CommonStructure.pointted.x,y:CommonStructure.pointted.y)), startAngle: 0, endAngle:Mathematics.mathematicsAngle(), clockwise: true)
+            
+        }
     }
 }

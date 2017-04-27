@@ -22,7 +22,6 @@ struct CommonStructure {
     static var transMiller = CGAffineTransform()
     static var count : [CGPoint] = []
     static var cg = Int()
-    static var angle = CGFloat()
     static var lineWidth : CGFloat = 1
     
     struct DefalutsSave {

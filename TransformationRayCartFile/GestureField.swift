@@ -40,21 +40,12 @@ struct GestureField {
             
             CommonStructure.pointted = TapGesture.tapGesture[index].location(ofTouch: i, in:view)
             
-            CommonStructure.angle = CGFloat(Mathematics.angle(a: CommonStructure.Point(x: 0, y: 0), b: CommonStructure.Point(x: CommonStructure.pointted.x, y: CommonStructure.pointted.y))) * Mathematics.angelMathematics
-            
-            if Mathematics.angleLength(p1: CommonStructure.Point(x:0,y:0), CommonStructure.Pointted(x:CommonStructure.pointted.x,y:CommonStructure.pointted.y)) > 0 {
+            CommonStructure.line2 = Mathematics.mathematicsCirle()
                 
-                CommonStructure.line2 = UIBezierPath(arcCenter: CGPoint(x:0, y:0), radius: Mathematics.angleLength(p1: CommonStructure.Point(x:0,y:0), CommonStructure.Pointted(x:CommonStructure.pointted.x,y:CommonStructure.pointted.y)) , startAngle: 0, endAngle:CommonStructure.angle, clockwise: true)
-                
-            }else{
-                
-                CommonStructure.line2 = UIBezierPath(arcCenter: CGPoint(x:0, y:0), radius: -Mathematics.angleLength(p1: CommonStructure.Point(x:0,y:0), CommonStructure.Pointted(x:CommonStructure.pointted.x,y:CommonStructure.pointted.y)), startAngle: 0, endAngle:CommonStructure.angle, clockwise: true)
-                
-            }
-            
+        
             GestureField.labelSet3(viewC: view)
             
-            CommonStructure.angle = 0.0
+            
             CommonStructure.line2.removeAllPoints()
             
             CommonStructure.line.move(to:CGPoint(x:0 , y:0))
@@ -73,7 +64,7 @@ struct GestureField {
             
         }
         
-        vc.navigationItem.title = "Distance"+Mathematics.mathematics()
+        vc.navigationItem.title = "Distance"+Mathematics.mathematicsLength()
         
     }
     
@@ -86,7 +77,6 @@ struct GestureField {
         CommonStructure.line.move(to:CGPoint(x:view.bounds.width/2 , y:view.bounds.height/2))
         CommonStructure.line.addLine(to: CGPoint(x:Mathematics.coordinate().1*100,y:Mathematics.coordinate().0*100))
         
-        CommonStructure.angle = 0.0
         CommonStructure.line2.removeAllPoints()
         
         CommonStructure.line2.move(to:CGPoint(x:view.bounds.width/2 , y:view.bounds.height/2))
