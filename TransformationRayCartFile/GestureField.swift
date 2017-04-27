@@ -30,30 +30,7 @@ struct GestureField {
             CommonStructure.count.append(CommonStructure.pointted)
             GestureField.labelSet(viewC: vc.view)
             
-            if GestureField.bool2 == true {
-                
-                let ddd = CommonStructure.DefalutsSave().k.object(forKey: "dx") as! CGFloat
-                let nnn = CommonStructure.DefalutsSave().k.object(forKey: "dy") as! CGFloat
-                
-                GestureField.bool2 = false
-                
-                vc.navigationItem.title = "Distance"+Mathematics.distance(a: CommonStructure.Point(x: ddd , y: nnn), b: CommonStructure.Point(x: CommonStructure.pointted.x, y: CommonStructure.pointted.y)).description
-                
-            }
-            
-            if GestureField.bool2 == false {
-                
-                CommonStructure.DefalutsSave().k.set(CGPoint(x:CommonStructure.pointted.x, y: CommonStructure.pointted.y).x, forKey: "dx")
-                CommonStructure.DefalutsSave().k.set(CGPoint(x:CommonStructure.pointted.x, y: CommonStructure.pointted.y).y, forKey: "dy")
-                GestureField.bool2 = true
-                
-            }
-            
-            if  GestureField.bool == true {
-                
-                TouchField.touchesMoved(CommonStructure.Unit().aTouch, with:CommonStructure.Unit().event, vw:CommonStructure.vw,pointted:CommonStructure.pointted)
-                
-            }
+            Mathematics.tap(vc: vc)
         }
     }
     
@@ -96,7 +73,7 @@ struct GestureField {
             
         }
         
-        vc.navigationItem.title = "Distance"+Mathematics.distance(a: CommonStructure.Point(x: 0, y: 0), b: CommonStructure.Point(x: CommonStructure.pointted.x, y: CommonStructure.pointted.y)).description
+        vc.navigationItem.title = "Distance"+Mathematics.mathematics()
         
     }
     
