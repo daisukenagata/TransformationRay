@@ -19,11 +19,12 @@ struct CommonStructure {
     static var line2 = UIBezierPath()
     static var views = UIView()
     static var vw = SetView().vw
+    static var alert = AlertView()
     static var transMiller = CGAffineTransform()
     static var count : [CGPoint] = []
     static var cg = Int()
     static var lineWidth : CGFloat = 1
-    
+    static var bool = false
     struct DefalutsSave {
         
         var k = UserDefaults.standard

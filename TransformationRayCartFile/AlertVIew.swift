@@ -12,7 +12,7 @@ import UIKit
 class AlertView {
     
     
-    func Alert(view:UIViewController)->String{
+    func alert(view:UIViewController)->String{
         
         let alertController = UIAlertController(title: "", message: "Angle input", preferredStyle: .alert)
         alertController.addTextField(configurationHandler: nil)
@@ -37,4 +37,27 @@ class AlertView {
         return (alertController.textFields?[0].text)!
     }
     
+    func alert2(view:UIViewController,st:String){
+        
+        if  CommonStructure.bool == false {
+            
+            let alertController = UIAlertController(title: "", message: "", preferredStyle: .alert)
+            alertController.title = st
+            
+            let otherAction = UIAlertAction(title: "false", style: .default) {
+                action in
+                
+            }
+            
+            let otherAction2 = UIAlertAction(title: "true", style: .default) {
+                action in
+                CommonStructure.bool = true
+            }
+            
+            alertController.addAction(otherAction)
+            alertController.addAction(otherAction2)
+            view.present(alertController, animated: true, completion: nil)
+            
+        }
+    }
 }

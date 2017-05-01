@@ -10,7 +10,6 @@ import UIKit
 
 class AngleInputViewController: UIViewController {
     
-    var alert = AlertView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,8 +28,8 @@ class AngleInputViewController: UIViewController {
     
     @IBAction func Angleinput(_ sender: UIBarButtonItem) {
         
-        self.navigationItem.title = alert.Alert(view: self)
-
+        self.navigationItem.title = CommonStructure.alert.alert(view: self)
+        
     }
-    
+      
 }

@@ -75,8 +75,9 @@ struct Mathematics {
             
             GestureField.bool2 = false
             
-            vc.navigationItem.title = "Distance"+Mathematics.distance(a: CommonStructure.Point(x: ddd , y: nnn), b: CommonStructure.Point(x: CommonStructure.pointted.x, y: CommonStructure.pointted.y)).description
             
+            CommonStructure.alert.alert2(view:vc,st: "Distance"+Mathematics.distance(a: CommonStructure.Point(x: ddd , y: nnn), b: CommonStructure.Point(x: CommonStructure.pointted.x, y: CommonStructure.pointted.y)).description)
+
         }
         
         if GestureField.bool2 == false {

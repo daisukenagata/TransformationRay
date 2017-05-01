@@ -31,7 +31,6 @@ struct GestureField {
             GestureField.labelSet(viewC: vc.view)
             
             Mathematics.mathematicsTap(vc: vc)
-            
         }
     }
     
