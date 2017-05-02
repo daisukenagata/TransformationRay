@@ -70,13 +70,12 @@ struct Mathematics {
         
         if GestureField.bool2 == true {
             
-            let ddd = CommonStructure.DefalutsSave().k.object(forKey: "dx") as! CGFloat
-            let nnn = CommonStructure.DefalutsSave().k.object(forKey: "dy") as! CGFloat
-            
+    
             GestureField.bool2 = false
             
             
-            CommonStructure.alert.alert2(view:vc,st: "Distance"+Mathematics.distance(a: CommonStructure.Point(x: ddd , y: nnn), b: CommonStructure.Point(x: CommonStructure.pointted.x, y: CommonStructure.pointted.y)).description)
+            CommonStructure.alert.alert2(view:vc,st: "Distance"+Mathematics.distance(a: CommonStructure.Point(x: CommonStructure.DefalutsObject().ddd , y: CommonStructure.DefalutsObject().nnn), b: CommonStructure.Point(x: CommonStructure.pointted.x, y: CommonStructure.pointted.y)).description)
+            
 
         }
         

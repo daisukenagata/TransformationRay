@@ -30,6 +30,13 @@ struct CommonStructure {
         var k = UserDefaults.standard
         var s : Double?
     }
+    
+    struct DefalutsObject {
+        
+        let ddd = CommonStructure.DefalutsSave().k.object(forKey: "dx") as! CGFloat
+        let nnn = CommonStructure.DefalutsSave().k.object(forKey: "dy") as! CGFloat
+
+    }
 
     struct Unit {
         
