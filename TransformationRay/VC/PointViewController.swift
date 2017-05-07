@@ -16,10 +16,8 @@ class PointViewController: UIViewController,UIGestureRecognizerDelegate {
     @IBOutlet weak var sample4: UIView!
     @IBOutlet weak var anglePoint: UIBarButtonItem!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         //MARK: sample1
         sample1.frame = CGRect(x:0,y:44,width:UIScreen.main.bounds.width/2,height:UIScreen.main.bounds.height/2-22)
@@ -42,7 +40,6 @@ class PointViewController: UIViewController,UIGestureRecognizerDelegate {
         //MARK: sample4
         sample4.frame = CGRect(x:UIScreen.main.bounds.width/2,y:UIScreen.main.bounds.height/2+22,width:UIScreen.main.bounds.width/2,height:UIScreen.main.bounds.height/2-22)
         self.view.addSubview(sample4)
-        
         
         for i  in 0...TapGesture.tapGesture.count {
             

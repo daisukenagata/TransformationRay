@@ -76,7 +76,6 @@ struct Mathematics {
             
             CommonStructure.alert.alert2(view:vc,st: "Distance"+Mathematics.distance(a: CommonStructure.Point(x: CommonStructure.DefalutsObject().ddd , y: CommonStructure.DefalutsObject().nnn), b: CommonStructure.Point(x: CommonStructure.pointted.x, y: CommonStructure.pointted.y)).description)
             
-
         }
         
         if GestureField.bool2 == false {

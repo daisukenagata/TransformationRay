@@ -13,7 +13,6 @@ class Animation{
     var lineLayer = CAShapeLayer()
     var animation = CABasicAnimation(keyPath: "strokeEnd")
     
-    
     func setShapeLayer(viewC:UIView,bool:Bool){
         
         _ =  shapeLayer(shape: lineLayer, viewC: viewC,bool:bool)
