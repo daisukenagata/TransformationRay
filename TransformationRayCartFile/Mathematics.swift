@@ -68,25 +68,25 @@ struct Mathematics {
     
     static func mathematicsTap(vc:UIViewController) {
         
-        if GestureField.bool2 == true {
+        if CommonStructure.bool == true {
             
     
-            GestureField.bool2 = false
+            CommonStructure.bool = false
             
             
             CommonStructure.alert.alert2(view:vc,st: "Distance"+Mathematics.distance(a: CommonStructure.Point(x: CommonStructure.DefalutsObject().ddd , y: CommonStructure.DefalutsObject().nnn), b: CommonStructure.Point(x: CommonStructure.pointted.x, y: CommonStructure.pointted.y)).description)
             
         }
         
-        else if GestureField.bool2 == false {
+        else if CommonStructure.bool == false {
             
             CommonStructure.DefalutsSave().k.set(CGPoint(x:CommonStructure.pointted.x, y: CommonStructure.pointted.y).x, forKey: "dx")
             CommonStructure.DefalutsSave().k.set(CGPoint(x:CommonStructure.pointted.x, y: CommonStructure.pointted.y).y, forKey: "dy")
-            GestureField.bool2 = true
+            CommonStructure.bool = true
             
         }
         
-        if  GestureField.bool == true {
+        if  CommonStructure.bool == true {
             
             TouchField.touchesMoved(CommonStructure.Unit().aTouch, with:CommonStructure.Unit().event, vw:CommonStructure.vw,pointted:CommonStructure.pointted)
             

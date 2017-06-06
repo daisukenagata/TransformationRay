@@ -11,7 +11,6 @@ import UIKit
 struct GestureField {
     
     static var bool = false
-    static var bool2 = false
     
     static func singleTap(vc:UIViewController){
         
