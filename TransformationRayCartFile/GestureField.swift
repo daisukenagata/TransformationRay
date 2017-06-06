@@ -28,7 +28,11 @@ struct GestureField {
             CommonStructure.count.append(CommonStructure.pointted)
             GestureField.labelSet(viewC: vc.view)
             
-            Mathematics.mathematicsTap(vc: vc)
+            if GestureField.bool == true {
+                
+                Mathematics.mathematicsTap(vc: vc)
+                
+            }
         }
     }
     

@@ -70,7 +70,7 @@ struct Mathematics {
         
         if CommonStructure.bool == true {
             
-    
+            
             CommonStructure.bool = false
             
             
@@ -78,7 +78,7 @@ struct Mathematics {
             
         }
         
-        else if CommonStructure.bool == false {
+        if CommonStructure.bool == false {
             
             CommonStructure.DefalutsSave().k.set(CGPoint(x:CommonStructure.pointted.x, y: CommonStructure.pointted.y).x, forKey: "dx")
             CommonStructure.DefalutsSave().k.set(CGPoint(x:CommonStructure.pointted.x, y: CommonStructure.pointted.y).y, forKey: "dy")
@@ -113,14 +113,14 @@ struct Mathematics {
     //MARK: MathematicsCirle
     
     static func mathematicsCirle()->UIBezierPath{
-
+        
         if Mathematics.angleLength(p1: CommonStructure.Point(x:0,y:0), CommonStructure.Pointted(x:CommonStructure.pointted.x,y:CommonStructure.pointted.y)) > 0 {
             
-         return UIBezierPath(arcCenter: CGPoint(x:0, y:0), radius: Mathematics.angleLength(p1: CommonStructure.Point(x:0,y:0), CommonStructure.Pointted(x:CommonStructure.pointted.x,y:CommonStructure.pointted.y)) , startAngle: 0, endAngle:Mathematics.mathematicsAngle(), clockwise: true)
+            return UIBezierPath(arcCenter: CGPoint(x:0, y:0), radius: Mathematics.angleLength(p1: CommonStructure.Point(x:0,y:0), CommonStructure.Pointted(x:CommonStructure.pointted.x,y:CommonStructure.pointted.y)) , startAngle: 0, endAngle:Mathematics.mathematicsAngle(), clockwise: true)
             
         }else{
             
-        return UIBezierPath(arcCenter: CGPoint(x:0, y:0), radius: -Mathematics.angleLength(p1: CommonStructure.Point(x:0,y:0), CommonStructure.Pointted(x:CommonStructure.pointted.x,y:CommonStructure.pointted.y)), startAngle: 0, endAngle:Mathematics.mathematicsAngle(), clockwise: true)
+            return UIBezierPath(arcCenter: CGPoint(x:0, y:0), radius: -Mathematics.angleLength(p1: CommonStructure.Point(x:0,y:0), CommonStructure.Pointted(x:CommonStructure.pointted.x,y:CommonStructure.pointted.y)), startAngle: 0, endAngle:Mathematics.mathematicsAngle(), clockwise: true)
             
         }
     }
@@ -128,7 +128,7 @@ struct Mathematics {
     //MARK: MathematicsCirle_100
     
     static func mathematicsCirle_100(view:UIView,cg:CGFloat)->UIBezierPath{
-
+        
         return UIBezierPath(arcCenter: CGPoint(x:view.bounds.width/2, y:view.bounds.height/2), radius: Mathematics.angleLength(p1: CommonStructure.Point(x:0,y:0), CommonStructure.Pointted(x:100,y:100)) , startAngle: 0, endAngle:cg  * Mathematics.angelMathematics, clockwise: true)
     }
 }
