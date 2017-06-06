@@ -78,7 +78,7 @@ struct Mathematics {
             
         }
         
-        if GestureField.bool2 == false {
+        else if GestureField.bool2 == false {
             
             CommonStructure.DefalutsSave().k.set(CGPoint(x:CommonStructure.pointted.x, y: CommonStructure.pointted.y).x, forKey: "dx")
             CommonStructure.DefalutsSave().k.set(CGPoint(x:CommonStructure.pointted.x, y: CommonStructure.pointted.y).y, forKey: "dy")
