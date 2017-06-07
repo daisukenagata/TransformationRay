@@ -49,25 +49,19 @@ class PointViewController: UIViewController,UIGestureRecognizerDelegate {
                 TapGesture.tapGesture[i].delegate = self
                 self.sample1.addGestureRecognizer(TapGesture.tapGesture[i])
                 
-            }
-            
-            if self.sample2.tag == i {
+            } else if self.sample2.tag == i {
                 
                 TapGesture.tapGesture[i] = UITapGestureRecognizer(target: self, action: #selector(singleTap2))
                 TapGesture.tapGesture[i].delegate = self
                 self.sample2.addGestureRecognizer(TapGesture.tapGesture[i])
                 
-            }
-            
-            if self.sample3.tag == i {
+            } else if self.sample3.tag == i {
                 
                 TapGesture.tapGesture[i] = UITapGestureRecognizer(target: self, action: #selector(singleTap3))
                 TapGesture.tapGesture[i].delegate = self
                 self.sample3.addGestureRecognizer(TapGesture.tapGesture[i])
                 
-            }
-            
-            if self.sample4.tag == i {
+            } else if self.sample4.tag == i {
                 
                 TapGesture.tapGesture[i] = UITapGestureRecognizer(target: self, action: #selector(singleTap4))
                 TapGesture.tapGesture[i].delegate = self
@@ -87,7 +81,7 @@ class PointViewController: UIViewController,UIGestureRecognizerDelegate {
     func singleTap1(){
         
         GestureField.singleTap2(view:sample1,vc:self,index:sample1.tag)
-       
+        
         anglePoint.title = Mathematics.mathematics()
         
     }
@@ -112,7 +106,7 @@ class PointViewController: UIViewController,UIGestureRecognizerDelegate {
         GestureField.singleTap2(view:sample1,vc:self,index:sample4.tag)
         
         anglePoint.title = Mathematics.mathematics()
-
+        
     }
     
 }
