@@ -21,14 +21,14 @@ class AngleInputViewController: UIViewController {
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(true)
-        
+
         LineField.lineField(line:CommonStructure.line, viewC: self)
-        
+       
     }
     
     @IBAction func Angleinput(_ sender: UIBarButtonItem) {
         
-        self.navigationItem.title = CommonStructure.alert.alert(view: self)
+        self.navigationItem.title = CommonStructure.alert.alert(view: self) 
         
     }
       
