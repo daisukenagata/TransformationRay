@@ -78,7 +78,7 @@ class PointViewController: UIViewController,UIGestureRecognizerDelegate {
         
     }
     
-    func singleTap1(){
+    @objc func singleTap1(){
         
         GestureField.singleTap2(view:sample1,vc:self,index:sample1.tag)
         
@@ -86,14 +86,14 @@ class PointViewController: UIViewController,UIGestureRecognizerDelegate {
         
     }
     
-    func singleTap2(){
+    @objc func singleTap2(){
         
         GestureField.singleTap2(view:sample1,vc:self,index:sample2.tag)
         
         anglePoint.title = Mathematics.mathematics()
     }
     
-    func singleTap3(){
+    @objc func singleTap3(){
         
         GestureField.singleTap2(view:sample1,vc:self,index:sample3.tag)
         
@@ -101,7 +101,7 @@ class PointViewController: UIViewController,UIGestureRecognizerDelegate {
         
     }
     
-    func singleTap4(){
+    @objc func singleTap4(){
         
         GestureField.singleTap2(view:sample1,vc:self,index:sample4.tag)
         

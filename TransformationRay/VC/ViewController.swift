@@ -36,7 +36,7 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate  {
         
     }
     
-    func singleTap(){
+    @objc func singleTap(){
         
         GestureField.singleTap(vc: self)
         
@@ -49,19 +49,19 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate  {
         return view
     }
     
-    func zoomAction(sender: UIPinchGestureRecognizer) {
+    @objc func zoomAction(sender: UIPinchGestureRecognizer) {
         
         GestureField.zoomAction(sender: sender, view: self.view)
         
     }
     
-    func panLabel(sender: UIPanGestureRecognizer) {
+    @objc func panLabel(sender: UIPanGestureRecognizer) {
         
         GestureField.panLabel(sender: sender, view: self.view)
         
     }
     
-    func longTappled(sender: UILongPressGestureRecognizer) {
+    @objc func longTappled(sender: UILongPressGestureRecognizer) {
         
         CommonStructure.line.removeAllPoints()
         
