@@ -13,63 +13,17 @@
 		BB5FF0211EA1A92B001FF0F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB5FF01F1EA1A92B001FF0F4 /* Main.storyboard */; };
 		BB5FF0231EA1A92B001FF0F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB5FF0221EA1A92B001FF0F4 /* Assets.xcassets */; };
 		BB5FF0261EA1A92B001FF0F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB5FF0241EA1A92B001FF0F4 /* LaunchScreen.storyboard */; };
-		BB5FF0311EA1A92B001FF0F4 /* TransformationRayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5FF0301EA1A92B001FF0F4 /* TransformationRayTests.swift */; };
-		BB5FF03C1EA1A92B001FF0F4 /* TransformationRayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5FF03B1EA1A92B001FF0F4 /* TransformationRayUITests.swift */; };
 		BB7B3A6A1EAFB20E00468ED8 /* AlertVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7B3A5F1EAFB20E00468ED8 /* AlertVIew.swift */; };
 		BB7B3A6B1EAFB20E00468ED8 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7B3A601EAFB20E00468ED8 /* Animation.swift */; };
 		BB7B3A6C1EAFB20E00468ED8 /* CommonStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7B3A611EAFB20E00468ED8 /* CommonStructure.swift */; };
 		BB7B3A6D1EAFB20E00468ED8 /* ConversionImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7B3A621EAFB20E00468ED8 /* ConversionImage.swift */; };
 		BB7B3A6E1EAFB20E00468ED8 /* GestureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7B3A631EAFB20E00468ED8 /* GestureField.swift */; };
-		BB7B3A6F1EAFB20E00468ED8 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB7B3A641EAFB20E00468ED8 /* Info.plist */; };
 		BB7B3A701EAFB20E00468ED8 /* LineField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7B3A651EAFB20E00468ED8 /* LineField.swift */; };
 		BB7B3A711EAFB20E00468ED8 /* Mathematics.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7B3A661EAFB20E00468ED8 /* Mathematics.swift */; };
 		BB7B3A721EAFB20E00468ED8 /* SetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7B3A671EAFB20E00468ED8 /* SetView.swift */; };
 		BB7B3A731EAFB20E00468ED8 /* TouchField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7B3A681EAFB20E00468ED8 /* TouchField.swift */; };
-		BBCDF96A1EAF9F540077E270 /* TransformationRayCartFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBCDF9611EAF9F540077E270 /* TransformationRayCartFile.framework */; };
-		BBCDF9711EAF9F540077E270 /* TransformationRayCartFileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCDF9701EAF9F540077E270 /* TransformationRayCartFileTests.swift */; };
-		BBCDF9731EAF9F540077E270 /* TransformationRayCartFile.h in Headers */ = {isa = PBXBuildFile; fileRef = BBCDF9631EAF9F540077E270 /* TransformationRayCartFile.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BBCDF9761EAF9F540077E270 /* TransformationRayCartFile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBCDF9611EAF9F540077E270 /* TransformationRayCartFile.framework */; };
-		BBCDF9771EAF9F540077E270 /* TransformationRayCartFile.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BBCDF9611EAF9F540077E270 /* TransformationRayCartFile.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BBE318841EA960B10085E56A /* PointViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE318831EA960B10085E56A /* PointViewController.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		BB5FF02D1EA1A92B001FF0F4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BB5FF0101EA1A92B001FF0F4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BB5FF0171EA1A92B001FF0F4;
-			remoteInfo = TransformationRay;
-		};
-		BB5FF0381EA1A92B001FF0F4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BB5FF0101EA1A92B001FF0F4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BB5FF0171EA1A92B001FF0F4;
-			remoteInfo = TransformationRay;
-		};
-		BBCDF96B1EAF9F540077E270 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BB5FF0101EA1A92B001FF0F4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BBCDF9601EAF9F540077E270;
-			remoteInfo = TransformationRayCartFile;
-		};
-		BBCDF96D1EAF9F540077E270 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BB5FF0101EA1A92B001FF0F4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BB5FF0171EA1A92B001FF0F4;
-			remoteInfo = TransformationRay;
-		};
-		BBCDF9741EAF9F540077E270 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BB5FF0101EA1A92B001FF0F4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BBCDF9601EAF9F540077E270;
-			remoteInfo = TransformationRayCartFile;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		BBCDF97B1EAF9F540077E270 /* Embed Frameworks */ = {
@@ -78,7 +32,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				BBCDF9771EAF9F540077E270 /* TransformationRayCartFile.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -94,29 +47,15 @@
 		BB5FF0221EA1A92B001FF0F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB5FF0251EA1A92B001FF0F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB5FF0271EA1A92B001FF0F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BB5FF02C1EA1A92B001FF0F4 /* TransformationRayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransformationRayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BB5FF0301EA1A92B001FF0F4 /* TransformationRayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformationRayTests.swift; sourceTree = "<group>"; };
-		BB5FF0321EA1A92B001FF0F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BB5FF0371EA1A92B001FF0F4 /* TransformationRayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransformationRayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BB5FF03B1EA1A92B001FF0F4 /* TransformationRayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformationRayUITests.swift; sourceTree = "<group>"; };
-		BB5FF03D1EA1A92B001FF0F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB7B3A5F1EAFB20E00468ED8 /* AlertVIew.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertVIew.swift; sourceTree = "<group>"; };
 		BB7B3A601EAFB20E00468ED8 /* Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
 		BB7B3A611EAFB20E00468ED8 /* CommonStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonStructure.swift; sourceTree = "<group>"; };
 		BB7B3A621EAFB20E00468ED8 /* ConversionImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversionImage.swift; sourceTree = "<group>"; };
 		BB7B3A631EAFB20E00468ED8 /* GestureField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureField.swift; sourceTree = "<group>"; };
-		BB7B3A641EAFB20E00468ED8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB7B3A651EAFB20E00468ED8 /* LineField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineField.swift; sourceTree = "<group>"; };
 		BB7B3A661EAFB20E00468ED8 /* Mathematics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mathematics.swift; sourceTree = "<group>"; };
 		BB7B3A671EAFB20E00468ED8 /* SetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetView.swift; sourceTree = "<group>"; };
 		BB7B3A681EAFB20E00468ED8 /* TouchField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchField.swift; sourceTree = "<group>"; };
-		BB7B3A691EAFB20E00468ED8 /* TransformationRayCartFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransformationRayCartFile.h; sourceTree = "<group>"; };
-		BBCDF9611EAF9F540077E270 /* TransformationRayCartFile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TransformationRayCartFile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BBCDF9631EAF9F540077E270 /* TransformationRayCartFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransformationRayCartFile.h; sourceTree = "<group>"; };
-		BBCDF9641EAF9F540077E270 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BBCDF9691EAF9F540077E270 /* TransformationRayCartFileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransformationRayCartFileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BBCDF9701EAF9F540077E270 /* TransformationRayCartFileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformationRayCartFileTests.swift; sourceTree = "<group>"; };
-		BBCDF9721EAF9F540077E270 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BBE318831EA960B10085E56A /* PointViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,62 +64,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBCDF9761EAF9F540077E270 /* TransformationRayCartFile.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BB5FF0291EA1A92B001FF0F4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BB5FF0341EA1A92B001FF0F4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BBCDF95D1EAF9F540077E270 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BBCDF9661EAF9F540077E270 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BBCDF96A1EAF9F540077E270 /* TransformationRayCartFile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BB279D3F1EA7B62C0095555A /* VC */ = {
-			isa = PBXGroup;
-			children = (
-				BB279D401EA7B62C0095555A /* ViewController.swift */,
-				BBE318831EA960B10085E56A /* PointViewController.swift */,
-				BB50455A1EAC5BE500161BFE /* AngleInputViewController.swift */,
-			);
-			name = VC;
-			path = TransformationRay/VC;
-			sourceTree = SOURCE_ROOT;
-		};
 		BB5FF00F1EA1A92B001FF0F4 = {
 			isa = PBXGroup;
 			children = (
 				BB5FF01A1EA1A92B001FF0F4 /* TransformationRay */,
-				BB5FF02F1EA1A92B001FF0F4 /* TransformationRayTests */,
-				BB7B3A5E1EAFB20E00468ED8 /* TransformationRayCartFile */,
-				BB5FF03A1EA1A92B001FF0F4 /* TransformationRayUITests */,
-				BBCDF9621EAF9F540077E270 /* TransformationRayCartFile */,
-				BBCDF96F1EAF9F540077E270 /* TransformationRayCartFileTests */,
 				BB5FF0191EA1A92B001FF0F4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -189,10 +82,6 @@
 			isa = PBXGroup;
 			children = (
 				BB5FF0181EA1A92B001FF0F4 /* TransformationRay.app */,
-				BB5FF02C1EA1A92B001FF0F4 /* TransformationRayTests.xctest */,
-				BB5FF0371EA1A92B001FF0F4 /* TransformationRayUITests.xctest */,
-				BBCDF9611EAF9F540077E270 /* TransformationRayCartFile.framework */,
-				BBCDF9691EAF9F540077E270 /* TransformationRayCartFileTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -201,81 +90,27 @@
 			isa = PBXGroup;
 			children = (
 				BB5FF01B1EA1A92B001FF0F4 /* AppDelegate.swift */,
-				BB5FF01F1EA1A92B001FF0F4 /* Main.storyboard */,
-				BB5FF0221EA1A92B001FF0F4 /* Assets.xcassets */,
-				BB5FF0241EA1A92B001FF0F4 /* LaunchScreen.storyboard */,
-				BB5FF0271EA1A92B001FF0F4 /* Info.plist */,
-				BB279D3F1EA7B62C0095555A /* VC */,
-			);
-			path = TransformationRay;
-			sourceTree = "<group>";
-		};
-		BB5FF02F1EA1A92B001FF0F4 /* TransformationRayTests */ = {
-			isa = PBXGroup;
-			children = (
-				BB5FF0301EA1A92B001FF0F4 /* TransformationRayTests.swift */,
-				BB5FF0321EA1A92B001FF0F4 /* Info.plist */,
-			);
-			path = TransformationRayTests;
-			sourceTree = "<group>";
-		};
-		BB5FF03A1EA1A92B001FF0F4 /* TransformationRayUITests */ = {
-			isa = PBXGroup;
-			children = (
-				BB5FF03B1EA1A92B001FF0F4 /* TransformationRayUITests.swift */,
-				BB5FF03D1EA1A92B001FF0F4 /* Info.plist */,
-			);
-			path = TransformationRayUITests;
-			sourceTree = "<group>";
-		};
-		BB7B3A5E1EAFB20E00468ED8 /* TransformationRayCartFile */ = {
-			isa = PBXGroup;
-			children = (
 				BB7B3A5F1EAFB20E00468ED8 /* AlertVIew.swift */,
+				BB50455A1EAC5BE500161BFE /* AngleInputViewController.swift */,
 				BB7B3A601EAFB20E00468ED8 /* Animation.swift */,
 				BB7B3A611EAFB20E00468ED8 /* CommonStructure.swift */,
 				BB7B3A621EAFB20E00468ED8 /* ConversionImage.swift */,
 				BB7B3A631EAFB20E00468ED8 /* GestureField.swift */,
-				BB7B3A641EAFB20E00468ED8 /* Info.plist */,
 				BB7B3A651EAFB20E00468ED8 /* LineField.swift */,
 				BB7B3A661EAFB20E00468ED8 /* Mathematics.swift */,
+				BBE318831EA960B10085E56A /* PointViewController.swift */,
 				BB7B3A671EAFB20E00468ED8 /* SetView.swift */,
 				BB7B3A681EAFB20E00468ED8 /* TouchField.swift */,
-				BB7B3A691EAFB20E00468ED8 /* TransformationRayCartFile.h */,
+				BB279D401EA7B62C0095555A /* ViewController.swift */,
+				BB5FF0271EA1A92B001FF0F4 /* Info.plist */,
+				BB5FF0221EA1A92B001FF0F4 /* Assets.xcassets */,
+				BB5FF01F1EA1A92B001FF0F4 /* Main.storyboard */,
+				BB5FF0241EA1A92B001FF0F4 /* LaunchScreen.storyboard */,
 			);
-			path = TransformationRayCartFile;
-			sourceTree = "<group>";
-		};
-		BBCDF9621EAF9F540077E270 /* TransformationRayCartFile */ = {
-			isa = PBXGroup;
-			children = (
-				BBCDF9631EAF9F540077E270 /* TransformationRayCartFile.h */,
-				BBCDF9641EAF9F540077E270 /* Info.plist */,
-			);
-			path = TransformationRayCartFile;
-			sourceTree = "<group>";
-		};
-		BBCDF96F1EAF9F540077E270 /* TransformationRayCartFileTests */ = {
-			isa = PBXGroup;
-			children = (
-				BBCDF9701EAF9F540077E270 /* TransformationRayCartFileTests.swift */,
-				BBCDF9721EAF9F540077E270 /* Info.plist */,
-			);
-			path = TransformationRayCartFileTests;
+			path = TransformationRay;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
-
-/* Begin PBXHeadersBuildPhase section */
-		BBCDF95E1EAF9F540077E270 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BBCDF9731EAF9F540077E270 /* TransformationRayCartFile.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		BB5FF0171EA1A92B001FF0F4 /* TransformationRay */ = {
@@ -290,85 +125,11 @@
 			buildRules = (
 			);
 			dependencies = (
-				BBCDF9751EAF9F540077E270 /* PBXTargetDependency */,
 			);
 			name = TransformationRay;
 			productName = TransformationRay;
 			productReference = BB5FF0181EA1A92B001FF0F4 /* TransformationRay.app */;
 			productType = "com.apple.product-type.application";
-		};
-		BB5FF02B1EA1A92B001FF0F4 /* TransformationRayTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BB5FF0431EA1A92B001FF0F4 /* Build configuration list for PBXNativeTarget "TransformationRayTests" */;
-			buildPhases = (
-				BB5FF0281EA1A92B001FF0F4 /* Sources */,
-				BB5FF0291EA1A92B001FF0F4 /* Frameworks */,
-				BB5FF02A1EA1A92B001FF0F4 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BB5FF02E1EA1A92B001FF0F4 /* PBXTargetDependency */,
-			);
-			name = TransformationRayTests;
-			productName = TransformationRayTests;
-			productReference = BB5FF02C1EA1A92B001FF0F4 /* TransformationRayTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		BB5FF0361EA1A92B001FF0F4 /* TransformationRayUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BB5FF0461EA1A92B001FF0F4 /* Build configuration list for PBXNativeTarget "TransformationRayUITests" */;
-			buildPhases = (
-				BB5FF0331EA1A92B001FF0F4 /* Sources */,
-				BB5FF0341EA1A92B001FF0F4 /* Frameworks */,
-				BB5FF0351EA1A92B001FF0F4 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BB5FF0391EA1A92B001FF0F4 /* PBXTargetDependency */,
-			);
-			name = TransformationRayUITests;
-			productName = TransformationRayUITests;
-			productReference = BB5FF0371EA1A92B001FF0F4 /* TransformationRayUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
-		BBCDF9601EAF9F540077E270 /* TransformationRayCartFile */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BBCDF9781EAF9F540077E270 /* Build configuration list for PBXNativeTarget "TransformationRayCartFile" */;
-			buildPhases = (
-				BBCDF95C1EAF9F540077E270 /* Sources */,
-				BBCDF95D1EAF9F540077E270 /* Frameworks */,
-				BBCDF95E1EAF9F540077E270 /* Headers */,
-				BBCDF95F1EAF9F540077E270 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = TransformationRayCartFile;
-			productName = TransformationRayCartFile;
-			productReference = BBCDF9611EAF9F540077E270 /* TransformationRayCartFile.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		BBCDF9681EAF9F540077E270 /* TransformationRayCartFileTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BBCDF97C1EAF9F540077E270 /* Build configuration list for PBXNativeTarget "TransformationRayCartFileTests" */;
-			buildPhases = (
-				BBCDF9651EAF9F540077E270 /* Sources */,
-				BBCDF9661EAF9F540077E270 /* Frameworks */,
-				BBCDF9671EAF9F540077E270 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BBCDF96C1EAF9F540077E270 /* PBXTargetDependency */,
-				BBCDF96E1EAF9F540077E270 /* PBXTargetDependency */,
-			);
-			name = TransformationRayCartFileTests;
-			productName = TransformationRayCartFileTests;
-			productReference = BBCDF9691EAF9F540077E270 /* TransformationRayCartFileTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -384,33 +145,6 @@
 						CreatedOnToolsVersion = 8.3;
 						LastSwiftMigration = 0920;
 						ProvisioningStyle = Manual;
-					};
-					BB5FF02B1EA1A92B001FF0F4 = {
-						CreatedOnToolsVersion = 8.3;
-						DevelopmentTeam = B3ZKJZUE9E;
-						LastSwiftMigration = 0920;
-						ProvisioningStyle = Automatic;
-						TestTargetID = BB5FF0171EA1A92B001FF0F4;
-					};
-					BB5FF0361EA1A92B001FF0F4 = {
-						CreatedOnToolsVersion = 8.3;
-						DevelopmentTeam = B3ZKJZUE9E;
-						LastSwiftMigration = 0920;
-						ProvisioningStyle = Automatic;
-						TestTargetID = BB5FF0171EA1A92B001FF0F4;
-					};
-					BBCDF9601EAF9F540077E270 = {
-						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = B3ZKJZUE9E;
-						LastSwiftMigration = "";
-						ProvisioningStyle = Automatic;
-					};
-					BBCDF9681EAF9F540077E270 = {
-						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = B3ZKJZUE9E;
-						LastSwiftMigration = 0920;
-						ProvisioningStyle = Automatic;
-						TestTargetID = BB5FF0171EA1A92B001FF0F4;
 					};
 				};
 			};
@@ -428,10 +162,6 @@
 			projectRoot = "";
 			targets = (
 				BB5FF0171EA1A92B001FF0F4 /* TransformationRay */,
-				BB5FF02B1EA1A92B001FF0F4 /* TransformationRayTests */,
-				BB5FF0361EA1A92B001FF0F4 /* TransformationRayUITests */,
-				BBCDF9601EAF9F540077E270 /* TransformationRayCartFile */,
-				BBCDF9681EAF9F540077E270 /* TransformationRayCartFileTests */,
 			);
 		};
 /* End PBXProject section */
@@ -441,38 +171,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB7B3A6F1EAFB20E00468ED8 /* Info.plist in Resources */,
 				BB5FF0261EA1A92B001FF0F4 /* LaunchScreen.storyboard in Resources */,
 				BB5FF0231EA1A92B001FF0F4 /* Assets.xcassets in Resources */,
 				BB5FF0211EA1A92B001FF0F4 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BB5FF02A1EA1A92B001FF0F4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BB5FF0351EA1A92B001FF0F4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BBCDF95F1EAF9F540077E270 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BBCDF9671EAF9F540077E270 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,66 +200,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BB5FF0281EA1A92B001FF0F4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BB5FF0311EA1A92B001FF0F4 /* TransformationRayTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BB5FF0331EA1A92B001FF0F4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BB5FF03C1EA1A92B001FF0F4 /* TransformationRayUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BBCDF95C1EAF9F540077E270 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BBCDF9651EAF9F540077E270 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BBCDF9711EAF9F540077E270 /* TransformationRayCartFileTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		BB5FF02E1EA1A92B001FF0F4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BB5FF0171EA1A92B001FF0F4 /* TransformationRay */;
-			targetProxy = BB5FF02D1EA1A92B001FF0F4 /* PBXContainerItemProxy */;
-		};
-		BB5FF0391EA1A92B001FF0F4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BB5FF0171EA1A92B001FF0F4 /* TransformationRay */;
-			targetProxy = BB5FF0381EA1A92B001FF0F4 /* PBXContainerItemProxy */;
-		};
-		BBCDF96C1EAF9F540077E270 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BBCDF9601EAF9F540077E270 /* TransformationRayCartFile */;
-			targetProxy = BBCDF96B1EAF9F540077E270 /* PBXContainerItemProxy */;
-		};
-		BBCDF96E1EAF9F540077E270 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BB5FF0171EA1A92B001FF0F4 /* TransformationRay */;
-			targetProxy = BBCDF96D1EAF9F540077E270 /* PBXContainerItemProxy */;
-		};
-		BBCDF9751EAF9F540077E270 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BBCDF9601EAF9F540077E270 /* TransformationRayCartFile */;
-			targetProxy = BBCDF9741EAF9F540077E270 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		BB5FF01F1EA1A92B001FF0F4 /* Main.storyboard */ = {
@@ -695,6 +337,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TransformationRay/Info.plist;
@@ -712,6 +355,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TransformationRay/Info.plist;
@@ -722,144 +366,6 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
-			};
-			name = Release;
-		};
-		BB5FF0441EA1A92B001FF0F4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = B3ZKJZUE9E;
-				INFOPLIST_FILE = TransformationRayTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = readJson.TransformationRayTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TransformationRay.app/TransformationRay";
-			};
-			name = Debug;
-		};
-		BB5FF0451EA1A92B001FF0F4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = B3ZKJZUE9E;
-				INFOPLIST_FILE = TransformationRayTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = readJson.TransformationRayTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TransformationRay.app/TransformationRay";
-			};
-			name = Release;
-		};
-		BB5FF0471EA1A92B001FF0F4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = B3ZKJZUE9E;
-				INFOPLIST_FILE = TransformationRayUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = readJson.TransformationRayUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
-				TEST_TARGET_NAME = TransformationRay;
-			};
-			name = Debug;
-		};
-		BB5FF0481EA1A92B001FF0F4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = B3ZKJZUE9E;
-				INFOPLIST_FILE = TransformationRayUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = readJson.TransformationRayUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
-				TEST_TARGET_NAME = TransformationRay;
-			};
-			name = Release;
-		};
-		BBCDF9791EAF9F540077E270 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = B3ZKJZUE9E;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = TransformationRayCartFile/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = readJson.TransformationRayCartFile;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		BBCDF97A1EAF9F540077E270 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = B3ZKJZUE9E;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = TransformationRayCartFile/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = readJson.TransformationRayCartFile;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_SWIFT3_OBJC_INFERENCE = On;
-				SWIFT_VERSION = 4.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		BBCDF97D1EAF9F540077E270 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = B3ZKJZUE9E;
-				INFOPLIST_FILE = TransformationRayCartFileTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = readJson.TransformationRayCartFileTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TransformationRay.app/TransformationRay";
-			};
-			name = Debug;
-		};
-		BBCDF97E1EAF9F540077E270 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = B3ZKJZUE9E;
-				INFOPLIST_FILE = TransformationRayCartFileTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = readJson.TransformationRayCartFileTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TransformationRay.app/TransformationRay";
 			};
 			name = Release;
 		};
@@ -880,42 +386,6 @@
 			buildConfigurations = (
 				BB5FF0411EA1A92B001FF0F4 /* Debug */,
 				BB5FF0421EA1A92B001FF0F4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BB5FF0431EA1A92B001FF0F4 /* Build configuration list for PBXNativeTarget "TransformationRayTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BB5FF0441EA1A92B001FF0F4 /* Debug */,
-				BB5FF0451EA1A92B001FF0F4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BB5FF0461EA1A92B001FF0F4 /* Build configuration list for PBXNativeTarget "TransformationRayUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BB5FF0471EA1A92B001FF0F4 /* Debug */,
-				BB5FF0481EA1A92B001FF0F4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BBCDF9781EAF9F540077E270 /* Build configuration list for PBXNativeTarget "TransformationRayCartFile" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BBCDF9791EAF9F540077E270 /* Debug */,
-				BBCDF97A1EAF9F540077E270 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BBCDF97C1EAF9F540077E270 /* Build configuration list for PBXNativeTarget "TransformationRayCartFileTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BBCDF97D1EAF9F540077E270 /* Debug */,
-				BBCDF97E1EAF9F540077E270 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
