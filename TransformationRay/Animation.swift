@@ -38,7 +38,7 @@ class Animation{
             
             shape.lineWidth = CommonStructure.Unit().lineWidth
             shape.strokeColor = UIColor.black.cgColor
-            shape.fillRule = kCAFillRuleEvenOdd
+            shape.fillRule = CAShapeLayerFillRule.evenOdd
             shape.path = CommonStructure.line.cgPath
             viewC.layer.addSublayer(shape)
             
@@ -52,7 +52,7 @@ class Animation{
         
         shape.lineWidth = CommonStructure.Unit().lineWidth
         shape.strokeColor = UIColor.white.cgColor
-        shape.fillRule = kCAFillRuleEvenOdd
+        shape.fillRule = CAShapeLayerFillRule.evenOdd
         shape.path = CommonStructure.line.cgPath
         viewC.layer.addSublayer(shape)
         
@@ -64,7 +64,7 @@ class Animation{
         
         shape.lineWidth = CommonStructure.Unit().lineWidth
         shape.strokeColor = UIColor.black.cgColor
-        shape.fillRule = kCAFillRuleNonZero
+        shape.fillRule = CAShapeLayerFillRule.nonZero
         shape.path = CommonStructure.line2.cgPath
         viewC.layer.addSublayer(shape)
         
@@ -75,10 +75,10 @@ class Animation{
     func animationDraw(animation:CABasicAnimation)->CABasicAnimation{
         
         animation.duration = 1.0
-        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
+        animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeIn)
         animation.fromValue = 0.0
         animation.toValue = 1.0
-        animation.fillMode = kCAFillModeForwards
+        animation.fillMode = CAMediaTimingFillMode.forwards
         animation.isRemovedOnCompletion = true
         
         return animation
