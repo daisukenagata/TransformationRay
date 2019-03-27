@@ -1,4 +1,4 @@
-# TransformationRay Xcode10.1 Swift4.2
+# TransformationRay Xcode10.2 Swift5
 
 ![](https://github.com/daisukenagata/TransformationRay/blob/master/Gif/Alert.gif?raw=true)
 ![](https://raw.githubusercontent.com/daisukenagata/TransformationRay/master/Gif/AngleInputEntry.gif)
