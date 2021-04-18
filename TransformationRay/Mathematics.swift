@@ -20,7 +20,7 @@ struct Mathematics {
         if r < 0 {
             r = r + CGFloat(2 * Double.pi)
         }
-        return floor(Double(r * 360 / CGFloat(2 * Double.pi)))
+        return Double(r * 360 / CGFloat(2 * Double.pi))
     }
     
     //MARK:AngleLength
